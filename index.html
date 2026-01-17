@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulutox Entgiftungstee | 70% Rabatt - Jetzt Bestellen</title>
+    <meta name="description" content="Lulutox Detox Tee - Abnehmen, Fett verbrennen und weniger Blähungen mit 13 natürlichen Superfoods. Jetzt 70% Rabatt sichern!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #2d5a27;
+            --color-primary-light: #4a8a42;
+            --color-primary-dark: #1e3d1a;
+            --color-accent: #d4a853;
+            --color-accent-light: #f0d694;
+            --color-bg: #faf9f6;
+            --color-bg-warm: #f5f2eb;
+            --color-text: #2c2c2c;
+            --color-text-light: #666666;
+            --color-white: #ffffff;
+            --color-success: #22c55e;
+            --color-star: #fbbf24;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
+            --radius: 12px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: var(--color-white);
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .announcement-bar strong {
+            color: var(--color-accent-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(180deg, var(--color-bg-warm) 0%, var(--color-bg) 100%);
+            padding: 40px 0 60px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: var(--color-white);
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            box-shadow: var(--shadow-md);
+            animation: pulse 2s infinite;
+        }
+
+        .discount-badge span:first-child {
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        .discount-badge span:last-child {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            color: var(--color-text);
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--color-primary);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            margin-bottom: 25px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .stars {
+            color: var(--color-star);
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .rating-text {
+            color: var(--color-text-light);
+            font-size: 14px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .benefits-list li::before {
+            content: "✓";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .price-box {
+            background: var(--color-white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 25px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .price-current {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .price-original {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+            text-decoration: line-through;
+        }
+
+        .price-save {
+            font-size: 14px;
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: var(--color-white);
+            border: none;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: var(--radius);
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(45, 90, 39, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(45, 90, 39, 0.5);
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+            font-size: 13px;
+            color: var(--color-text-light);
+        }
+
+        .guarantee svg {
+            width: 16px;
+            height: 16px;
+            color: var(--color-success);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            background: var(--color-white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: var(--color-text);
+        }
+
+        .section-title span {
+            color: var(--color-primary);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px 15px;
+            background: var(--color-bg-warm);
+            border-radius: var(--radius);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 28px;
+        }
+
+        .benefit-card h4 {
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        /* Ingredients Section */
+        .ingredients-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--color-bg-warm) 0%, var(--color-bg) 100%);
+        }
+
+        .ingredients-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .ingredients-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .ingredients-text p {
+            color: var(--color-text-light);
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        .ingredient-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ingredient-tag {
+            background: var(--color-white);
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-primary);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(45, 90, 39, 0.1);
+        }
+
+        .ingredients-image {
+            position: relative;
+        }
+
+        .ingredients-image img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 80px 0;
+            background: var(--color-white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--color-bg);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 80px;
+            color: var(--color-primary);
+            opacity: 0.15;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--color-star);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--color-text);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .author-info h5 {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .author-info span {
+            font-size: 13px;
+            color: var(--color-text-light);
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--color-success);
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            text-align: center;
+            color: var(--color-white);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section .cta-button {
+            display: inline-block;
+            width: auto;
+            background: var(--color-white);
+            color: var(--color-primary);
+            padding: 18px 50px;
+        }
+
+        .cta-section .cta-button:hover {
+            background: var(--color-accent-light);
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .trust-badge svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-text);
+            color: var(--color-white);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--color-white);
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer-links span {
+            margin: 0 15px;
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-image-container {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .ingredients-content {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .trust-badges {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .discount-badge {
+                width: 70px;
+                height: 70px;
+            }
+
+            .discount-badge span:first-child {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ⏰ Zeitlich begrenztes Angebot: <strong>70% Rabatt auf Entgiftungstee</strong> — Nur solange der Vorrat reicht!
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image-container">
+                    <img src="images/hero-tea.jpg" alt="Lulutox Entgiftungstee" class="hero-image">
+                    <div class="discount-badge">
+                        <span>70%</span>
+                        <span>Rabatt</span>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.9/5 basierend auf 1.257 Bewertungen</span>
+                    </div>
+                    <h1>Abnehmen, Fett verbrennen und <span>weniger Blähungen</span> ist ganz einfach</h1>
+                    <p class="hero-subtitle">Entdecken Sie die Kraft von 13 natürlichen Superfoods in jedem Schluck – mit köstlicher Pfirsichnote.</p>
+                    
+                    <ul class="benefits-list">
+                        <li>Natürliche Gewichtsreduktion</li>
+                        <li>Aktiviert die Fettverbrennung</li>
+                        <li>Reduziert Blähungen spürbar</li>
+                        <li>Stärkt das Immunsystem</li>
+                        <li>Mehr Energie im Alltag</li>
+                    </ul>
+
+                    <div class="price-box">
+                        <div class="price-row">
+                            <span class="price-current">25,95 €</span>
+                            <span class="price-original">85,90 €</span>
+                        </div>
+                        <span class="price-save">Sie sparen 59,95 € (70%)</span>
+                    </div>
+
+                    <a href="https://cart.lulutox.com/products-order/de" class="cta-button">Jetzt Bestellen</a>
+                    
+                    <div class="guarantee">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        30 Tage Geld-zurück-Garantie · Sichere Bezahlung
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">5 Vorteile für <span>Ihre Gesundheit</span></h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚖️</div>
+                    <h4>Gewichts&shy;reduktion</h4>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔥</div>
+                    <h4>Fett&shy;verbrennung</h4>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h4>Stärkeres Immun&shy;system</h4>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h4>Mehr Energie</h4>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💨</div>
+                    <h4>Weniger Blähungen</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients-section">
+        <div class="container">
+            <div class="ingredients-content">
+                <div class="ingredients-text">
+                    <h2>13 Kraftvolle <span style="color: var(--color-primary)">Superfoods</span></h2>
+                    <p>Jede Tasse enthält eine sorgfältig ausgewählte Mischung aus bewährten Naturzutaten, die seit Jahrhunderten für ihre wohltuenden Eigenschaften geschätzt werden.</p>
+                    <div class="ingredient-tags">
+                        <span class="ingredient-tag">🍵 Matcha</span>
+                        <span class="ingredient-tag">🌿 Mate</span>
+                        <span class="ingredient-tag">🍃 Grüner Tee Sencha</span>
+                        <span class="ingredient-tag">🫖 Oolong</span>
+                        <span class="ingredient-tag">🫐 Goji-Beeren</span>
+                        <span class="ingredient-tag">🌸 Mariendistel</span>
+                        <span class="ingredient-tag">🌱 Ginseng</span>
+                        <span class="ingredient-tag">🌾 Zitronengras</span>
+                        <span class="ingredient-tag">🌿 Brennnesselblätter</span>
+                        <span class="ingredient-tag">🌼 Löwenzahnblatt</span>
+                        <span class="ingredient-tag">☕ Guarana</span>
+                        <span class="ingredient-tag">🍃 Stevia</span>
+                        <span class="ingredient-tag">🍑 Pfirsich-Aroma</span>
+                    </div>
+                </div>
+                <div class="ingredients-image">
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&h=600&fit=crop" alt="Natürliche Zutaten">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Das sagen unsere <span>Kundinnen</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Es funktioniert wirklich und der Geschmack ist göttlich! Ich habe 8 Kilo abgenommen! Meine Haut sieht besser aus und ich fühle mich wirklich gesund."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">HS</div>
+                        <div class="author-info">
+                            <h5>Helen S., 49 <span class="verified-badge">✓ Verifiziert</span></h5>
+                            <span>München</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Mein Bauch war so aufgebläht, dass ich mich nicht mehr traute, enge Kleidung zu tragen. Jetzt fühle ich mich wieder selbstbewusst und trage endlich wieder meine Lieblingskleider!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TS</div>
+                        <div class="author-info">
+                            <h5>Tessa S., 35 <span class="verified-badge">✓ Verifiziert</span></h5>
+                            <span>Hamburg</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Nach der Geburt meines zweiten Kindes dachte ich, ich würde nie wieder in meine alte Kleidung passen. Dank Lulutox habe ich 20 kg verloren – von Größe 42 auf 38!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JB</div>
+                        <div class="author-info">
+                            <h5>Julia B., 41 <span class="verified-badge">✓ Verifiziert</span></h5>
+                            <span>Berlin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Bereit für Ihre Verwandlung?</h2>
+            <p>Schließen Sie sich über 10.000 zufriedenen Kundinnen an und beginnen Sie noch heute Ihre Reise zu einem gesünderen Ich.</p>
+            <a href="https://cart.lulutox.com/products-order/de" class="cta-button">Jetzt 70% Rabatt Sichern</a>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    Sichere Bezahlung
+                </div>
+                <div class="trust-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    30 Tage Geld-zurück
+                </div>
+                <div class="trust-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                    </svg>
+                    Schneller Versand
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="agb.html">Allgemeine Geschäftsbedingungen</a>
+            <span>|</span>
+            <a href="datenschutz.html">Datenschutzerklärung</a>
+        </div>
+        <p>© 2024 Lulutox. Alle Rechte vorbehalten. | Diese Seite ist nicht Teil der Facebook-Website oder von Facebook Inc.</p>
+    </footer>
+</body>
+</html>
