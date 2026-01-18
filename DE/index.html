@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Jahrelang habe ich gelitten - Dann probierte ich dieses Warmwasser-Ritual</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- NEWS PORTAL THEME --- */
+        :root {
+            --news-red: #c00;
+            --news-dark: #222;
+            --news-grey: #f4f4f4;
+            --news-border: #ddd;
+            --news-blue: #004e8c;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fff;
+            color: #111;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        a { color: var(--news-blue); text-decoration: none; border-bottom: 1px solid #cce0f5; }
+        a:hover { background-color: #eef5fc; color: #000; }
+        
+        img { max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; }
+
+        /* HEADER */
+        .advertorial-header {
+            background: #fff;
+            border-bottom: 1px solid #000;
+            padding: 10px 20px;
+        }
+        
+        .top-label {
+            font-size: 10px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+            text-align: right;
+        }
+
+        .news-logo {
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: #000;
+            border-bottom: 4px solid var(--news-red);
+            display: inline-block;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .nav-bar {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .nav-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-inner a { color: #fff; border: none; }
+        .nav-inner a:hover { color: #ccc; background: none; }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .main-col {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+            font-size: 38px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .meta-data {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 24px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        p { margin-bottom: 18px; text-align: justify; }
+
+        ul { margin-bottom: 25px; padding-left: 20px; border-left: 3px solid var(--news-red); background: #fafafa; padding: 20px 20px 20px 40px; }
+        li { margin-bottom: 10px; }
+
+        /* HIGHLIGHT BOX (News Style) */
+        .highlight-box {
+            background-color: #fff;
+            border-top: 2px solid var(--news-red);
+            border-bottom: 2px solid var(--news-red);
+            padding: 20px 0;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-size: 22px;
+            color: #333;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        /* TESTIMONIALS (News Sidebar Style) */
+        .testimonial-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--news-blue);
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        /* CTA BUTTON */
+        .btn-primary {
+            background-color: #d92027; /* Signal Red */
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 700;
+            padding: 18px 30px;
+            text-decoration: none;
+            border-radius: 3px;
+            display: block;
+            margin: 30px auto;
+            width: 100%;
+            border: none;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .btn-primary:hover { background-color: #a00; color: #fff; }
+
+        /* FOOTER */
+        .site-footer {
+            background: #f4f4f4;
+            border-top: 1px solid #ddd;
+            padding: 40px 20px;
+            font-size: 12px;
+            color: #666;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .footer-links a { color: #555; margin: 0 10px; border:none; }
+        .fda-box { border: 1px solid #ccc; padding: 10px; margin-top: 20px; font-size: 11px; text-align: left; }
+
+        /* --- EMBEDDED WHEEL CSS (Preserved & Adapted) --- */
+        .spin-game-wrapper {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            max-width: 100%;
+            margin: 40px auto;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        .game-headline { font-family: 'Merriweather', serif; font-size: 24px; font-weight: 900; color: #333; margin-bottom: 5px; text-transform: uppercase; }
+        .game-subhead { font-size: 16px; color: #555; margin-bottom: 25px; }
+        .wheel-container { position: relative; width: 300px; height: 300px; margin: 0 auto 30px auto; border-radius: 50%; border: 8px solid #fff; box-shadow: 0 0 0 2px #ccc, 0 5px 15px rgba(0,0,0,0.2); }
+        .wheel { width: 100%; height: 100%; border-radius: 50%; transition: transform 4s cubic-bezier(0.15, 0, 0.2, 1); position: relative; background: conic-gradient( #72c934 0deg 60deg, #ffffff 60deg 120deg, #72c934 120deg 180deg, #ffffff 180deg 240deg, #72c934 240deg 300deg, #ffffff 300deg 360deg ); }
+        .wheel-label { position: absolute; top: 50%; left: 50%; width: 140px; height: 30px; margin-top: -15px; transform-origin: 0% 50%; text-align: right; padding-right: 35px; font-weight: 900; font-size: 24px; line-height: 30px; z-index: 2; text-shadow: 0 1px 1px rgba(0,0,0,0.1); }
+        .lbl-1 { transform: rotate(-60deg); color: #fff; } .lbl-2 { transform: rotate(0deg); color: #333; } .lbl-3 { transform: rotate(60deg); color: #fff; } .lbl-4 { transform: rotate(120deg); color: #333; } .lbl-5 { transform: rotate(180deg); color: #fff; } .lbl-6 { transform: rotate(240deg); color: #333; }
+        .center-cap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #fff; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 10; border: 4px solid #72c934; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .wheel-pointer { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: #d32f2f; clip-path: polygon(100% 0, 50% 100%, 0 0); z-index: 15; }
+        .spin-btn { background-color: #d32f2f; color: white; font-size: 20px; font-weight: 900; border: none; padding: 15px 50px; border-radius: 4px; cursor: pointer; text-transform: uppercase; width: 100%; max-width: 350px; }
+        .spin-btn:disabled { background-color: #ccc; cursor: default; }
+        .winner-overlay { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.98); z-index: 20; flex-direction: column; justify-content: center; align-items: center; animation: fadeIn 0.5s forwards; padding: 20px; }
+        .win-title { font-size: 28px; color: #72c934; font-weight: 900; margin-bottom: 10px; text-transform: uppercase; animation: popIn 0.5s ease; }
+        .win-desc { font-size: 18px; margin-bottom: 20px; color: #333; }
+        .final-cta-btn { background-color: #72c934; color: white; font-size: 20px; font-weight: bold; text-decoration: none; padding: 15px 30px; border-radius: 4px; display: inline-block; animation: pulse 1.5s infinite; text-transform: uppercase; }
+        .confetti { position: absolute; width: 8px; height: 8px; background-color: #f00; animation: fall linear forwards; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } @keyframes popIn { from { transform: scale(0.5); opacity:0; } to { transform: scale(1); opacity:1; } } @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } } @keyframes fall { to { transform: translateY(700px) rotate(720deg); } }
+
+        /* FB COMMENTS */
+        .fb-comments-wrapper { background: #fff; border-top: 4px solid #000; padding: 20px 0; margin: 40px auto; font-family: Arial, sans-serif; }
+        .fb-header-title { font-size: 20px; font-weight: bold; color: #000; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 20px; }
+        .fb-comment { display: flex; margin-bottom: 20px; align-items: flex-start; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+        .fb-comment.indented { margin-left: 40px; border-left: 3px solid #f0f0f0; padding-left: 10px; border-bottom: none; }
+        .fb-avatar { width: 40px; height: 40px; border-radius: 50%; margin-right: 15px; flex-shrink: 0; }
+        .fb-name { font-weight: bold; font-size: 14px; color: #365899; }
+        .fb-meta { font-size: 11px; color: #999; margin-bottom: 5px; }
+        .fb-text { font-size: 15px; color: #1d2129; line-height: 1.4; margin-bottom: 8px; }
+        .fb-action { font-size: 12px; color: #4267b2; cursor: pointer; }
+        .fb-image-proof { max-width: 200px; border-radius: 3px; margin-top: 5px; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            .nav-inner { display: none; } /* Hide detailed nav on mobile */
+            .news-logo { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="advertorial-header">
+        <div class="top-label">Anzeige</div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+            <div class="news-logo">GESUNDHEIT HEUTE</div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="nav-inner">
+            <a href="#">Nachrichten</a>
+            <a href="#">Politik</a>
+            <a href="#" style="color: #ff9999;">Gesundheit</a>
+            <a href="#">Wissen</a>
+            <a href="#">Reise</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-col">
+            <div class="meta-data">
+                <strong>Gesundheit & Ernährung</strong> | Von Redaktion | Aktualisiert: 16.01.2026
+            </div>
+    <img src="./lulu10/scp.jpg" alt="Transformation" style="width:100%; border-bottom: 0px solid var(--news-red);">
+            <h1>Jahrelang habe ich gelitten – bis ich dieses "Warmwasser-Ritual" entdeckte, das meinen Stoffwechsel explodieren ließ</h1>
+              <img src="./lulu10/168-1.jpeg" alt="Transformation" style="width:100%; border-bottom: 0px solid var(--news-red);">
+            
+        
+            
+            <p style="font-weight: bold; font-size: 20px; color: #444;">Ich war gefangen in einem Körper, den ich nicht mehr mochte... Dann fand ich das hier.</p>
+            
+  
+            
+            <p>Ich erinnere mich noch genau an den Moment, als ich wusste: Es muss sich etwas ändern.</p>
+            <p>Es war an einem Sommernachmittag. Ich machte mich fertig, um mit meinen Enkelkindern ins Schwimmbad zu gehen.</p>
+            <p>Ich warf einen Blick auf meinen Badeanzug und dann in den Spiegel. Mir wurde einfach nur übel.</p>
+            
+            <img src="./lulu10/98043438094038349.webp" alt="Traurige Frau im Spiegel">
+            
+            <p>Ich kam da nicht mehr raus.</p>
+            <p>Also zog ich ein riesiges Schlabber-Shirt an, erzählte den Kleinen, ich sei heute einfach zu müde, und wir würden an einem anderen Tag gehen.</p>
+            <p>Traurigerweise kam dieser Tag nie.</p>
+            <p>Ich mied nicht nur Badeanzüge – ich mied das Leben.</p>
+
+            <div class="highlight-box">
+                "Schon wieder von vorne anfangen... ich war es so leid. Hält dein Gewicht dich auch davon ab, das Leben zu leben, das du willst?"
+            </div>
+
+            <p>Ich habe immer alle anderen an erste Stelle gesetzt: meine Familie, meinen Job. Mich selbst zu pflegen, kam immer erst ganz zum Schluss.</p>
+            <p>Ich war immer diese "Am Montag fange ich an"-Person. Und diesmal, komme was wolle, wollte ich es durchziehen.</p>
+
+            <h2>Ich habe jeden neuen Trend ausprobiert</h2>
+            <img src="./lulu10/43098438948334.webp" alt="Frustriert mit Pillen">
+            <p>Keto, Kalorienzählen, Vorkochen.</p>
+            <p>Jedes Mal dachte ich: Das ist es. Das ist das Ding, das für mich funktioniert.</p>
+            <p>Jedes Mal fing ich super an, verlor ein paar Pfund – und dann kam das Leben dazwischen.</p>
+            <p>Ich bekam Stress, oder ich erreichte ein Plateau, und zack – war ich wieder genau dort, wo ich angefangen hatte.</p>
+            <p>Und manchmal nahm ich sogar noch mehr zu.</p>
+            <p>In was für einem elenden Teufelskreis ich steckte: Diät halten und hungern oder Fressanfälle und Schuldgefühle.</p>
+            <p>Es gab nur das eine oder das andere.</p>
+            <p><strong>Ich dachte, es sei meine Schuld. Ich dachte, ich habe einfach keine Willenskraft. Mein Stoffwechsel war eingeschlafen.</strong></p>
+            <p>Vielleicht war es mein Schicksal, für den Rest meines Lebens übergewichtig zu sein.</p>
+            <p>Ich war einfach nur müde.</p>
+            <p>Müde davon, mich auf Fotos zu verstecken.</p>
+            <p>Müde davon, mich auf Familienfeiern unwohl zu fühlen.</p>
+            <p>Müde davon, keine Kleidung zu finden, die richtig sitzt.</p>
+            <p>Müde davon, mich zu verhüllen, während andere Frauen trugen, was sie wollten.</p>
+            <p>Müde von dem Druck, auf eine bestimmte Weise auszusehen und mich trotzdem gut fühlen zu müssen.</p>
+            <p>Die Leute bemerkten es, wenn ich abnahm. Sie sagten: "Wow, du siehst toll aus!"</p>
+            <p>Und dann nahm ich alles wieder zu. Ich konnte spüren, wie sie mich ansahen.</p>
+            <p>Es war peinlich. Ich wollte das Gewicht verlieren – und es für immer loswerden.</p>
+            <p>Ich wollte so sehr mögen, was ich im Spiegel sah.</p>
+            <p>Ich wollte mich so sehr leichter und glücklicher fühlen – für immer.</p>
+
+            <h2>Dann passierte es: Ich fand etwas, das funktionierte</h2>
+            <img src="./lulu10/43290839084209834289.webp" alt="Gespräch mit Freundin">
+            <p>Da ich alle modischen Diäten durchhatte, suchte ich eigentlich nicht nach etwas Neuem.</p>
+            <p>Das Thema war für mich durch. Ich hatte es satt zu scheitern.</p>
+            <p>Dann hörte ich vom <strong>"Warmwasser-Trick"</strong> und dachte mir: Hä, ernsthaft?</p>
+            <p>Ich dachte, es sei viel zu simpel. Aber es soll eine versteckte Reaktion im Körper auslösen, die das Fett quasi "wegschmelzen" lässt. Das war der Moment, in dem sich alles änderte.</p>
+            <p>Keine Diät. Kein Trainingsplan. Keine weitere "Wunderpille".</p>
+            <p>So einfach, dass ich es fast ignoriert hätte.</p>
+            <p>Jeden Tag bemerkte ich eine Veränderung.</p>
+            <p>Kein Heißhunger, keine nächtlichen Snacks, kein Frustessen.</p>
+            <p>Mein Körper fühlte sich an, als würde er von innen gereinigt und als wäre mein Stoffwechsel endlich aufgewacht.</p>
+            <p>Ich verlor Gewicht. Ohne zu hungern, ohne Schuldgefühle.</p>
+            <p>Und weißt du was? <strong>Es war einfach.</strong></p>
+            <p>Ich befolge keine verrückten Regeln.</p>
+            <p>Ich zähle keine Kalorien.</p>
+            <p>Ich mache keine erschöpfenden Workouts.</p>
+            <p>Ich stecke nicht in einem Zyklus aus Verzicht und Versagen fest.</p>
+            <p>Kein ständiges Wiegen, kein ständiges Nachdenken über Essen.</p>
+
+            <img src="./lulu10/bf1.jpeg" alt="Glückliche Frau am Strand">
+            <p>Mein Körper fühlt sich 10 Jahre jünger an. Ich fühle mich leichter, glücklicher und voller Energie.</p>
+            <p>Ich liebe die Kleidung, die ich trage, und ich verstecke meinen Körper nicht mehr.</p>
+            <p>Ich mache mir keine Sorgen um Essen oder mein Aussehen.</p>
+            <p>Zum ersten Mal in meinem Leben habe ich die Kontrolle.</p>
+            <p>Keine langen Stunden im Fitnessstudio oder Verzicht auf meine Lieblingsspeisen.</p>
+            <p>Diäten bestimmen mein Leben nicht mehr.</p>
+            <p>Ich bin nicht erschöpft, überfordert oder schäme mich.</p>
+            <p>Ich kenne jetzt die Wahrheit: Diäten sind nicht nur für Leute mit Disziplin oder guten Genen.</p>
+            <p><strong>Es lag nicht an mir – die Diäten waren das Problem.</strong></p>
+
+            <h2>Es war zu schön, um wahr zu sein...</h2>
+            <p>Zuerst glaubte ich es nicht. Wie konnte etwas so Einfaches funktionieren?</p>
+            <p>Am Ende der ersten Woche...</p>
+            <ul>
+                <li>Fast kein Heißhunger mehr.</li>
+                <li>Ich fühle mich leichter, weniger aufgebläht und voller Energie.</li>
+                <li>Zwei Kilo weg!</li>
+            </ul>
+            <p>Und ich war nicht die Einzige, die es bemerkte.</p>
+            <p>Meine Schwester lachte. "Niemals funktioniert das", sagte sie. Und dann probierte sie es. Und es funktionierte auch bei ihr!</p>
+            <p>Sie nahm im ersten Monat 7 Kilo ab.</p>
+            <p>Meine beste Freundin, noch so eine Erfolgsgeschichte. "Was zur Hölle?!" Nach zwei Wochen passte sie in zwei Hosengrößen kleiner.</p>
+            <p>Da traf es mich wie ein Blitz: Das war nicht nur für mich. Jede Frau musste davon erfahren.</p>
+            <p>Es ist meine Realität, nicht nur ein Wunschtraum. Du hast wahrscheinlich jede Diät da draußen ausprobiert. Jetzt ist es anders.</p>
+            <p>Probier es nur einmal aus – du wirst innerhalb von Tagen wissen, ob es für dich funktioniert, genau wie bei mir.</p>
+            
+            <video src="./lulu10/gif1.mp4" autoplay loop muted playsinline style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);"></video>
+
+            <h2>Das Geheimnis hinter dem "Warmwasser-Ritual"</h2>
+            <p>Was genau ist also dieser "Trick", der mein Leben verändert hat?</p>
+            <p>Es stellt sich heraus, mein Erfolg war keine Magie. Es war ein einfaches, wohltuendes Ritual mit einem speziellen Tee namens <strong><a href="https://trk.cmclk.com/cf/click/1" target="_blank">Lulutox</a></strong>.</p>
+            <p>Im Gegensatz zu Pillen, die mir auf den Magen schlugen, oder Shakes, die nach Kreide schmeckten, ist Lulutox eine köstliche Mischung aus uralten Superfoods, die man warm genießt und die <em>mit</em> deinem Körper arbeiten, nicht gegen ihn.</p>
+            <p>Es wirkt als das ultimative <strong>"Stoffwechsel-Elixier für die Wechseljahre"</strong> auf 3 kraftvolle Arten:</p>
+            <ul>
+                <li>🔥 <strong>Stoffwechsel-Aktivierung:</strong> Zutaten wie Oolong und Matcha zünden die Kalorienverbrennung auf natürliche Weise.</li>
+                <li>🚽 <strong>Sanfte Entschlackung:</strong> Das warme Elixier spült sanft die "Altlasten" und Giftstoffe aus, die dich aufgebläht und schwer fühlen lassen.</li>
+                <li>⚡ <strong>Stoppt Heißhunger:</strong> Garcinia Cambogia hilft, dieses ständige "Ich habe Hunger"-Gefühl zu blockieren.</li>
+            </ul>
+
+            <h2>Echte Menschen, Echte Ergebnisse</h2>
+            
+            <div style="background: #eee; padding: 20px; margin-bottom: 30px;">
+                <img src="./lulu10/srxvzke_hero-17.jpg" alt="Erfahrungsbericht 1">
+                <div class="testimonial-box">
+                    <p><strong>⭐⭐⭐⭐⭐ "23 Kilo runter!"</strong><br>
+                    "Absolut unglaublich! 23 Kilo in 3 Monaten. Ich hätte nie gedacht, dass Abnehmen so einfach sein könnte. Sehr zu empfehlen!"</p>
+                    <p>— Sarah W.</p>
+                </div>
+                
+                <img src="./lulu10/b7ti0gz_hero-11.jpg" alt="Erfahrungsbericht 2">
+                <div class="testimonial-box">
+                    <p><strong>⭐⭐⭐⭐⭐ "14 Kilo weg in 6 Wochen!"</strong><br>
+                    "Ich passe endlich wieder in mein Hochzeitskleid! Dieses Produkt hat mein Leben komplett verändert!"</p>
+                    <p>— Katharina B.</p>
+                </div> 
+                
+                <img src="./lulu10/lisa-smith-testimonial.jpg" alt="Erfahrungsbericht 2">
+                <div class="testimonial-box">
+                    <p><strong>⭐⭐⭐⭐⭐ "Das Beste, was mir passieren konnte"</strong><br>
+                    "Ich trinke es jeden Abend warm. Es schmeckt lecker nach Pfirsich und der Blähbauch ist sofort weg. Ich liebe es."</p>
+                    <p>— Sabine K.</p>
+                </div>
+            </div>
+
+            <p>Gerade jetzt bietet Lulutox einen speziellen Rabatt für jeden an, der meine Geschichte liest.</p>
+            <p>Wenn du den Kampf leid bist, die Diäten satt hast und es leid bist, dich unsichtbar zu fühlen... <strong>drehe unten am Rad, um deinen exklusiven Rabatt zu gewinnen.</strong></p>
+
+            <div class="spin-game-wrapper">
+                <div class="game-headline">Haben Sie heute Glück?</div>
+                <div class="game-subhead">Drehen Sie das Rad für Ihren exklusiven Rabatt!</div>
+                <div class="wheel-container">
+                    <div class="wheel-pointer"></div>
+                    <div class="wheel" id="spinWheel">
+                        <div class="center-cap">🎁</div>
+                        <div class="wheel-label lbl-1">70%</div> <div class="wheel-label lbl-2">20%</div> <div class="wheel-label lbl-3">30%</div> <div class="wheel-label lbl-4">50%</div> <div class="wheel-label lbl-5">10%</div> <div class="wheel-label lbl-6">40%</div>
+                    </div>
+                </div>
+                <button class="spin-btn" id="btnSpin" onclick="spinWheel()">JETZT DREHEN</button>
+                <div class="winner-overlay" id="winnerOverlay">
+                    <div class="win-title">🎉 GLÜCKWUNSCH!</div>
+                    <div class="win-desc">Sie haben den <strong>70% RABATT</strong> Hauptpreis gewonnen!</div>
+                    <a href="https://trk.cmclk.com/cf/click/1" target="_blank" class="final-cta-btn">➡️ RABATT JETZT EINLÖSEN</a>
+                    <p style="font-size: 13px; margin-top: 20px; color: #888;">Gutschein reserviert für: <span id="timer">10:00</span></p>
+                </div>
+            </div>
+
+            <div class="fb-comments-wrapper">
+                <div class="fb-header-title">Leserkommentare (24)</div>
+
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Evelyn+Förster&background=random" class="fb-avatar" alt="Evelyn">
+                    <div class="fb-content">
+                        <div class="fb-name">Evelyn Förster</div>
+                        <div class="fb-meta">12.01.2026</div>
+                        <div class="fb-text">Hallo zusammen, ich habe ebenfalls mit Hilfe von Lulutox abgenommen. Ganz ehrlich: ich hätte nie gedacht, dass ich ein solches Ergebnis erreichen könnte! Ich hielt es für Unsinn und wollte es nicht einmal ausprobieren, aber meine Schwester hat mich überzeugt. Wir haben es zusammen bestellt und konnten beide abnehmen. In einem Monat habe ich 13 kg verloren und meine Schwester 4,5 kg, aber sie sah trotzdem schlanker aus als ich. Jetzt hat sich mein Gewicht stabilisiert und verändert sich nicht mehr!!! Ich bin super glücklich und empfehle jedem, es mindestens 2 Wochen lang auszuprobieren – dann werdet ihr die ersten Ergebnisse sehen!</div>
+                        <img src="./lulu10/10a1.jpg" class="fb-image-proof" alt="Evelyn Transformation"> 
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
+
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Eleonore+Lachmann&background=random" class="fb-avatar" alt="Eleonore">
+                    <div class="fb-content">
+                        <div class="fb-name">Eleonore Lachmann</div>
+                        <div class="fb-meta">12.01.2026</div>
+                        <div class="fb-text">
+                            Du hast Fett im Gehirn – selbst wenn du abnimmst, nimmst du sofort wieder zu, sobald du nur ein bisschen mehr isst.
+                        </div>
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Winona+Evers&background=random" class="fb-avatar" alt="Winona">
+                    <div class="fb-content">
+                        <div class="fb-name">Winona Evers</div>
+                        <div class="fb-meta">12.01.2026</div>
+                        <div class="fb-text">
+                            Mädels, hört nicht auf andere – macht, was euch glücklich macht. Wenn ich es geschafft habe, schafft ihr das auch! Ich empfehle Lulutox jedem, es hat mir sehr geholfen.
+                        </div>
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Abigail+Lehmann&background=random" class="fb-avatar" alt="Abigail">
+                    <div class="fb-content">
+                        <div class="fb-name">Abigail Lehmann</div>
+                        <div class="fb-meta">11.01.2026</div>
+                        <div class="fb-text">
+                            Wow!! Das ist der zweite Tag, an dem ich es nehme, und ich habe schon bemerkt, dass ich ruhiger bin, mein Appetit nachgelassen hat, ich keine Lust mehr auf Süßes habe und meine Laune super ist. Alles läuft perfekt!!!
+                        </div>
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
+                <div class="fb-comment">
+                    <img src="https://ui-avatars.com/api/?name=Stella+Dubber&background=random" class="fb-avatar" alt="Stella">
+                    <div class="fb-content">
+                        <div class="fb-name">Stella Dubber</div>
+                        <div class="fb-meta">11.01.2026</div>
+                        <div class="fb-text">
+                            Gut gemacht! Du hast dich selbst schöner gemacht und auch anderen Frauen geholfen!
+                        </div>
+                        <img src="./lulu10/t4.png" class="fb-image-proof" alt="Stella Transformation">
+                        <div class="fb-action">Antworten</div>
+                    </div>
+                </div>
+                <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Myrna+Starkmann&background=random" class="fb-avatar" alt="Myrna">
+        <div class="fb-content">
+            <div class="fb-name">Myrna Starkmann</div>
+            <div class="fb-meta">11.01.2026</div>
+            <div class="fb-text">
+                Mädels, zweifelt nicht. Ich habe mit Hilfe von Lulutox abgenommen und möchte es jetzt mit dem Rabatt für meine Freundin bestellen. Ich hasse Diäten und freue mich, dass ich wie gewohnt essen und trotzdem meine Figur verbessern kann!
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Greta+Grau&background=random" class="fb-avatar" alt="Greta">
+        <div class="fb-content">
+            <div class="fb-name">Greta Grau</div>
+            <div class="fb-meta">11.01.2026</div>
+            <div class="fb-text">
+                Danke für den Artikel, genau das habe ich gebraucht. Ich habe das Formular ausgefüllt und kann es kaum erwarten, das Paket zu erhalten.
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Victoria+Michel&background=random" class="fb-avatar" alt="Victoria">
+        <div class="fb-content">
+            <div class="fb-name">Victoria Michel</div>
+            <div class="fb-meta">11.01.2026</div>
+            <div class="fb-text">
+                Ich habe Lulutox vor einem Monat entdeckt und die Anwendung bereits abgeschlossen. Das Ergebnis ist erstaunlich, sogar Experten empfehlen es – ich habe es dank meiner Kollegin entdeckt. Ich liebe die Resultate!
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Lilly+Maurer&background=random" class="fb-avatar" alt="Lilly">
+        <div class="fb-content">
+            <div class="fb-name">Lilly Maurer</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Schluss mit den Klischees über Frauenkörper! Warum muss denn jede Frau schlank sein? Ich zum Beispiel wiege 72 kg, bin 1,67 m groß und schäme mich nicht. Ich liebe mein Aussehen und fühle mich großartig!!
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Ashley+Mohr&background=random" class="fb-avatar" alt="Ashley">
+        <div class="fb-content">
+            <div class="fb-name">Ashley Mohr</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Kann man nur einmal am Gewinnspiel teilnehmen? Ich hatte bisher kein Glück.
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Zoe+Reiter&background=random" class="fb-avatar" alt="Zoe">
+        <div class="fb-content">
+            <div class="fb-name">Zoe Reiter</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Mädels!!! Ich muss dringend 8 Kilo abnehmen!!! Ich war 6 Monate zu Hause und habe gar nicht gemerkt, dass ich so viel zugenommen habe. Was soll ich tun!!!? Helft mir!!! Ich kann keine Diät machen, ich habe keine Willenskraft, ich halte es nicht durch und esse dann noch mehr. Nicht einmal das Fitnessstudio ist etwas für mich, ich bin zu faul........
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Amelia+Eder&background=random" class="fb-avatar" alt="Amelia">
+        <div class="fb-content">
+            <div class="fb-name">Amelia Eder</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Wenn es wirklich funktioniert, ist es großartig, aber ich bin ein wenig skeptisch. Ich kann an die Kraft eines Medikaments glauben, aber nicht an einen einfachen Pflanzenextrakt. Aber da ich den Körper meiner Träume haben möchte, werde ich auch mein Glück versuchen, um zu sehen, ob ich einen Rabatt bekomme!
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Elise+Dassow&background=random" class="fb-avatar" alt="Elise">
+        <div class="fb-content">
+            <div class="fb-name">Elise Dassow</div>
+            <div class="fb-meta">12.01.2026</div>
+            <div class="fb-text">
+                Ich wiege 88 kg und weiß nicht, wie ich abnehmen soll. Ich möchte nicht über 90 kg kommen. Was soll ich tun!!! Helft mir!!! Kann ich Lulutox in Apotheken finden???
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment indented">
+        <img src="https://ui-avatars.com/api/?name=Hanna+Evers&background=random" class="fb-avatar" alt="Hanna">
+        <div class="fb-content">
+            <div class="fb-name">Hanna Evers</div>
+            <div class="fb-meta">12.01.2026</div>
+            <div class="fb-text">
+                Elise, natürlich könntest du dort danach suchen, aber ich habe dank des Gewinnspiels einen Rabatt bekommen und es lohnt sich wirklich – tatsächlich kannst du bis zu -70% erhalten!
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Scarlett+Girsch&background=random" class="fb-avatar" alt="Scarlett">
+        <div class="fb-content">
+            <div class="fb-name">Scarlett Girsch</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Hast du schon einmal versucht, einfach weniger zu essen? Ich verstehe es, wenn man als Kind isst, was einem gegeben wird – aber als Erwachsener, ist es wirklich unmöglich, sich zu kontrollieren und nicht zu viel zu essen?
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment indented">
+        <img src="https://ui-avatars.com/api/?name=Chloe+Löwe&background=random" class="fb-avatar" alt="Chloe">
+        <div class="fb-content">
+            <div class="fb-name">Chloe Löwe</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Scarlett, ich esse praktisch nichts, aber es hilft nicht. Ich nehme einfach nicht ab.
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Natalie+Martens&background=random" class="fb-avatar" alt="Natalie">
+        <div class="fb-content">
+            <div class="fb-name">Natalie Martens</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Ich war überrascht, dass du geschrieben hast, als ob nur Ernährungsberater und Endokrinologen von Lulutox wüssten. Ich nehme es seit 2 Jahren regelmäßig. Am Anfang, als ich mit der Einnahme begann, habe ich 13 kg abgenommen, jetzt nehme ich es zur Vorbeugung und wegen der Vitamine, da es ein natürlicher, pflanzlicher Extrakt ist. Übrigens benutzen es auch meine Freunde schon lange, also ist es nicht nur dein Geheimnis hahaah.
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Clarissa+Neumann&background=random" class="fb-avatar" alt="Clarissa">
+        <div class="fb-content">
+            <div class="fb-name">Clarissa Neumann</div>
+            <div class="fb-meta">11.01.2026</div>
+            <div class="fb-text">
+                Was für ein Glück im Gewinnspiel!!! Ich habe einen Rabatt gewonnen, ich hatte noch nie etwas gewonnen!!!
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Alisa+Thomsen&background=random" class="fb-avatar" alt="Alisa">
+        <div class="fb-content">
+            <div class="fb-name">Alisa Thomsen</div>
+            <div class="fb-meta">11.01.2026</div>
+            <div class="fb-text">
+                Meine Tochter hat mir diese Teebeutel gegeben, sie enthalten viele Vitamine. Sie nimmt sie, um nach der Geburt abzunehmen, und hat bereits 6 Kilo verloren.
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Emma+Schneider&background=random" class="fb-avatar" alt="Emma">
+        <div class="fb-content">
+            <div class="fb-name">Emma Schneider</div>
+            <div class="fb-meta">11.01.2026</div>
+            <div class="fb-text">
+                Danke, das ist sehr interessant. Ich bestelle es, solange die Aktion noch läuft.
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Jakob+Harpner&background=random" class="fb-avatar" alt="Jakob">
+        <div class="fb-content">
+            <div class="fb-name">Jakob Harpner</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Dieses Produkt ist perfekt für mich. Ich war dick und niemand wollte mich.... Jetzt habe ich eine Freundin. Ich habe schnell abgenommen. Hier sind meine Fotos!
+            </div>
+            <img src="./lulu10/10a2.jpg" class="fb-image-proof" alt="Jakob Transformation">
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Mia+Gallner&background=random" class="fb-avatar" alt="Mia">
+        <div class="fb-content">
+            <div class="fb-name">Mia Gallner</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Nun, mein Mann und ich kennen Lulutox schon lange. Früher hatten wir Gewichtsprobleme, aber jetzt denken wir nicht einmal mehr daran – wir essen, was wir wollen, und wenn wir ein paar Kilo zunehmen, nehmen wir sofort Lulutox, um wieder in Form zu kommen.
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Brigitte+Richter&background=random" class="fb-avatar" alt="Brigitte">
+        <div class="fb-content">
+            <div class="fb-name">Brigitte Richter</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Ich möchte allen danken, die ihre Kommentare hinterlassen und ihre Fotos geteilt haben! Eure Ergebnisse geben mir so viel Hoffnung! Ich habe einen starken Wunsch, mich zu verändern, aber ich habe es seit vielen Jahren nicht geschafft, Gewicht zu verlieren. Sobald ich ein paar Kilo abnehme, kommen sie sofort zurück.
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Samantha+Röber&background=random" class="fb-avatar" alt="Samantha">
+        <div class="fb-content">
+            <div class="fb-name">Samantha Röber</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Ich schaue mir auch die Vorher- und Nachher-Fotos an. Was für eine Freude! Ich hoffe, bald denselben Kommentar hinterlassen zu können. In der Zwischenzeit habe ich gerade mein Paket erhalten!
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+    <div class="fb-comment">
+        <img src="https://ui-avatars.com/api/?name=Sarah+Schott&background=random" class="fb-avatar" alt="Sarah">
+        <div class="fb-content">
+            <div class="fb-name">Sarah Schott</div>
+            <div class="fb-meta">13.01.2026</div>
+            <div class="fb-text">
+                Um Lulutox in unserem Land zu bekommen, müssen wir dann am Gewinnspiel teilnehmen oder können wir es in Online-Shops kaufen?
+            </div>
+            <div class="fb-action">Antworten</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container" style="display: block;">
+            <div class="footer-links">
+                <a href="#" target="_blank">Datenschutz</a> | 
+                <a href="#" target="_blank">AGB</a> | 
+                <a href="#" target="_blank">Widerrufsrecht</a> | 
+                <a href="#" target="_blank">Kontakt</a> |
+                <a href="#" target="_blank">Impressum</a>
+            </div>
+            <div style="margin-top: 20px;">Copyright © 2025 Gesundheit Heute Verlag. Alle Rechte vorbehalten.</div>
+            <div class="fda-box">
+                Die Informationen auf dieser Website wurden nicht von der Lebensmittel- und Arzneimittelbehörde oder einer anderen medizinischen Stelle bewertet. Wir beabsichtigen nicht, Krankheiten zu diagnostizieren, zu behandeln, zu heilen oder zu verhindern. Die Informationen werden nur zu Bildungszwecken weitergegeben. Sie sollten immer Ihren Arzt konsultieren, bevor Sie auf Inhalte dieser Website reagieren, insbesondere wenn Sie schwanger sind, stillen, Medikamente einnehmen oder an einer Krankheit leiden.
+                <br><br>
+                Diese Seite ist kein Teil der Facebook-Website oder von Facebook Inc. Außerdem wird diese Seite NICHT von Facebook in irgendeiner Weise unterstützt. FACEBOOK ist eine Marke von FACEBOOK, Inc.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    function spinWheel() {
+        const wheel = document.getElementById('spinWheel');
+        const overlay = document.getElementById('winnerOverlay');
+        const wrapper = document.querySelector('.spin-game-wrapper');
+        const btn = document.getElementById('btnSpin');
+        btn.disabled = true;
+        btn.style.opacity = "0.5";
+        btn.innerText = "VIEL GLÜCK...";
+        const winningDegree = 2130; 
+        wheel.style.transform = `rotate(${winningDegree}deg)`;
+        setTimeout(() => {
+            overlay.style.display = 'flex';
+            triggerConfetti(wrapper);
+            startTimer();
+        }, 4000);
+    }
+    function triggerConfetti(container) {
+        const colors = ['#d32f2f', '#72c934', '#fcb900', '#0099ff'];
+        for (let i = 0; i < 60; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = -10 + 'px';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            container.appendChild(confetti);
+        }
+    }
+    function startTimer() {
+        let duration = 600; 
+        const display = document.querySelector('#timer');
+        setInterval(function () {
+            let minutes = parseInt(duration / 60, 10);
+            let seconds = parseInt(duration % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            display.textContent = minutes + ":" + seconds;
+            if (--duration < 0) { duration = 0; }
+        }, 1000);
+    }
+    </script>
+    <script>!function(){"use strict";var n="lp_ref",t="cpid",e="lpurl",c="https://trk.cmclk.com",r="(?<domain>http(?:s?)://[^/]*)".concat("/cf/click"),a="(?:(?:/(?<cta>[1-9][0-9]*)/?)|(?:/))?",i="^".concat(r).concat(a).concat("(?:$|(\\?.*))"),o='javascript:window.clickflare.l="(?<original_link>'.concat(r).concat(a,'("|(\\?[^"]*"))).*'),s=function(){return new RegExp(i,"")},u=function(){return new RegExp(o,"")};function l(n){var t=function(n){return n.replace(s(),(function(n){for(var t=[],e=1;e<arguments.length;e++)t[e-1]=arguments[e];var r=t[t.length-1].domain;return n.replace(r,c)}))}(n);return'javascript:window.clickflare.l="'.concat(t,'"; void 0;')}function d(n,t){if(t&&n&&t.apply(document,[n]),/loaded|interactive|complete/.test(document.readyState))for(var e=0,c=document.links.length;e<c;e++)if(s().test(document.links[e].href)){var r=document.links[e];window.clickflare.links_replaced.has(r)||(r.href=l(r.href),window.clickflare.links_replaced.add(r))}}var f,h,m,p;!function(r,a){var i=document.onreadystatechange;window.clickflare||(window.clickflare={listeners:{},customParams:{},links_replaced:new Set,addEventListener:function(n,t){var e=this.listeners[n]||[];e.includes(t)||e.push(t),this.listeners[n]=e},dispatchEvent:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))},push:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))}},document.onreadystatechange=function(n){return d(n,i)},d(null,i),setTimeout((function(){!function(r,a){var i,o=function(r,a){var i=new URL("".concat(c).concat(r)),o="{",s=o+o;a.startsWith(s)||i.searchParams.set(t,a);return i.searchParams.append(n,document.referrer),i.searchParams.append(e,location.href),i.searchParams.append("lpt",document.title),i.searchParams.append("t",(new Date).getTime().toString()),i.toString()}(r,a),s=document.createElement("script"),l=document.scripts[0];s.async=1,s.src=o,s.onerror=function(){!function(){for(var n=function(n,t){var e=document.links[n];u().test(decodeURI(e.href))&&setTimeout((function(){e&&e.setAttribute("href",function(n){var t=n.match(u());if(t){var e=(t.groups||{}).original_link;return e?e.slice(0,-1):n}return n}(decodeURI(e.href)))}))},t=0,e=document.links.length;t<e;t++)n(t)}()},null===(i=l.parentNode)||void 0===i||i.insertBefore(s,l)}(r,a)})))}("".concat("/cf/tags","/").concat(new URL(window.location.href).searchParams.get("cftmid")||"{{__CONTAINER_ID__}}"),(m=new URL(window.location.href).searchParams.get(t),f=new RegExp("(^| )".concat("cf_cpid","=([^;]+)")),p=(h=document.cookie.match(f))&&h.pop()||null,m||p||"{{__CAMPAIGN_ID__}}"))}();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"51c74777a23b422eb3a377f88e088bbb","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script></body></html>
