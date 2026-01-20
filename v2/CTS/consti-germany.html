@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ich litt drei Jahre lang an chronischer Verstopfung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Roboto:wght@300;400;500;700&display=swap');
+
+        :root {
+            --spiegel-red: #E64415;
+            --text-black: #111;
+            --bg-grey: #f2f2f2;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-black);
+            background-color: white;
+        }
+
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Spiegel Header Imitation */
+        .logo-text {
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .highlight-box {
+            border-left: 4px solid var(--spiegel-red);
+            background-color: #fff5f2;
+            padding: 1.5rem;
+            font-style: italic;
+            margin: 1.5rem 0;
+            font-family: 'Merriweather', serif;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            background-color: var(--spiegel-red);
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .cta-button:hover {
+            background-color: #c43810;
+        }
+
+        .img-caption {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 8px;
+            border-left: 1px solid #ccc;
+            padding-left: 10px;
+            line-height: 1.2;
+        }
+
+        /* Checkmark List */
+        .check-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        .check-list li::before {
+            content: '✓';
+            color: var(--spiegel-red);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Quiz Styles */
+        .quiz-option {
+            display: block;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            background: #eee;
+            border-color: #bbb;
+        }
+        .quiz-option input {
+            margin-right: 10px;
+        }
+
+        /* Comment Section */
+        .comment-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+        .comment-avatar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .comment-date {
+            color: #888;
+            font-size: 0.75rem;
+        }
+        
+        /* Door Game Animations */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .shake-door {
+            animation: shake 0.4s ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <div class="hidden md:block border-b text-xs text-gray-600 py-1 bg-gray-50">
+        <div class="container mx-auto px-4 flex justify-between">
+            <div class="space-x-4 font-bold">
+                <span>Anmelden</span>
+                <span>Shop</span>
+                <span>Abo</span>
+            </div>
+            <div>
+                <span id="headerDate"></span>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white py-6 md:py-8 border-b-4 border-[#E64415]">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-end">
+                <a href="#" class="text-3xl md:text-5xl logo-text leading-none text-black hover:opacity-80">
+                    DER SPIEGEL
+                </a>
+                <span class="hidden md:block font-bold text-[#E64415] text-xl uppercase">Gesundheit</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-[#E64415] text-white py-2 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 overflow-x-auto">
+            <div class="flex space-x-6 text-sm md:text-base font-bold whitespace-nowrap">
+                <a href="#" class="hover:text-gray-200">Schlagzeilen</a>
+                <a href="#" class="hover:text-gray-200">Plus</a>
+                <a href="#" class="hover:text-gray-200">Politik</a>
+                <a href="#" class="hover:text-gray-200">Wirtschaft</a>
+                <a href="#" class="hover:text-gray-200">Panorama</a>
+                <a href="#" class="hover:text-gray-200">Sport</a>
+                <a href="#" class="hover:text-gray-200">Wissenschaft</a>
+                <a href="#" class="hover:text-gray-200 underline">Gesundheit</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-4 text-xs text-gray-500 uppercase font-bold tracking-wider">
+        <a href="#">Startseite</a> <span class="mx-1">></span> <a href="#">Gesundheit</a> <span class="mx-1">></span> <span class="text-[#E64415]">Verdauung</span>
+    </div>
+
+    <main class="container mx-auto px-4 py-2 max-w-4xl">
+        <article>
+            <span class="block text-[#E64415] font-bold uppercase text-sm mb-2">Erfahrungsbericht</span>
+            <h1 class="text-2xl md:text-4xl font-black mb-4 leading-tight serif-font text-gray-900">
+                Ich litt drei Jahre lang an chronischer Verstopfung und landete deswegen fast auf dem OP-Tisch!
+            </h1>
+            
+            <div class="flex items-center text-sm text-gray-500 mb-6 border-b pb-4">
+                <span class="font-bold text-gray-900 mr-2">Von Eleonore A.</span>
+                <span class="mx-2">|</span>
+                <span id="currentDate"></span>
+            </div>
+
+            <div class="mb-6">
+                <img src="./images/1.jpg" alt="Intro" class="w-full rounded-sm">
+                <div class="img-caption">Aber ich fand einen Weg, die Verstopfung in nur 4 Wochen für immer loszuwerden!!</div>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-4 serif-font">Meine Geschichte: Wie ich die Verstopfung in 4 Wochen loswurde!</h2>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Hallo! Mein Name ist Eleonore. Ich bin 58 Jahre alt und lebe in <span id="cityName">Berlin</span>. Heute möchte ich meine Geschichte teilen, wie ich massive <b>Verdauungsprobleme</b> hatte und wie ich es schaffte, <b>die Verstopfung für immer loszuwerden!</b>
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Im Alter von 55 Jahren hatte ich zum ersten Mal eine Magen-Darm-Erkrankung, und <b>dann wurde bei mir Gastritis diagnostiziert</b>. Der Grund dafür war eine ungesunde Ernährung! Ich arbeitete als Kassiererin in einem örtlichen Supermarkt. Bei der Arbeit waren wir ständig beschäftigt, also ersetzten wir ein normales Mittagessen oft durch Kaffee und Kekse. Damals schien mir das zu reichen, aber mit den Jahren nahm mein Appetit ab. Nach der Untersuchung sagte der Spezialist, dass sich <b>Gastritis in 70% der Fälle</b> bei Menschen in meinem Alter mit dieser Ernährung entwickelt.
+            </p>
+
+            <div class="mb-6">
+                <img src="./images/2.jpg" alt="Darmprobleme" class="w-full rounded-sm">
+                <div class="img-caption">Ansammlung von Kot im Darm.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Ich begann mit der Behandlung, und nach einem Monat bemerkte ich, dass ich nur noch 2-3 Mal pro Woche zur Toilette ging. Zuerst schenkte ich dem keine Beachtung, aber es wurde jede Woche schlimmer. Irgendwann konnte ich einfach nicht mehr ohne Schmerzen zur Toilette gehen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Ich ging zum gleichen Spezialisten. Er sagte, dass ich <b>Verstopfung</b> hätte, was durch Verdauungsstörungen und eine Nebenwirkung der Medikamente verursacht sein könnte, die ich gegen Gastritis einnahm. Er verschrieb Abführmittel und schickte mich nach Hause. Ich machte die Kur, aber <b>nichts änderte sich</b>. Nach der Einnahme der Medikamente wurde es nur für ein paar Tage leichter, und dann kam alles zurück.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Nach einem Monat Anwendung wurde mir klar, dass diese Abführmittel mir nicht helfen würden, und ich beschloss, erneut zum Spezialisten zu gehen. <b>Er zuckte nur mit den Schultern und sagte:</b> <i>„In Ihrem Alter ist das normal. Es ist schwierig, Verstopfung vollständig loszuwerden. Ich habe bereits die besten Mittel verschrieben, die ich kenne.“</i>
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Seine Gleichgültigkeit machte mich wahnsinnig! Warum nennen Sie sich Experte, wenn Sie nicht helfen können? Ich hatte bereits über 1.500 € für die empfohlenen Mittel ausgegeben, und das Ergebnis war gleich null. Ich kehrte nach Hause zurück und hoffte, dass sich mein Körper vielleicht anpassen würde und die Verstopfung von selbst verschwinden würde.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                <b>Sechs Monate vergingen.</b> Ich begann unter ständigen Bauchschmerzen, Übelkeit und Schwindel zu leiden. Jeder Gang zur Toilette war eine Qual. Es fühlte sich an, als würde ich versuchen, Steine auszuscheiden. Entschuldigung für die Details, aber man kann es nicht anders sagen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Ich begann im Internet nach Informationen zu suchen und erfuhr, dass der Körper bei Verstopfung bis zu 8 Kilogramm <b>giftige Schlacken</b> ansammeln kann, die den Körper von innen vergiften und den Darm auf gefährliche Größen dehnen.
+            </p>
+
+            <div class="mb-6">
+                <img src="./images/3.jpg" alt="Röntgen" class="w-full rounded-sm">
+                <div class="img-caption">So sieht eine Kotansammlung auf einem Röntgenbild aus.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Mit jeder Woche wurden die Schmerzen stärker. Ich hielt es nicht mehr aus. Die Informationen im Internet machten mir Angst, und ich beschloss, in eine teure Privatklinik zu gehen, in der Hoffnung, dass sie die wahre Ursache meines Problems finden würden.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Ich wurde in der Klinik wunderbar empfangen: freundliches Personal, aufmerksame Haltung. Es war völlig anders als in meiner örtlichen Praxis. Ich wurde von einem erfahrenen Spezialisten mit 12 Jahren Erfahrung empfangen. Er befragte mich ausführlich zu meinen Symptomen, hörte aufmerksam zu, untersuchte mich und schickte mich zur weiteren Untersuchung.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                <b>Die Ergebnisse kamen sehr schnell, und sie schockierten mich.</b> Der Experte sagte, die Situation sei ernst:
+            </p>
+
+            <div class="highlight-box">
+                <p>
+                    „Ihr Darm ist zu überlastet; über 6 Kilogramm Abfallstoffe haben sich darin angesammelt. Die Tests zeigten einen hohen Toxingehalt im Blut, und aufgrund des ständigen Stresses haben sich Narben an den Darmwänden gebildet. Wenn Sie nicht mit der Reinigung beginnen, kann dies zu gefährlichen Komplikationen führen. Ich empfehle Ihnen, sofort mit der natürlichen Wiederherstellung zu beginnen; sonst schafft es der Körper nicht alleine. Verstehen Sie, dass Ihre Dickdarmkontraktionen nur alle paar Tage stattfinden; Ihr Körper kann diesen Kot physisch nicht ausscheiden!“
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <img src="./images/4.jpg" alt="Darm Scan" class="w-full rounded-sm">
+                <div class="img-caption">So sah mein Darm auf dem Röntgenbild aus.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800 font-bold">
+                Ich stimmte der Operation zu, obwohl sie sehr teuer für mich war.
+            </p>
+            <p class="text-lg leading-relaxed mb-6 text-gray-800 font-bold">
+                Die Operation wurde für einen Monat später angesetzt, also kehrte ich nach der Konsultation mit dem Experten nach Hause zurück.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Dann erinnerte ich mich, dass der Mann meiner Kollegin Madeleine vor sechs Monaten ein ähnliches Problem hatte. Ich beschloss, sie anzurufen, um herauszufinden, wie alles gelaufen war und was ihm geholfen hatte. Madeleine sagte, sie würde morgen zur Arbeit kommen und mir mehr erzählen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Am nächsten Tag ging ich zu Madeleine und begann ein Gespräch. Ich war fassungslos, weil die Frau aufgeregt wurde.
+            </p>
+
+            <div class="bg-gray-100 p-6 rounded mb-6 italic">
+                <p class="mb-2">— Was ist passiert?</p>
+                <p class="mb-2">— Mein Mann… hatte vor einem Monat Komplikationen nach Problemen mit dem Magen-Darm-Trakt.</p>
+                <p class="mb-2">— Wie das? Er ist doch erst 55!</p>
+                <p>— Er hatte schwere Verstopfung und musste operiert werden. Aber danach gab es einen Rückfall, und sein Körper konnte sich nicht normalisieren. Die Operation war erfolgreich, aber ein paar Wochen später wurde bei ihm eine Darmanomalie diagnostiziert. Jetzt muss er mit einem speziellen Beutel herumlaufen, um den Kot aufzufangen, weil er sich nicht normal entleeren kann.</p>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                <b>Ich stand unter Schock.</b> Mein Spezialist hatte mich auch gewarnt, dass ich Gefahr liefe, eine Anomalie zu entwickeln, und jetzt geriet ich noch mehr in Panik. Ich fragte Madeleine nach allen Einzelheiten, wie ihr Mann behandelt wurde, was seine Symptome waren. Und es stellte sich heraus, dass ihm die gleichen Medikamente verschrieben wurden, die ich einnahm. Aber sie halfen nicht!
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800 font-bold text-center text-[#E64415]">
+                Ich begann Panik zu bekommen!
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Ich ging kaum noch zur Arbeit; meine Hände zitterten, und ich wurde von angstvollen Gedanken verfolgt. Ich hatte keine Kraft mehr zu arbeiten. Es schien, als wäre das Leben vorbei. Ich fühlte ständigen Schmerz, Angst und Ohnmacht. Ich beschloss, nicht aufzugeben und begann, nach einem natürlichen Weg zu suchen, um die Verstopfung loszuwerden und eine Operation zu vermeiden.
+            </p>
+
+            <div class="mb-6">
+                <img src="./images/30.jpg" alt="Darm Stadien" class="w-full rounded-sm">
+                <div class="img-caption">Stadien der Darmanomalie-Entwicklung, die innerhalb von 1-2 Jahren auftreten.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800 font-bold">
+                Ich begann im Internet nach einer Lösung zu suchen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                So stieß ich auf ein Forum, in dem eine Frau ihre Geschichte teilte: Sie heilte chronische Verstopfung ohne Operation, Spritzen oder Pillen. Nur ein Tee half ihr. Ihrer Meinung nach wirkt er stark, ist aber völlig natürlich. Der Preis war angemessen, und die Zusammensetzung ist rein pflanzlich. Nach all den Ausgaben für Medikamente dachte ich: "Ein paar Euro mehr sind kein so großer Betrag, wenn es wirklich hilft."
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Ich kontaktierte die Frau, um herauszufinden, wo sie ihn bestellt hatte. Es stellte sich heraus, dass dieser Tee nur auf der offiziellen Website des Herstellers verkauft wird. Und selbst dort ist er nicht immer verfügbar. Aber ich hatte Glück, ich schaffte es, eine Bestellung aufzugeben, gerade als er verfügbar war. Ich erhielt den Tee 4 Tage später per Post.
+            </p>
+
+            <div class="mb-6">
+                <img src="./images/5.jpg" alt="Verpackung" class="w-full rounded-sm">
+                <div class="img-caption">So sieht die Teeverpackung aus.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Zuerst glaubte ich nicht wirklich daran, dass es funktionieren würde, weil ich schon Dutzende verschiedener Mittel ohne Erfolg ausprobiert hatte.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Aber nach zwei Tagen der Einnahme erkannte ich, dass dieses Mal alles anders war. <b>Das ist das effektivste Produkt, das ich je probiert habe!</b> Ich trank es jeden Morgen nach dem Essen. Schon nach dem ersten Tag spürte ich Erleichterung: Die Krämpfe und die Schwere im Magen verschwanden. Und am Abend des zweiten Tages konnte ich ohne Probleme zur Toilette gehen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Der Tee wirkt sanft, ohne scharfe Krämpfe und ohne den unangenehmen Effekt, der oft nach Abführmitteln auftritt. <b>Nach 4 Tagen waren alle toxischen Rückstände, die sich über Monate angesammelt hatten, vollständig aus dem Körper ausgeschieden.</b> Ich trank ihn noch zwei Wochen lang weiter zur vollständigen Genesung, denn die Darmreinigung ist nur der erste Schritt, um das Problem vollständig loszuwerden.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Seine Hauptwirkung besteht darin, die Arbeit des gesamten Verdauungstraktes zu normalisieren und die natürliche Kontraktion des Rektums wiederherzustellen. Jetzt verstehe ich, warum diese Abführmittel, die mir der Spezialist riet, nur für ein paar Tage halfen: Sie entfernen einfach den Abfall, beseitigen aber nicht die Ursache. Und dieses Produkt funktioniert anders; es beseitigt die Wurzel des Problems. Das Produkt heißt <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a>.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Bei einem Besuch beim Spezialisten bestätigte er das Ergebnis: <b>Die Verstopfung war wirklich vollständig verschwunden!</b> Und das ohne Schaden für die Mikroflora. Also scheint alles gut gegangen zu sein, ohne Nebenwirkungen. Die Operation wurde sofort abgesagt. Ich habe keine Worte, um zu beschreiben, wie glücklich ich damals war! Ich fühlte eine unglaubliche Erleichterung! Wer chronische Verstopfung losgeworden ist, wird mich definitiv verstehen.
+            </p>
+
+            <div class="mb-6">
+                <img src="./images/6.jpg" alt="Darm gesund" class="w-full rounded-sm">
+                <div class="img-caption">Der Zustand meines Darms nach einer Kur mit Lulutox Detox Tea.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Es sind drei Monate seit dieser ganzen Geschichte vergangen, und ich fühle mich immer noch großartig! Ich gehe normal zur Toilette und spüre keine Schmerzen oder Unbehagen mehr. Ich konnte sogar wieder zur Arbeit gehen! Oh, ich wünschte, ich hätte <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a> sofort gefunden.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Aber wenn Sie das gleiche Problem mit Verdauung und Verstopfung haben, lösen Sie es schneller! Ich bin sehr froh, dass ich es geschafft habe, eine Operation und Rückfälle zu vermeiden und die Verstopfung relativ schnell loszuwerden! Ich wünsche Ihnen dasselbe!
+            </p>
+
+            <h2 class="text-2xl font-bold mt-10 mb-4 serif-font">
+                Unseren Journalisten gelang es, einen Kommentar von einem Spezialisten zu erhalten, der persönlich an der Entwicklung von Lulutox Detox Tea beteiligt war. Hier ist, was er uns erzählte:
+            </h2>
+
+            <div class="mb-6">
+                <img src="./images/7.jpg" alt="Doktor" class="w-full rounded-sm">
+                <div class="img-caption">Dr. Logan B. ist ein leitender Experte auf dem Gebiet der Gastroenterologie in den USA. Berufserfahrung - 25 Jahre.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-4 text-gray-800 font-bold">— Logan, warum leiden Ihrer Meinung nach heute so viele Menschen an Verdauungsproblemen und Verstopfung, trotz moderner Behandlungsmethoden?</p>
+
+            <p class="text-lg leading-relaxed mb-4 text-gray-800">— Dies liegt vor allem an:</p>
+
+            <ul class="check-list text-lg text-gray-800 mb-6">
+                <li>dem Lebensstil des modernen Menschen (Stress, unregelmäßiges Essen, Bewegungsmangel);</li>
+                <li>Umweltverschmutzung;</li>
+                <li>einer Zunahme von minderwertigen und gentechnisch veränderten Lebensmitteln in der Ernährung;</li>
+                <li>einem veralteten Behandlungssystem.</li>
+            </ul>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Die Verbreitung von Magen-Darm-Erkrankungen in unserem Land ist erschreckend. In verschiedenen Bundesstaaten reicht sie von 70 bis 90 % der Bevölkerung. Das ist viel mehr als in Israel, Japan und Europa.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-4 text-gray-800 font-bold">— Warum ist die Situation mit der wirksamen Behandlung von Magen-Darm-Erkrankungen in unserem Land Ihrer Meinung nach so schwierig?</p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                — Leider bleibt das Problem wirksamer Lösungen für Magen-Darm-Erkrankungen in unserem Land sehr akut. Viele Pharmaunternehmen haben es nicht eilig, Mittel bekannt zu machen, die wirklich funktionieren, da dies ihre Gewinne erheblich schmälern könnte. Heute ist jedoch ein Produkt auf dem Markt erschienen, das das Problem wirklich lösen könnte und es Patienten ermöglicht, die normale Funktion des Verdauungssystems wiederherzustellen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Letztes Jahr wurde ein neues Produkt, <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a>, entwickelt, das ein optimales Gleichgewicht des Darmmikrobioms und des gesamten Verdauungssystems schafft.
+            </p>
+
+            <div class="mb-6">
+                <img src="./images/8.jpg" alt="Produkt" class="w-full rounded-sm">
+                <div class="img-caption">So sieht die Originalverpackung von Lulutox Detox Tea aus.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Die neue Formel neutralisiert die Auswirkungen schädlicher Faktoren auf den Darm und stellt das normale Magen-Darm-Mikrobiom in 30 Tagen zu 100% wieder her, wodurch alle Symptome beseitigt werden.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Dies ist ein Pflanzenkomplex, der bei Einnahme die Synthese von 4 Milliarden koloniebildenden Einheiten (KBE/g) auslöst, was es Ihnen ermöglicht, das Gleichgewicht des Darmmikrobioms aufrechtzuerhalten und eine einzigartige Wirkung auf den Körper zu haben.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-4 text-gray-800 font-bold">— Welche Pflanzen sind in Lulutox Detox Tea enthalten?</p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                — Es ist ein kraftvoller Kräuterkomplex, der moderne medizinische Technologien mit der natürlichen Kraft von Extrakten einer Vielzahl von Pflanzen verbindet: Sencha-Grüntee, Brennnesselblätter, Löwenzahnblätter, Zitronengras, Goji-Beeren, Ginseng, Mariendistelblätter, Steviablätter, Yerba Mate, Matcha-Grüntee usw. Diese wiederum:
+            </p>
+
+            <ul class="check-list text-lg text-gray-800 mb-6">
+                <li>Erhöhen die Sekretion der Magen-Darm-Drüsen, tonisieren die Darmmuskulatur und beseitigen Schmerzen und Entzündungen.</li>
+                <li>Verbessern die Peristaltik, stellen die normale Darmfunktion wieder her.</li>
+                <li>Haben antimikrobielle und antiseptische Wirkungen, entfernen Giftstoffe und Schlacken aus dem Körper.</li>
+                <li>Haben regenerative Eigenschaften, sorgen für lokale Immunität.</li>
+                <li>Haben entzündungshemmende Eigenschaften, ein starkes Mittel gegen Parasiten.</li>
+            </ul>
+
+            <div class="mb-6">
+                <img src="./images/9.jpg" alt="Darm Grafik" class="w-full rounded-sm">
+                <div class="img-caption">Die Formel zur Wiederherstellung des menschlichen Magen-Darm-Trakts bietet eine schnelle und starke Wirkung gegen Erkrankungen des Magen-Darm-Trakts.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-4 text-gray-800 font-bold">— Wie unterscheidet sich Lulutox Detox Tea von allen anderen bestehenden Magen-Darm-Mitteln?</p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                — Das Mittel unterscheidet sich von allen existierenden Analoga durch seine sanfte Reinigung des Darms, die Wiederherstellung des Magen-Darm-Trakts sowie die Stärkung und Aufrechterhaltung der zellulären Immunität auf hohem Niveau.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Dies ist ein natürliches pflanzliches Mittel, um Verstopfung und jegliche Magen-Darm-Störungen bei Erwachsenen loszuwerden. Seine Vorteile sind:
+            </p>
+
+            <ul class="check-list text-lg text-gray-800 mb-6">
+                <li>milde Wirkung, ohne dass man während der Behandlung zu Hause bleiben muss,</li>
+                <li>keine Gewöhnung,</li>
+                <li>Wiederherstellung des Darms ohne Elektrolytverlust und Nebenwirkungen,</li>
+                <li>angenehmes Gefühl während der Einnahme, Fehlen von Darmkrämpfen,</li>
+                <li>Verbesserung der Darmperistaltik,</li>
+                <li>sanfte Freisetzung von veraltetem Stuhl,</li>
+                <li>stellt das natürliche Darmmikrobiom in 30 Tagen wieder her.</li>
+            </ul>
+
+            <div class="mb-6">
+                <img src="./images/10.jpg" alt="Wirkung" class="w-full rounded-sm">
+                <div class="img-caption">Verbesserungen beginnen ab dem ersten Tag der Einnahme von Lulutox Detox Tea.</div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a> hilft bei Reizdarmsyndrom, ist geeignet bei Verstopfung durch Medikamente und Gallenblasenprobleme, verbessert die Verdauung und normalisiert die Funktion des Magen-Darm-Trakts im Allgemeinen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                All dies in Kombination trägt zur Normalisierung der mikrobiologischen Prozesse im Magen-Darm-Trakt und zur Verbesserung der Lebensaktivität in vielen Indikatoren bei. Wie man sagt: Für ein aktives langes Leben morgen müssen Sie Ihr Mikrobiom heute pflegen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-4 text-gray-800 font-bold">— Wie wendet man Lulutox Detox Tea richtig an, um die besten Ergebnisse zu erzielen?</p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">— Die Anwendungsmethode ist sehr einfach:</p>
+
+            <div class="mb-6">
+                <video src="./images/product-use.mp4" autoplay loop muted playsinline class="w-full rounded-sm shadow-md"></video>
+            </div>
+
+            <ol class="list-decimal ml-6 space-y-2 mb-6 text-lg text-gray-800">
+                <li>Schütteln Sie die Packung und geben Sie einen Beutel Lulutox Detox Tea in eine Tasse mit heißem Wasser.</li>
+                <li>Lassen Sie ihn 5-7 Minuten ziehen – trinken Sie ihn heiß oder lassen Sie ihn abkühlen und trinken Sie ihn als kalten Tee.</li>
+                <li>Nehmen Sie ihn einmal täglich ein und Sie werden in nur wenigen Tagen spürbare Ergebnisse sehen!</li>
+            </ol>
+
+            <p class="text-lg leading-relaxed mb-4 text-gray-800 font-bold">— Ist Lulutox Detox Tea sicher?</p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                — Da <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a> eine völlig natürliche Zusammensetzung hat, ist er absolut sicher für die Gesundheit. Mehr noch, er ist sehr nützlich für den Körper!
+            </p>
+
+            <div class="bg-gray-100 border border-gray-200 p-4 rounded-lg mb-6 flex gap-4">
+                <div class="w-1/4 max-w-[100px]">
+                    <img src="./images/11.jpg" alt="Francis" class="w-full rounded-full object-cover">
+                </div>
+                <div class="w-3/4">
+                    <p class="italic text-gray-700 text-sm mb-2">"Ich habe lange unter schrecklichen Bauchschmerzen, Verstopfung und Blähungen gelitten. Ich wurde mehrmals vom Krankenwagen abgeholt. Und dann begannen sich Diabetes und Bluthochdruck zu entwickeln... Ich habe Glück, dass ich <a href="#" class="font-bold text-[#E64415]">Lulutox Detox Tea</a> rechtzeitig gefunden habe. Er hat mir nicht nur geholfen, die Darmprobleme loszuwerden, die mich einfach quälten, sondern auch meinen Körper komplett wiederhergestellt. Und ich kehrte zu einem vollen Leben und meiner Lieblingsarbeit zurück."</p>
+                    <p class="font-bold text-sm">Francis T.</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-100 border border-gray-200 p-4 rounded-lg mb-6 flex gap-4">
+                <div class="w-1/4 max-w-[100px]">
+                    <img src="./images/12.jpg" alt="Amy" class="w-full rounded-full object-cover">
+                </div>
+                <div class="w-3/4">
+                    <p class="italic text-gray-700 text-sm mb-2">"Ich habe seit meiner Jugend einen schwachen Darm. Und ich habe auch Gallensteine, hohen Zucker und hohen Cholesterinspiegel. Und ich werde oft krank. Man sagt, es liegt auch am Darm! Es gab keine Möglichkeit, alles auf einmal zu bewältigen: Ich nehme Pillen für eine Sache, und die andere wird schlimmer... Ich litt jahrelang, bis mir geraten wurde, <a href="#" class="font-bold text-[#E64415]">Lulutox Detox Tea</a> zu verwenden. Eine Kur mit dem Mittel - und ich bin ein gesunder Mensch!"</p>
+                    <p class="font-bold text-sm">Amy G.</p>
+                </div>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800 font-bold">
+                Meine Kollegen, die Gastroenterologie und das Mikrobiom studieren, haben einen speziellen Schnelltest für die Online-Diagnose entwickelt.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Jeder kann den Test kostenlos machen - es dauert nur 2 Minuten, aber die Ergebnisse helfen festzustellen, ob Sie Gefahr laufen, Magen-Darm-Erkrankungen zu entwickeln.
+            </p>
+
+            <div id="quiz-block" class="border-2 border-[#E64415] rounded-lg p-6 my-8 bg-white shadow-lg">
+                <div id="quiz-step-1">
+                    <p class="text-xl font-bold mb-4 text-center">Finden Sie heraus, ob Sie Probleme mit der Funktion des Magen-Darm-Trakts haben!</p>
+                    <button onclick="showStep(2)" class="cta-button w-full text-center">Test starten</button>
+                </div>
+
+                <div id="quiz-step-2" style="display:none;">
+                    <p class="font-bold mb-4">Welche Symptome bemerken Sie? (Sie können mehrere auswählen)</p>
+                    <label class="quiz-option"><input type="checkbox" checked> Verstopfung, Schweregefühl im Magen</label>
+                    <label class="quiz-option"><input type="checkbox"> Blähungen, Gasbildung</label>
+                    <label class="quiz-option"><input type="checkbox"> Sodbrennen</label>
+                    <label class="quiz-option"><input type="checkbox"> Unangenehmer Geschmack im Mund</label>
+                    <label class="quiz-option"><input type="checkbox"> Müdigkeit, Schläfrigkeit</label>
+                    <label class="quiz-option"><input type="checkbox"> Bluthochdruck</label>
+                    <button onclick="showStep(3)" class="cta-button w-full mt-4 text-center">Weiter</button>
+                </div>
+
+                <div id="quiz-step-3" style="display:none;">
+                    <p class="font-bold mb-4">Welche Risikofaktoren gibt es in Ihrem Leben? (Sie können mehrere auswählen)</p>
+                    <label class="quiz-option"><input type="checkbox" checked> Häufiger Stress</label>
+                    <label class="quiz-option"><input type="checkbox"> Schlechte Ernährung</label>
+                    <label class="quiz-option"><input type="checkbox"> Geringe körperliche Aktivität</label>
+                    <label class="quiz-option"><input type="checkbox"> Schlechte Gewohnheiten</label>
+                    <label class="quiz-option"><input type="checkbox"> Langfristige Medikamenteneinnahme</label>
+                    <button onclick="showStep(4)" class="cta-button w-full mt-4 text-center">Weiter</button>
+                </div>
+
+                <div id="quiz-step-4" style="display:none;">
+                    <p class="font-bold mb-4">Wie alt sind Sie?</p>
+                    <label class="quiz-option"><input type="radio" name="age" checked> 21-30</label>
+                    <label class="quiz-option"><input type="radio" name="age"> 31-40</label>
+                    <label class="quiz-option"><input type="radio" name="age"> 41-50</label>
+                    <label class="quiz-option"><input type="radio" name="age"> 51-60</label>
+                    <label class="quiz-option"><input type="radio" name="age"> 61-70</label>
+                    <label class="quiz-option"><input type="radio" name="age"> 71-80</label>
+                    <label class="quiz-option"><input type="radio" name="age"> 81-90</label>
+                    <label class="quiz-option"><input type="radio" name="age"> Älter als 91</label>
+                    <button onclick="showStep(5)" class="cta-button w-full mt-4 text-center">Weiter</button>
+                </div>
+
+                <div id="quiz-step-5" style="display:none;">
+                    <p class="font-bold mb-4">Sind Sie ein Mann oder eine Frau?</p>
+                    <label class="quiz-option"><input type="radio" name="sex" checked> Mann</label>
+                    <label class="quiz-option"><input type="radio" name="sex"> Frau</label>
+                    <button onclick="showStep(6)" class="cta-button w-full mt-4 text-center">Ergebnis anzeigen</button>
+                </div>
+
+                <div id="quiz-step-6" style="display:none;" class="text-center">
+                    <p class="text-2xl font-bold text-[#E64415] mb-4">WARNUNG!</p>
+                    <p class="mb-2 font-bold">Die Wahrscheinlichkeit von Problemen mit der Funktion des Magen-Darm-Trakts beträgt in Ihrem Fall 92%.</p>
+                    <p class="mb-2 font-bold">Das Risiko, in den kommenden Monaten ernsthafte Komplikationen zu entwickeln, beträgt 80%!</p>
+                    <p class="mb-4">Ihr Niveau an toxischer Belastung für den Körper ist bereits fast kritisch, daher kann die Verwendung aggressiver Medikamente die Situation nur verschlimmern.</p>
+                    <p class="mb-6 font-bold bg-gray-100 p-2 border-l-4 border-[#E64415]">Sie müssen sich einer vollständigen Wiederherstellung der Funktionen des Verdauungssystems unterziehen, aber nur mit Hilfe eines natürlichen Mittels.</p>
+                </div>
+            </div>
+            <p class="text-lg leading-relaxed mb-4 text-gray-800 font-bold">— Wir wissen, dass Lulutox Detox Tea nicht in Apotheken erhältlich ist. Und Ärzte verschreiben ihn nicht. Warum?</p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                — Es stehen Milliarden von Gewinnen und ein gut etabliertes Geldkreislaufschema im medizinischen Bereich auf dem Spiel. Ich sage das, weil eine solche Haltung gegenüber dem eigenen Volk ein Verbrechen ist, keine Medizin. Denken Sie nur darüber nach, jeden Tag verschreiben Millionen von Spezialisten etwa ein Dutzend "richtige" Medikamente an Hunderte von Millionen Menschen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Normalerweise kauft eine Person mit Magen-Darm-Problemen mehrere Packungen von jedem von ihnen in 1-2 Jahren, weil der Spezialist sie nach seinem System verschreibt. Oder noch schlimmer, "weil es oft in der Werbung gezeigt wird". Als Ergebnis wird niemand gesund, und alle kaufen Medikamente in Scharen und bereichern Pharmaunternehmen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Ich sage Ihnen das. Normale Leute wissen nichts über <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a>. Und selbst Spezialisten aus kleinen Städten und Dörfern sind nicht immer auf dem Laufenden über solche Neuheiten und Entwicklungen. Und das ist sehr traurig.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-4 text-gray-800 font-bold">— Sie sagten, dass Lulutox Detox Tea nicht in Apotheken verkauft wird. Aber wo kann man ihn kaufen?</p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                — Alle Bürger können <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a> online direkt beim Hersteller im Rahmen eines speziellen Rabattprogramms bestellen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-4 text-gray-800 font-bold">— Warum ist dieses Produkt nur online erhältlich?</p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">— Das geschah aus drei Gründen:</p>
+
+            <ol class="list-decimal ml-6 space-y-2 mb-6 text-lg text-gray-800">
+                <li>Qualitätskontrolle. <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a> wird direkt ab Werk an den Kunden geliefert.</li>
+                <li>Schutz vor Zwischenhändlern. Wenn das Produkt 10, 20 oder sogar 30 Mal teurer verkauft wird.</li>
+                <li>Schnelle gezielte Lieferung.</li>
+            </ol>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Wie ich bereits sagte, wird das Programm des Sozialhilfefonds bereits umgesetzt. Dieses Programm ermöglicht es Ihnen, den <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a> mit einem Rabatt von 70% zu bestellen.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-800">
+                Daher empfehle ich als Experte dringend: Verlieren Sie keine Zeit! Es gibt vielleicht keine zweite Chance. Wie lange das Programm dauern wird und wie lange der <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="font-bold text-[#E64415] underline">Lulutox Detox Tea</a> vorrätig sein wird, ist unbekannt.
+            </p>
+
+            <div class="bg-yellow-50 border-2 border-[#E64415] p-4 text-center my-8 font-bold text-gray-800">
+                <p>SPEZIELL FÜR UNSERE LESER VERÖFFENTLICHEN WIR EINEN OFFIZIELLEN VERKAUF DES HERSTELLERS</p>
+                <p>ANDERE RABATTE WERDEN JEDEM GEWÄHRT</p>
+                <p>BIS ZUM <span id="offerDate"></span> EINSCHLIESSLICH!</p>
+            </div>
+
+            <div id="door-game-section" class="my-8 p-6 bg-gray-50 rounded-lg text-center border-t-4 border-[#E64415]">
+                <h3 class="text-xl md:text-2xl font-bold mb-6 text-gray-800 uppercase">WÄHLEN SIE EINE TÜR FÜR EINEN SONDER-RABATT</h3>
+                
+                <div id="door-grid" class="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+                    <div id="door1" onclick="pickDoor(this)" class="cursor-pointer transition hover:scale-105">
+                        <img src="./images/door1.png" alt="Tür 1" class="w-full shadow-md rounded-md">
+                    </div>
+                    <div id="door2" onclick="pickDoor(this)" class="cursor-pointer transition hover:scale-105">
+                        <img src="./images/door2.png" alt="Tür 2" class="w-full shadow-md rounded-md">
+                    </div>
+                    <div id="door3" onclick="pickDoor(this)" class="cursor-pointer transition hover:scale-105">
+                        <img src="./images/door3.png" alt="Tür 3" class="w-full shadow-md rounded-md">
+                    </div>
+                </div>
+
+                <div id="winner-block" class="hidden border-4 border-[#E64415] p-6 bg-white text-center rounded-lg mt-2 shadow-xl">
+                    <h3 class="text-3xl font-black text-[#E64415] mb-2 uppercase">GLÜCKWUNSCH!</h3>
+                    <p class="text-xl font-bold mb-4 text-gray-800">Sie haben einen 70% Rabatt gewonnen!</p>
+                    <div class="mb-4">
+                        <img src="./images/product.png" class="mx-auto w-48 object-contain">
+                    </div>
+                    <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="cta-button animate-pulse text-xl shadow-lg transform hover:scale-105 transition">
+                        RABATT JETZT SICHERN >>
+                    </a>
+                    <p class="text-sm text-gray-500 mt-4">Angebot gilt bis zum <span id="offerDate2"></span></p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="font-bold text-gray-500 mb-4">KOMMENTARE / 27</div>
+                <div class="flex gap-4 mb-6 border-b pb-2">
+                    <button class="font-bold text-[#E64415]">Neueste</button>
+                    <button class="text-gray-500">Beliebteste</button>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m5.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Karsten C.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 6 Stunden</div>
+                        <p>Ich habe von diesem Lulutox Detox Tea gehört, ihn aber noch nicht ausprobiert. Und ich sollte. Es ist beängstigend, sich bis zu einer Darmanomalie zu bringen, oder sogar zu anderen Komplikationen. Ein Freund von mir hatte eine Darmanomalie. Obwohl er viele verschiedene Medikamente nahm. Und alles begann mit Verstopfung. Also denkt nach. Ich habe den Lulutox Detox Tea bestellt, man muss seinem Darm helfen.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m6.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Jakob G.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 6 Stunden</div>
+                        <p>Ich habe den Lulutox Detox Tea einen Monat lang genommen. Das Ergebnis hat mich überrascht. Ich fing an, mich besser zu fühlen; keine Verstopfung mehr, ich hatte Kraft, und der Druck war 120 zu 85. Es schmerzte und zog in meiner Seite, besonders nach dem Sport, aber alles ging weg.</p>
+                        <img src="./images/13.jpg" class="mt-2 w-32 rounded-sm">
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m7.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Jekson C.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 6 Stunden</div>
+                        <p>Ein gutes Mittel! Es hat mir gefallen. Ich nahm es wegen Verstopfung und zur Stärkung des Körpers, aber ich teilte es auch mit meiner Frau, die hohen Blutzucker hat. Meine Verstopfung verschwand nach einer Woche. Der Zucker meiner Frau ist gesunken, und auch mein Blutdruck ist seit einigen Tagen normal. Ich empfehle den Lulutox Detox Tea jedem.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w5.png" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Angie F.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 6 Stunden</div>
+                        <p>Vielen Dank! Ich habe es geschafft, eine Kur für mich im Rahmen des Werbeprogramms zu bestellen. Ich werde es ausprobieren. Das Problem mit dem Darm ist…</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w6.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Lally B.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 6 Stunden</div>
+                        <p>Mein Mann hat große Probleme mit seinem Darm. Kolitis, Blähungen und schreckliche Verstopfung. Sie boten einen Krankenhausaufenthalt an, aber was wird das bringen? Außer dass sie ihn eine Weile an den Tropf hängen, und das war's. Aber die Schwester meines Mannes hat irgendwo Lulutox Detox Tea besorgt, und mein Mann nahm ihn in zwei Kuren. Also, was denken Sie? Jetzt geht er regelmäßig zur Toilette! Und sein Cholesterin ist auch gesunken, und damit sein Blutdruck. Also dieses Mittel wirkt, wie sonst!</p>
+                        <img src="./images/14.jpg" class="mt-2 w-32 rounded-sm">
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w7.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Eva F.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 6 Stunden</div>
+                        <p>Ich ging das Risiko ein, Lulutox Detox Tea zu bestellen und bereue es immer noch nicht. Ich gehe einmal pro Woche zur Toilette, und meine Immunität ist schwach; ich habe Probleme mit den Blutgefäßen, und mein Blutdruck ist hoch. Nach Lulutox Detox Tea gab es keine Nebenwirkungen, und ich war mit dem Ergebnis zufrieden. Es ist ein natürliches Mittel, es schadet zumindest nicht. Ich fing an, jeden Tag zur Toilette zu gehen, entschuldigung für die Details.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w8.png" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Heather B.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 6 Stunden</div>
+                        <p>Hurra!!! Ich habe es geschafft, Lulutox Detox Tea mit Rabatt zu bestellen! Und wenn es so einen Hype darum gibt, bedeutet das, dass es ein wirklich wirksames Mittel ist.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w9.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Dorothea F.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 5 Stunden</div>
+                        <p>Danke für die Information! Ich möchte es ausprobieren; der Darm ist sehr wichtig.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w10.png" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Gillian G.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 5 Stunden</div>
+                        <p>Eine Freundin empfahl mir Lulutox Detox Tea gegen Verstopfung und Blähungen. Ich kaufte ihn mit einem guten Rabatt während einer Aktion. Ich habe schon angefangen, ihn zu trinken, und heute bemerkte ich, dass mein Kopf klar ist, nicht wehtut und nicht schwer ist wie sonst. Mein Blutdruck ist normal. Ich fühle, dass die innere Schwellung zurückgeht, und ich fühle mich leichter. Ein gutes natürliches Mittel, ich werde es weiterhin trinken.</p>
+                        <img src="./images/15.jpg" class="mt-2 w-32 rounded-sm">
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m8.png" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Evan B.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 5 Stunden</div>
+                        <p>Ich beschloss, es zu versuchen. Ich habe Verstopfung. Meine Frau trinkt auch Lulutox Detox Tea. Ihr Blutdruck sprang; jetzt ist alles normal, die Schwellung ist weg, und sie hat viel Gewicht verloren.</p>
+                        <img src="./images/16.jpg" class="mt-2 w-32 rounded-sm">
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w11.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Beryl A.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 5 Stunden</div>
+                        <p>Danke für die Aktion! Ich habe es zu einem tollen Preis bestellt.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w12.png" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Winifred J.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 4 Stunden</div>
+                        <p>Meine Mutter wurde dank Lulutox Detox Tea gerettet! Alles, wie die Frau hier schrieb: Die Krankheit entwickelte sich, ihr Magen tat weh, und die Spezialisten zuckten nur mit den Schultern. Und gleichzeitig isst meine Mutter im Allgemeinen alles gedämpft, gekocht. Aber Alter, Ökologie, Stress... und das war's, Entzündung im Darm. Die Krankheit entwickelte sich schnell, und letzten Winter hörte meine Mutter buchstäblich auf, nach draußen zu gehen, wegen Bauchschmerzen und Blähungen! Lulutox Detox Tea half sehr. Jetzt, wo es einen Rabatt gibt, werde ich 2 weitere Kuren bestellen, damit sie besser zur Hand sind. Besonders jetzt, wo man es im Angebot bekommen kann!</p>
+                        <img src="./images/17.jpg" class="mt-2 w-32 rounded-sm">
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w13.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Cordelia E.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 4 Stunden</div>
+                        <p>In letzter Zeit war ich ein Wrack, mit Magenproblemen, mal Verstopfung, mal Durchfall. Gesamtcholesterin war 6,8, was sehr hoch für mich ist. Ständiger Schwindel, Blutdrucksprünge und schlechte Gesundheit. Und nach 2 Monaten Einnahme von Lulutox Detox Tea lag der Wert bei 3,4. Aber das Wichtigste ist meine Gesundheit! Jetzt kann man die Analyse weglassen. Ich habe den Unterschied verstanden, dass wenn man viel Kraft hat, man nicht müde wird, der Kopf klar arbeitet und nichts wehtut! Heute habe ich auch den Lulutox Detox Tea laut Programm für meine Mutter bestellt. Sie ist 78 Jahre alt. Ich hoffe, er schützt sie vor dem Virus. Blutdruck, Zucker und Gelenke quälten sie auch.</p>
+                        <img src="./images/18.jpg" class="mt-2 w-32 rounded-sm">
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m9.png" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Andreas C.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 4 Stunden</div>
+                        <p>Ich trinke Lulutox Detox Tea seit einem Monat. Ich begann mich merklich besser zu fühlen, und ich fühle, dass es jeden Tag besser wird. Mein Magen stört mich nicht mehr, und ich gehe normal zur Toilette. Ich hatte nicht erwartet, noch mit meinen Enkelkindern zu spielen, aber nein, ich werde länger leben!</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m10.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Paul C.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 4 Stunden</div>
+                        <p>Ich bin 58 Jahre alt und krank. Ich habe früher hart gearbeitet und mich nicht geschont. In letzter Zeit hatte ich Probleme mit meinem Stuhl. Ich nahm viele verschiedene Medikamente, aber sie halfen nicht. Dann rieten sie mir Lulutox Detox Tea für den Magen, aber damals konnte ich ihn nicht finden. Und jetzt habe ich ihn in der Aktion bekommen! Ich bestellte ihn ohne nachzudenken! Ich fing an zu trinken, und meine Gesundheit verbesserte sich! Ich gehe jetzt normal zur Toilette. Ich habe mehr Energie, Kraft und schlafe besser. Mein Blutdruck hörte auch auf zu steigen. Dank Lulutox Detox Tea kehrte ich ins normale Leben zurück. Hier ist die Geschichte. Deshalb rate ich aus eigener Erfahrung. Es hat mir sehr geholfen. Ich wollte leben!</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w14.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Rosalyn J.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 3 Stunden</div>
+                        <p>Ich stimme jedem Wort zu - Lulutox Detox Tea ist ein sehr wirksames Mittel. Ich hörte davon im Programm "Gesundheit". Ich bin sehr froh, dass man ihn mit Rabatt bestellen kann, was ich auch getan habe. Und auch wenn diese Stars ins Ausland reisen, werden die besten Gesundheitsprodukte immer noch in unserem Land hergestellt.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w15.png" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Linda G.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 3 Stunden</div>
+                        <p>Danke für den Artikel! Ich fand ihn sehr zeitgemäß. Es ist ein Geschenk des Himmels für unsere Familie. Wir haben alle Magen-Darm-Probleme. Und es gibt genug andere Beschwerden. Ich habe große Angst vor Covid, ich habe meinen Schwiegervater und meine Schwiegermutter in dem Jahr verloren, dieser Virus nahm viele meiner Freunde mit 20. Und meine Immunität ist schwach, ich habe viele Papillome, und ich werde oft krank. Mein Mann hat Diabetes, mein Sohn hat Ekzeme, und meine Mutter hat hohen Blutdruck. Ich habe eine Kur für die ganze Familie bestellt, und wir werden sie nehmen!</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w16.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Doris C.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 3 Stunden</div>
+                        <p>Lulutox Detox Tea ist ein ausgezeichnetes Mittel! Ich wusste schon lange von den heilenden Eigenschaften der Pflanzen, aus denen der Sirup besteht. Meine Großmutter machte auch eine Tinktur daraus und gab uns immer einen Teelöffel zum Abendessen. Ich liebe natürlich und ohne Chemie. Und ich mag es nicht, zu den Ärzten zu gehen, diese Warteschlangen, Ärzte sind so wütend wie Hunde. Und der Arzt hat recht, die Hälfte aller unserer Krankheiten, sogar die schrecklichsten, werden dadurch verursacht, dass der Magen-Darm-Trakt nicht mit voller Kapazität arbeitet. Wiederherstellen, reinigen - und Sie werden überrascht sein, wie viel auf einmal verschwindet! Keine Viren, Druck und Schwellungen mehr. Ich hatte auch ein Frauenproblem, und davon ist auch keine Spur mehr übrig. Ich fühle mich großartig! Das ist wahrlich ein Heilmittel für alle Krankheiten.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m11.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Tiller F.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 3 Stunden</div>
+                        <p>Ich las über den Lulutox Detox Tea und beschloss, ihn auszuprobieren. In unserer Situation muss man alles versuchen. Bis Komplikationen beginnen. Es ist beängstigend, ich habe das gesehen... Das wünscht man seinem Feind nicht.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m12.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Joshua F.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 3 Stunden</div>
+                        <p>Vielen Dank für diesen Artikel! Ich hoffe, er wird auch Menschen helfen, so wie er mir geholfen hat!</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w17.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Johanna B.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 2 Stunden</div>
+                        <p>Meine Schwiegermutter empfahl mir diesen Lulutox Detox Tea, und ich schaffte es, ihn am letzten Tag des Verkaufs zu bestellen. In 2 Monaten wurde ich ein anderer Mensch! Nicht nur verschwand mein Bauch, sondern meine Energie schoss in die Höhe, mein Blutdruck normalisierte sich, und ich verlor auch 8 kg, und viszerales Fett war übrigens weg. Ich fühle mich jetzt viel besser! Ein sehr gutes Mittel. Ich empfehle Lulutox Detox Tea definitiv jedem!</p>
+                        <img src="./images/19.jpg" class="mt-2 w-32 rounded-sm">
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m13.png" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Stephan B.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 2 Stunden</div>
+                        <p>Das beste Mittel! 5 Sterne! Nehmen Sie es, Sie werden es nicht bereuen, wenn Sie lange leben wollen!</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w18.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Essie F.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 2 Stunden</div>
+                        <p>Ich bin begeistert! Ich habe so viele Mittel für meinen Magen ausprobiert, und dieser Sirup half mir in einer Woche! Ich muss noch mehr kaufen. Wer wusste, dass die Hälfte meiner Krankheiten auf einmal geheilt werden könnte! Danke an den Arzt, dass er es so ausführlich erklärt hat.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w19.png" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Madeline D.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 2 Stunden</div>
+                        <p>Die Ärzte schrieben meine Krankheiten dem Alter zu, und ich war beleidigt. Wie das? Ich fühle mich jung. Mein Leben ist meine Familie, mein Garten, meine Blumen, und wegen Problemen mit meinem Stuhl ist ein normaler Gang zum Laden gegenüber für mich selten geworden. Außerdem habe ich Probleme mit den Blutgefäßen, dem Herzen und dem Blutdruck. Und dann, zufällig, dank Ihres Artikels, erfuhr ich von Lulutox Detox Tea. Er erwies sich als preiswert; als Rentner schadet ein zusätzlicher Pfennig nicht. Jetzt fühle ich mich wie ein gesunder Mensch! Und was noch passieren wird! Ich trinke ihn erst seit drei Wochen und plane, ihn noch zwei Monate zu trinken!</p>
+                        <img src="./images/20.jpg" class="mt-2 w-32 rounded-sm">
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m14.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Connon L.</div>
+                        <div class="text-xs text-gray-500 mb-2">Vor 2 Stunden</div>
+                        <p>Lulutox Detox Tea ist ein wunderbares Mittel! Es gab keine Nebenwirkungen; die Zusammensetzung ist natürlich. Ich machte eine Kur, bekam einen Rabatt auf die Aktion, und es stellte sich heraus, dass es selbst für mich, einen Rentner, ziemlich preiswert war.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/m15.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Frank B.</div>
+                        <div class="text-xs text-gray-500 mb-1">Vor 1 Stunde</div>
+                        <p>Ich habe auch eine positive Erfahrung mit der Einnahme von Lulutox Detox Tea bei verschiedenen Krankheiten.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item flex gap-4">
+                    <div class="comment-avatar flex-shrink-0">
+                        <img src="./images/avatars/w20.jpg" alt="User">
+                    </div>
+                    <div>
+                        <div class="font-bold text-[#E64415]">Belinda C.</div>
+                        <div class="text-xs text-gray-500 mb-1">Vor 1 Stunde</div>
+                        <p>Ich trinke Lulutox Detox Tea seit einem Monat, und der Effekt ist da! Er hilft dem Magen-Darm-Trakt. Und das Gewicht ging runter, und die Schmerzen in der Seite hörten auf.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center my-8">
+                <a href="https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&event5=1&depth" class="cta-button">
+                    Jetzt Bestellen
+                </a>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="bg-gray-100 border-t border-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-wrap justify-center gap-6 mb-6 text-sm font-bold text-gray-600">
+                <a href="/privacy" class="hover:text-black">Datenschutz</a>
+                <a href="/terms" class="hover:text-black">Impressum & AGB</a>
+                <a href="/contact" class="hover:text-black">Kontakt</a>
+            </div>
+            
+            <div class="text-[10px] text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                <p class="mb-2"><strong>Haftungsausschluss:</strong></p>
+                <p>
+                    Dies ist eine Werbung und kein aktueller Nachrichtenartikel, Blog oder Verbraucherschutz-Update. 
+                    Der Inhalt dieser Seite dient nur zu Informations- und Marketingzwecken.
+                </p>
+                <p class="mt-2">
+                    Das vorgestellte Produkt ist ein Nahrungsergänzungsmittel, kein Medikament. 
+                    Ergebnisse können variieren. Konsultieren Sie vor der Anwendung einen Arzt.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set Header Date
+        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('headerDate').textContent = new Date().toLocaleDateString('de-DE', dateOptions);
+        
+        // Set Article Date (4 days ago)
+        const articleDate = new Date();
+        articleDate.setDate(articleDate.getDate() - 4);
+        document.getElementById('currentDate').textContent = articleDate.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' }) + ' | 10:24';
+
+        // Set Offer Date (Tomorrow)
+        const offerDate = new Date();
+        offerDate.setDate(offerDate.getDate() + 1);
+        document.getElementById('offerDate').textContent = offerDate.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        document.getElementById('offerDate2').textContent = offerDate.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+
+        // Geo Location Simulation (Can be replaced with real IP API)
+        document.getElementById('cityName').textContent = "Berlin"; 
+
+        // Quiz Logic
+        function showStep(step) {
+            // Hide all steps
+            for(let i=1; i<=6; i++) {
+                const el = document.getElementById('quiz-step-' + i);
+                if(el) el.style.display = 'none';
+            }
+            // Show requested step
+            document.getElementById('quiz-step-' + step).style.display = 'block';
+        }
+
+        // --- NEW DOOR GAME LOGIC ---
+        function pickDoor(element) {
+            // Prevent double clicks
+            if(element.classList.contains('clicked')) return;
+            element.classList.add('clicked');
+
+            // Add shake animation class
+            element.classList.add('shake-door');
+            
+            // Wait for animation, then reveal result
+            setTimeout(() => {
+                // Hide the grid of doors
+                document.getElementById('door-grid').style.display = 'none';
+                
+                // Show the Winner block
+                const winnerBlock = document.getElementById('winner-block');
+                winnerBlock.classList.remove('hidden');
+                
+                // Smooth scroll to the result so user sees it
+                winnerBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 600); // 600ms delay for effect
+        }
+    </script>
+    
+    <script>
+        let offerLink = "https://melodyeu.com/click.php?lp=1&clickid=d5nrhi8ni34c739vnrhg&t_id=14&bf_lander=to_offer&bf_offer=to_offer2&depth&depth"
+        let showCaseLink = "https://melodyeu.com/landers/uk/showcase/index.php?clickid=d5nrhi8ni34c739vnrhg&click_from=backfix"
+        let domain = "melodyeu.com"
+        let bfl = "to_offer"
+        let bfo = "to_offer2"
+        let maxAds = "4"
+        let geo = "uk"
+    </script>
+</body>
+</html>
