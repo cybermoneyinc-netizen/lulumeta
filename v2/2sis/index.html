@@ -25,7 +25,7 @@
         .top-bar { background: #222; color: #fff; padding: 5px 0; font-size: 12px; text-transform: uppercase; }
         .top-bar .inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 20px; }
         .logo-bar { background: #fff; border-bottom: 4px solid #cc0000; padding: 15px 0; }
-        .logo-text { font-family: 'Roboto Slab', serif; font-size: 32px; font-weight: 700; color: #000; letter-spacing: -1px; }
+        .logo-text { font-family: 'Roboto Slab', serif; font-size: 32px; font-weight: 700; color: #000; letter-spacing: -1px; line-height: 1.2; }
         .nav-bar { background: #f1f1f1; padding: 10px 0; border-bottom: 1px solid #ddd; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 14px; }
         .nav-bar ul { list-style: none; padding: 0; margin: 0; max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; gap: 20px; flex-wrap: wrap; }
         .nav-bar li.active { color: #cc0000; }
@@ -39,7 +39,7 @@
         /* --- Content Layout --- */
         .content-wrapper { display: flex; gap: 40px; }
         .main-article { flex: 2; }
-        .sidebar { flex: 1; display: none; } 
+        .sidebar { flex: 1; display: none; /* Hidden on mobile by default for focus */ } 
         
         /* --- Special Sections --- */
         .lead-paragraph { font-size: 20px; font-weight: 600; color: #222; border-left: 4px solid #cc0000; padding-left: 20px; margin-bottom: 30px; background: #fafafa; padding: 20px; }
@@ -52,7 +52,8 @@
         .benefits-list li { margin-bottom: 8px; font-weight: 500; }
 
         /* --- Ingredients Grid --- */
-        .ingredients-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin: 30px 0; }
+        /* Updated minmax to 140px to allow 2 columns on mobile screens */
+        .ingredients-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; margin: 30px 0; }
         .ingredient-card { background: #f8f9fa; border: 1px solid #e9ecef; padding: 15px; border-radius: 6px; }
         .ingredient-card strong { color: #2c3e50; display: block; margin-bottom: 5px; font-size: 16px; }
 
@@ -64,7 +65,7 @@
 
         /* --- Testimonials --- */
         .testimonial-wrapper { margin-bottom: 40px; }
-        .ba-placeholder { background-color: #f0f0f0; height: 350px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border-radius: 8px; border: 2px dashed #999; color: #555; font-weight: bold; font-size: 18px; text-align: center; padding: 20px; }
+        .ba-placeholder { background-color: #f0f0f0; min-height: 250px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border-radius: 8px; border: 2px dashed #999; color: #555; font-weight: bold; font-size: 18px; text-align: center; padding: 20px; }
         .testimonial-box { background: #f0f7ff; border: 1px solid #cce4ff; padding: 25px; border-radius: 8px; }
         .testimonial-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
         .testimonial-header img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -106,7 +107,7 @@
         .comment-avatar { width: 40px; height: 40px; background: #ddd; border-radius: 50%; flex-shrink: 0; overflow: hidden; }
         .comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
         
-        .comment-body-wrapper { display: flex; flex-direction: column; }
+        .comment-body-wrapper { display: flex; flex-direction: column; max-width: calc(100% - 52px); }
         .comment-bubble { background: #f0f2f5; border-radius: 18px; padding: 10px 15px; display: inline-block; }
         .comment-name { font-weight: 600; font-size: 13px; color: #050505; text-decoration: none; margin-bottom: 2px; display: block; }
         .comment-text { font-size: 15px; color: #050505; line-height: 1.4; }
@@ -114,18 +115,44 @@
         .comment-actions span { margin-right: 15px; cursor: pointer; font-weight: 600; }
         .comment-actions span:hover { text-decoration: underline; }
         
-        .comment-image { margin-top: 10px; max-width: 300px; border-radius: 10px; border: 1px solid #ddd; }
+        .comment-image { margin-top: 10px; max-width: 100%; width: 300px; border-radius: 10px; border: 1px solid #ddd; }
         .comment-reply { margin-left: 52px; margin-top: -10px; } /* Indent for replies */
 
+        /* --- MOBILE OPTIMIZATION --- */
         @media (min-width: 768px) {
             .sidebar { display: block; }
             .container { padding: 0 40px 60px; }
             .headline-section h1 { font-size: 48px; }
         }
+
         @media (max-width: 767px) {
-            .headline-section h1 { font-size: 32px; }
+            /* Better font scaling for mobile */
+            .headline-section h1 { font-size: 30px; line-height: 1.2; word-wrap: break-word; }
+            .headline-section .subheadline { font-size: 18px; }
+            
+            /* Logo resizing to prevent overflow */
+            .logo-text { font-size: 24px; text-align: center; }
+            
+            /* Center Nav */
+            .nav-bar ul { justify-content: center; gap: 15px; }
+            
+            /* Stack Content */
             .content-wrapper { flex-direction: column; }
+            
+            /* Adjust padding */
+            .container { padding: 0 15px 30px; }
+            
+            /* Adjust Buttons */
+            .cta-button { font-size: 20px; padding: 15px; width: 100%; box-sizing: border-box; }
             .age-buttons { flex-direction: column; }
+            
+            /* Adjust Comments for small screens */
+            .comment-reply { margin-left: 20px; }
+            .comment-bubble { padding: 8px 12px; }
+            .comment-text { font-size: 14px; }
+            
+            /* Scarcity Bar Font size */
+            .scarcity-bar { font-size: 12px; padding: 8px; }
         }
     </style>
 </head>
@@ -213,7 +240,7 @@
             <p>Am Arbeitsplatz ist die Voreingenommenheit gegenüber übergewichtigen Menschen oft unausgesprochen, aber sehr real. Bei Beförderungen übergangen werden. Als faul oder undiszipliniert beurteilt werden. Die ständige unterschwellige Botschaft, dass man irgendwie weniger fähig ist wegen seines Gewichts.</p>
             <p><em>„Ich hatte aufgehört, zu meinem Wanderverein zu gehen, weil ich mich geschämt habe"</em>, teilt eine Frau aus Frankfurt mit. <em>„Ich war früher so aktiv, aber ich konnte die mitleidigen Blicke nicht ertragen, wenn ich außer Atem war. Ich fühlte mich wie eine Versagerin."</em></p>
 
-            <div class="container" style="background: #fdfdfd; padding: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin: 30px 0;">
+            <div class="container" style="background: #fdfdfd; padding: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin: 30px 0; width: 100%; box-sizing: border-box;">
                 <h2 style="margin-top:0;">Die Klosterentdeckung, die alles veränderte</h2>
                 <figure>
                      <img src="./images/b49.jpg" alt="Vorher-Nachher-Ergebnisse" style="width: 100%; border-radius: 5px;">
@@ -256,8 +283,9 @@
                     <li>Gestörter Schlaf und erschöpftes Aufwachen</li>
                 </ul>
             </div>
-            <h3>Die Lösung: Die Formel für maximale Fettverbrennung</h3> <img src=" https://dailylifeinsider.com/wp-content/uploads/2025/05/49082398243809203498.webp" alt="Tee-Zutaten" style="margin-bottom: 1em; width: 100%; border-radius: 5px;">
-           
+
+            <h3>Die Lösung: Die Formel für maximale Fettverbrennung</h3>
+            <img src="https://dailylifeinsider.com/wp-content/uploads/2025/05/49082398243809203498.webp" alt="Tee-Zutaten" style="margin-bottom: 1em; width: 100%; border-radius: 5px;">
             <p>Um diese Spirale zu durchbrechen, entwickelten Lena und Laura <strong><a href="https://trk.cmclk.com/cf/click/1" class="red-text" style="text-decoration: underline;">Lulutox</a></strong>. Sie enthält exakt die Zutaten, die sie erforscht haben, optimiert für den modernen Stoffwechsel:</p>
             <div class="ingredients-grid">
                 <div class="ingredient-card"><strong>Matcha Grüntee</strong></div>
@@ -279,7 +307,7 @@
 
             <div class="testimonial-wrapper">
                 <div class="ba-placeholder">
-                    <img src="./images/ba11.jpg"  style="width: 100%;">
+                    <img src="./images/ba11.jpg"  style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
                 </div>
                 <div class="testimonial-box">
                     <div class="testimonial-header">
@@ -294,7 +322,6 @@
             </div>
 
             <div class="testimonial-wrapper">
-              
                 <blockquote class="quote-simple">
                     <p>„Bei meinem Schichtdienst im Krankenhaus war eine gesunde Ernährung fast unmöglich. Lulutox passt perfekt in meinen Alltag – ich brühe einfach jeden Morgen eine Tasse auf. Ich habe 20 kg in 8 Wochen abgenommen und meine Energie ist durch die Decke gegangen. Meine Kollegen fragen ständig, was ich anders mache! Das Beste ist, mein Blutdruck ist gesunken und mein Hausarzt ist begeistert."</p>
                     <cite>– Thomas M., 45, Hamburg</cite>
@@ -303,7 +330,7 @@
 
             <div class="testimonial-wrapper">
                 <div class="ba-placeholder">
-                   <img src="./images/365735673.jpg"  style="width: 100%;">
+                   <img src="./images/365735673.jpg"  style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
                 </div>
                 <div class="testimonial-box">
                     <div class="testimonial-header">
@@ -401,7 +428,7 @@
 
             <div class="testimonial-wrapper">
                 <div class="ba-placeholder">
-               <img src="./images/35.jpg"  style="width: 100%;">
+               <img src="./images/35.jpg"  style="width: 100%; max-width: 400px; display: block; margin: 0 auto;">
                 </div>
                 <blockquote class="quote-simple">
                     <p>„Ich wünschte, ich hätte Lulutox vor Jahren gefunden. Ich habe Tausende für Personal Trainer, Ernährungspläne und Abnehmkliniken ausgegeben. Dieser einfache Tee hat mir bessere Ergebnisse gebracht als alle zusammen. Ich bin 47 und habe endlich das Selbstvertrauen, wieder einen Badeanzug im Freibad zu tragen. Mein Mann sagt, ich sehe aus wie die Frau, die er vor 20 Jahren geheiratet hat. Mein einziges Bedauern ist, dass ich das nicht früher gefunden habe!"</p>
@@ -563,6 +590,4 @@
 </script>
 
 <script>!function(){"use strict";var n="lp_ref",t="cpid",e="lpurl",c="https://trk.cmclk.com",r="(?<domain>http(?:s?)://[^/]*)".concat("/cf/click"),a="(?:(?:/(?<cta>[1-9][0-9]*)/?)|(?:/))?",i="^".concat(r).concat(a).concat("(?:$|(\\?.*))"),o='javascript:window.clickflare.l="(?<original_link>'.concat(r).concat(a,'("|(\\?[^"]*"))).*'),s=function(){return new RegExp(i,"")},u=function(){return new RegExp(o,"")};function l(n){var t=function(n){return n.replace(s(),(function(n){for(var t=[],e=1;e<arguments.length;e++)t[e-1]=arguments[e];var r=t[t.length-1].domain;return n.replace(r,c)}))}(n);return'javascript:window.clickflare.l="'.concat(t,'"; void 0;')}function d(n,t){if(t&&n&&t.apply(document,[n]),/loaded|interactive|complete/.test(document.readyState))for(var e=0,c=document.links.length;e<c;e++)if(s().test(document.links[e].href)){var r=document.links[e];window.clickflare.links_replaced.has(r)||(r.href=l(r.href),window.clickflare.links_replaced.add(r))}}var f,h,m,p;!function(r,a){var i=document.onreadystatechange;window.clickflare||(window.clickflare={listeners:{},customParams:{},links_replaced:new Set,addEventListener:function(n,t){var e=this.listeners[n]||[];e.includes(t)||e.push(t),this.listeners[n]=e},dispatchEvent:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))},push:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))}},document.onreadystatechange=function(n){return d(n,i)},d(null,i),setTimeout((function(){!function(r,a){var i,o=function(r,a){var i=new URL("".concat(c).concat(r)),o="{",s=o+o;a.startsWith(s)||i.searchParams.set(t,a);return i.searchParams.append(n,document.referrer),i.searchParams.append(e,location.href),i.searchParams.append("lpt",document.title),i.searchParams.append("t",(new Date).getTime().toString()),i.toString()}(r,a),s=document.createElement("script"),l=document.scripts[0];s.async=1,s.src=o,s.onerror=function(){!function(){for(var n=function(n,t){var e=document.links[n];u().test(decodeURI(e.href))&&setTimeout((function(){e&&e.setAttribute("href",function(n){var t=n.match(u());if(t){var e=(t.groups||{}).original_link;return e?e.slice(0,-1):n}return n}(decodeURI(e.href)))}))},t=0,e=document.links.length;t<e;t++)n(t)}()},null===(i=l.parentNode)||void 0===i||i.insertBefore(s,l)}(r,a)})))}("".concat("/cf/tags","/").concat(new URL(window.location.href).searchParams.get("cftmid")||"{{__CONTAINER_ID__}}"),(m=new URL(window.location.href).searchParams.get(t),f=new RegExp("(^| )".concat("cf_cpid","=([^;]+)")),p=(h=document.cookie.match(f))&&h.pop()||null,m||p||"{{__CAMPAIGN_ID__}}"))}();</script>
-
-</body>
-</html>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"47168fb008614a75a0d6381e385a8e3b","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script></body></html>```
