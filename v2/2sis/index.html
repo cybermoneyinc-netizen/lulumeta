@@ -125,24 +125,21 @@
         }
 
         @media (max-width: 767px) {
-            /* HIDE NAV ON MOBILE */
+            /* 1. HIDE NAV COMPLETELY ON MOBILE */
             .nav-bar { display: none !important; }
             
-            /* COMPACT HEADER */
-            .logo-bar { padding: 10px 0; }
-            .logo-text { font-size: 22px; text-align: center; }
+            /* 2. COMPACT HEADER LOGO */
+            .logo-bar { padding: 8px 0; }
+            .logo-text { font-size: 20px; text-align: center; }
             .top-bar { font-size: 10px; }
 
-            /* FONT SCALING */
+            /* 3. OPTIMIZED CONTENT SPACING */
             .headline-section h1 { font-size: 28px; line-height: 1.2; word-wrap: break-word; hyphens: auto; }
             .headline-section .subheadline { font-size: 18px; }
-            p, li { font-size: 17px; }
-            
-            /* LAYOUT */
-            .content-wrapper { flex-direction: column; }
             .container { padding: 0 15px 30px; }
+            .content-wrapper { flex-direction: column; }
             
-            /* ELEMENTS */
+            /* 4. BUTTONS & ELEMENTS */
             .cta-button { font-size: 20px; padding: 15px; width: 100%; box-sizing: border-box; }
             .age-buttons { flex-direction: column; }
             .comment-reply { margin-left: 20px; }
