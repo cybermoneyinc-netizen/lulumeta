@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensation in Berlin: Milliarden-Deal für Diät-Tee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- General Reset & Typography --- */
+        body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: #f6f6f6; color: #333; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Roboto Slab', serif; color: #111; margin-bottom: 15px; }
+        p { margin-bottom: 20px; font-size: 19px; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        ul, ol { margin-bottom: 20px; }
+        li { margin-bottom: 10px; font-size: 18px; }
+        
+        /* --- Utility Classes --- */
+        .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 0 20px 40px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        .red-text { color: #cc0000; font-weight: bold; }
+        .bold { font-weight: 700; }
+        .center { text-align: center; }
+        
+        /* --- Header --- */
+        .top-bar { background: #222; color: #fff; padding: 5px 0; font-size: 12px; text-transform: uppercase; }
+        .top-bar .inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 20px; }
+        .logo-bar { background: #fff; border-bottom: 4px solid #cc0000; padding: 15px 0; }
+        .logo-text { font-family: 'Roboto Slab', serif; font-size: 32px; font-weight: 700; color: #000; letter-spacing: -1px; }
+        .nav-bar { background: #f1f1f1; padding: 10px 0; border-bottom: 1px solid #ddd; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 14px; }
+        .nav-bar ul { list-style: none; padding: 0; margin: 0; max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; gap: 20px; flex-wrap: wrap; }
+        .nav-bar li.active { color: #cc0000; }
+
+        /* --- Hero Section --- */
+        .headline-section { padding: 30px 0 10px; }
+        .headline-section h1 { font-size: 42px; line-height: 1.1; font-weight: 800; margin-bottom: 15px; }
+        .headline-section .subheadline { font-size: 22px; color: #555; margin-bottom: 20px; font-family: 'Roboto', sans-serif; line-height: 1.4; }
+        .author-line { font-size: 13px; color: #888; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
+
+        /* --- Content Layout --- */
+        .content-wrapper { display: flex; gap: 40px; }
+        .main-article { flex: 2; }
+        .sidebar { flex: 1; display: none; } 
+        
+        /* --- Special Sections --- */
+        .lead-paragraph { font-size: 20px; font-weight: 600; color: #222; border-left: 4px solid #cc0000; padding-left: 20px; margin-bottom: 30px; background: #fafafa; padding: 20px; }
+        .interview-box { background: #fdfdfd; border: 1px solid #e0e0e0; padding: 25px; margin: 30px 0; border-radius: 5px; }
+        .interview-box h3 { margin-top: 0; color: #cc0000; text-transform: uppercase; font-size: 18px; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
+        .interview-q { font-weight: bold; color: #cc0000; margin-top: 20px; display: block; }
+        .interview-a { display: block; margin-bottom: 15px; font-style: italic; color: #444; }
+        .highlight-box { background: #fff9e6; border-left: 5px solid #ffcc00; padding: 25px; margin: 30px 0; font-style: italic; font-size: 18px; }
+        .quote-simple { font-style: italic; color: #555; border-left: 4px solid #ccc; padding-left: 15px; margin: 20px 0; }
+        .benefits-list li { margin-bottom: 8px; font-weight: 500; }
+
+        /* --- Ingredients Grid --- */
+        .ingredients-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin: 30px 0; }
+        .ingredient-card { background: #f8f9fa; border: 1px solid #e9ecef; padding: 15px; border-radius: 6px; }
+        .ingredient-card strong { color: #2c3e50; display: block; margin-bottom: 5px; font-size: 16px; }
+
+        /* --- Steps List --- */
+        .how-it-works { list-style: none; padding: 0; counter-reset: my-awesome-counter; }
+        .how-it-works li { counter-increment: my-awesome-counter; margin-bottom: 15px; position: relative; padding-left: 40px; }
+        .how-it-works li::before { content: counter(my-awesome-counter); background: #0056b3; color: white; font-weight: bold; border-radius: 50%; width: 25px; height: 25px; line-height: 25px; text-align: center; position: absolute; left: 0; top: 0; font-size: 14px; }
+        .how-it-works strong { color: #222; }
+
+        /* --- Testimonials --- */
+        .testimonial-wrapper { margin-bottom: 40px; }
+        .ba-placeholder { background-color: #f0f0f0; height: 350px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; border-radius: 8px; border: 2px dashed #999; color: #555; font-weight: bold; font-size: 18px; text-align: center; padding: 20px; }
+        .testimonial-box { background: #f0f7ff; border: 1px solid #cce4ff; padding: 25px; border-radius: 8px; }
+        .testimonial-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .testimonial-header img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .verified-badge { color: #27ae60; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* --- Timeline Box --- */
+        .results-timeline { background: #f4f8fb; border: 1px solid #dbe6ef; border-radius: 8px; padding: 25px; margin: 30px 0; }
+        .timeline-item { margin-bottom: 20px; }
+        .timeline-item h3 { color: #0056b3; font-size: 20px; margin-bottom: 10px; }
+        .timeline-item ul { list-style-type: disc; padding-left: 20px; }
+
+        /* --- Offer & Age Selector --- */
+        .offer-box { background: #f9f9f9; padding: 30px; border: 1px solid #ddd; border-radius: 10px; margin-top: 40px; text-align: center; }
+        .age-buttons { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin: 20px 0; }
+        .age-card { flex: 1; min-width: 200px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; border: 1px solid #eee; }
+        .age-cta { display: block; background: #4caf50; color: white; padding: 10px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 10px; }
+        .age-cta:hover { background: #43a047; }
+        
+        /* --- Guarantee Box --- */
+        .guarantee-box { background: #e8f5e9; border: 2px solid #4caf50; padding: 25px; border-radius: 8px; text-align: center; margin: 30px 0; }
+        .guarantee-box p { margin-bottom: 10px; }
+
+        /* --- Warning Box --- */
+        .final-warning { background: #ffebee; border: 1px solid #ef9a9a; color: #c62828; padding: 15px; border-radius: 4px; font-weight: bold; text-align: center; margin: 20px 0; font-size: 16px; }
+
+        /* --- CTA Button --- */
+        .cta-button { display: block; width: 100%; max-width: 450px; margin: 30px auto; background: linear-gradient(to bottom, #4caf50 0%, #388e3c 100%); color: #fff; font-size: 24px; font-weight: 800; text-align: center; padding: 20px; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); border-bottom: 5px solid #2e7d32; transition: all 0.2s; text-transform: uppercase; text-shadow: 1px 1px 0px rgba(0,0,0,0.3); }
+        .cta-button:hover { transform: scale(1.02); background: linear-gradient(to bottom, #66bb6a 0%, #43a047 100%); color: white; }
+
+        /* --- Scarcity Bar --- */
+        .scarcity-bar { background: #c0392b; color: white; padding: 12px; text-align: center; font-weight: bold; font-size: 15px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+
+        /* --- FIXED COMMENTS CSS (Social Media Style) --- */
+        .comments-section { margin-top: 60px; background: #fff; border-top: 1px solid #e0e0e0; padding-top: 30px; font-family: 'Helvetica', 'Arial', sans-serif; }
+        .comments-header { font-size: 22px; font-weight: 700; margin-bottom: 20px; border-bottom: 1px solid #e0e0e0; padding-bottom: 15px; }
+        .comment-input-sim { background: #f0f2f5; padding: 10px; border-radius: 20px; color: #65676b; margin-bottom: 30px; border: 1px solid #ccc; font-size: 14px; cursor: text; }
+        
+        .comment { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-start; }
+        .comment-avatar { width: 40px; height: 40px; background: #ddd; border-radius: 50%; flex-shrink: 0; overflow: hidden; }
+        .comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .comment-body-wrapper { display: flex; flex-direction: column; }
+        .comment-bubble { background: #f0f2f5; border-radius: 18px; padding: 10px 15px; display: inline-block; }
+        .comment-name { font-weight: 600; font-size: 13px; color: #050505; text-decoration: none; margin-bottom: 2px; display: block; }
+        .comment-text { font-size: 15px; color: #050505; line-height: 1.4; }
+        .comment-actions { margin-left: 15px; margin-top: 5px; font-size: 12px; color: #65676b; }
+        .comment-actions span { margin-right: 15px; cursor: pointer; font-weight: 600; }
+        .comment-actions span:hover { text-decoration: underline; }
+        
+        .comment-image { margin-top: 10px; max-width: 300px; border-radius: 10px; border: 1px solid #ddd; }
+        .comment-reply { margin-left: 52px; margin-top: -10px; } /* Indent for replies */
+
+        @media (min-width: 768px) {
+            .sidebar { display: block; }
+            .container { padding: 0 40px 60px; }
+            .headline-section h1 { font-size: 48px; }
+        }
+        @media (max-width: 767px) {
+            .headline-section h1 { font-size: 32px; }
+            .content-wrapper { flex-direction: column; }
+            .age-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="scarcity-bar" id="scarcityBar">
+    <span style="font-size: 18px;">⚠️</span> ACHTUNG: Aufgrund des Medienberichts sind nur noch <span id="stockCount" style="background: #fff; color: #c0392b; padding: 0 5px; border-radius: 3px;">14</span> Packungen verfügbar.
+</div>
+
+<header>
+    <div class="top-bar">
+        <div class="inner">
+            <span>Anzeige / Advertorial</span>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+    <div class="logo-bar">
+        <div class="container" style="box-shadow:none; padding-bottom: 0; margin-bottom: 0;">
+            <div class="logo-text">DEUTSCHE GESUNDHEIT NACHRICHTEN</div>
+        </div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li class="active">NACHRICHTEN</li>
+            <li>GESUNDHEIT</li>
+            <li>INVESTITIONEN</li>
+            <li>WIRTSCHAFT</li>
+            <li>ERNÄHRUNG</li>
+            <li>LIFESTYLE</li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <div class="headline-section">
+        <h1 class="headline">Berliner Schwestern sichern sich Rekord-Deal mit deutschen Investoren: Ihr "Kloster-Tee" lässt das Bauchfett schmelzen</h1>
+        <p class="subheadline">Nachdem sie von Banken abgelehnt wurden, bewiesen Lena und Laura Baier allen das Gegenteil. Die Entdeckung, die sie machten, ist heute Millionen wert – und hilft Tausenden Deutschen beim Abnehmen.</p>
+        
+        <div class="author-line">
+            <img src="./images/doc.png" alt="Reporter" style="object-fit: contain; width: auto; height: 30px;">
+            <span>Von <strong>Dr. med. Thomas Stein</strong> | Wissenschaftsredaktion | Aktualisiert: <span id="updateDate"></span></span>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <article class="main-article">
+            <img src="./images/49082398243809203498.jpg" alt="Schwestern Berlin" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+            <div class="image-caption">Ein Foto, das Geschichte schrieb: Lena (34) und Laura Baier (31) kurz nach der Unterzeichnung des Rekord-Investments in Berlin.</div>
+
+            <div class="lead-paragraph">
+                <p style="margin-bottom:0;">Eine bahnbrechende Entdeckung sorgt für Aufsehen: Ein deutsches Start-up hat eine rein pflanzliche Methode entwickelt, die den Körper entgiftet, den Stoffwechsel ankurbelt und beim Abnehmen hilft – mit nur einer Tasse Tee pro Tag. Dieser innovative Detox- und Schlankheitstee, den sich jeder leisten kann, kann in 30 Tagen bis zu 4 Kilo reduzieren und den Körper von innen heraus reinigen.</p>
+            </div>
+
+            <p><strong>BERLIN</strong> – Es waren die wohl spannendsten 15 Minuten der deutschen Start-up-Geschichte. Als die beiden Berliner Schwestern Lena und Laura Baier vor die Gruppe schwerreicher deutscher Investoren traten, rechnete niemand mit einer solchen Sensation.</p>
+            <p>Die Schwestern suchten Kapital für eine ungewöhnliche Entdeckung. Doch statt Kritik hagelte es Angebote. <strong>Innerhalb von Minuten entbrannte ein Bieterkrieg unter den Wirtschaftsmagnaten.</strong></p>
+
+            <div class="interview-box">
+                <h3>Sensation auf dem Ernährungskongress</h3>
+                <p>Im Frühjahr 2024 sorgte ein Vortrag auf einer großen ernährungswissenschaftlichen Konferenz für Aufsehen. Lena und Laura Baier, die Gründerinnen des Start-ups hinter <strong>Lulutox</strong>, präsentierten ihre revolutionäre Methode zur natürlichen Gewichtsabnahme und Entgiftung.</p>
+                <p>„Wir haben so viele Diäten ausprobiert – nichts war nachhaltig“, sagt Laura. „Wir wollten etwas entwickeln, das wirklich funktioniert – sanft, aber effektiv.“</p>
+                <p>Einige der führenden Ernährungswissenschaftler waren erstaunt, wie gut der Tee Fettverbrennung und Entgiftung kombiniert, um nachhaltige Ergebnisse zu erzielen.</p>
+
+                <div style="background: #fff; padding: 20px; border-left: 3px solid #cc0000; margin-top: 20px;">
+                    <h4 style="margin-top:0;">Exklusives Interview mit den Gründerinnen von Lulutox</h4>
+                    
+                    <span class="interview-q">Viral Reporter: Laura, was hat Sie dazu inspiriert, ein Produkt zur Gewichtsabnahme und Entgiftung zu entwickeln?</span>
+                    <span class="interview-a">Laura: „Wir wollten etwas wirklich Effektives schaffen, und unsere Forschung führte uns zu einer entscheidenden Erkenntnis: Seit Jahrhunderten nutzen Mönche und traditionelle asiatische Kulturen spezielle Kräuter, um ihren Körper zu entgiften, den Stoffwechsel anzukurbeln und ein gesundes Gewicht zu halten. Wenn man darüber nachdenkt, sieht man selten übergewichtige Mönche – sie haben die Kunst der natürlichen Körperreinigung perfektioniert.“</span>
+                    <span class="interview-a">„Inspiriert von diesem alten Wissen haben wir monatelang verschiedene Heilkräuter untersucht und getestet. Nach einem Jahr intensiver Forschung haben wir schließlich eine präzise Mischung aus 11 kraftvollen Kräutern entwickelt, die dafür bekannt sind, den Körper von Giftstoffen zu befreien, die Verdauung zu verbessern und die Fettverbrennung zu beschleunigen. Das macht Lulutox so einzigartig – es basiert auf jahrhundertealtem Wissen, kombiniert mit moderner Wissenschaft.“</span>
+
+                    <span class="interview-q">Viral Reporter: Was macht Lulutox so besonders?</span>
+                    <span class="interview-a">Laura: „Anders als viele andere Produkte, die auf aggressive Chemikalien oder extreme Diäten setzen, basiert Lulutox auf einer sorgfältig abgestimmten Kräuterformel, die sich über Generationen hinweg bewährt hat. Diese Kräuter arbeiten in perfekter Harmonie, um den natürlichen Entgiftungsprozess des Körpers zu unterstützen, während sie gleichzeitig den Stoffwechsel ankurbeln und Fett verbrennen.“</span>
+                </div>
+            </div>
+
+            <h2>Die versteckte Last von Übergewicht auf deutsche Leben</h2>
+            <p>Neben den Zahlen auf der Waage fordert Übergewicht einen tiefgreifenden Tribut vom täglichen Leben der Deutschen – sowohl körperlich als auch emotional.</p>
+            
+            <p><strong>Die gesundheitliche Belastung ist real:</strong> Viele Menschen in Deutschland leben mit den Folgen von Übergewicht, ohne den Zusammenhang zu erkennen. Die Typ-2-Diabetes-Raten sind gestiegen, wobei Deutschland nun vor dem steht, was manche Ärzte eine „Epidemie in der Epidemie" nennen. Bluthochdruck, Herz-Kreislauf-Erkrankungen und Fettlebererkrankungen werden selbst bei Menschen in ihren 30ern und 40ern immer häufiger.</p>
+            
+            <div class="highlight-box" style="background: #fff0f0; border-left-color: #cc0000;">
+                <p><strong>Die emotionale Last ist genauso schwer:</strong> Es gibt eine stille Scham, die mit dem Kampf gegen Übergewicht in Deutschland einhergeht. Die Kommentare bei Familienfeiern. Das Unbehagen, nicht bequem in Restaurantstühle zu passen. Das Vermeiden von Fotos bei Hochzeiten und Geburtstagsfeiern. Das geflüsterte Urteil, das man sich vorstellt, wenn man sich noch einmal am Buffet bedient.</p>
+            </div>
+
+            <p>Viele Deutsche merken, wie ihr Selbstvertrauen langsam schwindet. Dating fühlt sich unmöglich an. Intimität in Beziehungen leidet. Manche meiden soziale Situationen ganz und bleiben lieber zu Hause, als einen weiteren Abend voller Selbstunsicherheit zu ertragen.</p>
+            <p>Am Arbeitsplatz ist die Voreingenommenheit gegenüber übergewichtigen Menschen oft unausgesprochen, aber sehr real. Bei Beförderungen übergangen werden. Als faul oder undiszipliniert beurteilt werden. Die ständige unterschwellige Botschaft, dass man irgendwie weniger fähig ist wegen seines Gewichts.</p>
+            <p><em>„Ich hatte aufgehört, zu meinem Wanderverein zu gehen, weil ich mich geschämt habe"</em>, teilt eine Frau aus Frankfurt mit. <em>„Ich war früher so aktiv, aber ich konnte die mitleidigen Blicke nicht ertragen, wenn ich außer Atem war. Ich fühlte mich wie eine Versagerin."</em></p>
+
+            <div class="container" style="background: #fdfdfd; padding: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin: 30px 0;">
+                <h2 style="margin-top:0;">Die Klosterentdeckung, die alles veränderte</h2>
+                <figure>
+                     <img src="./images/b49.jpg" alt="Vorher-Nachher-Ergebnisse" style="width: 100%; border-radius: 5px;">
+                     <figcaption style="font-size: 12px; color: #777; margin-top: 5px;">Ergebnisse können variieren</figcaption>
+                </figure>
+                
+                <p>Lena und Laura Baier, zwei Schwestern aus Berlin, hatten alles probiert, was in Deutschland verfügbar ist. Zusammen hatten sie Tausende für Abnehmprogramme, Fitnessstudio-Mitgliedschaften, Mahlzeiten-Lieferdienste ausgegeben und sogar über eine Operation nachgedacht. Nichts wirkte langfristig.</p>
+                <p>„Ich war am Tiefpunkt", erinnert sich Lena, 46. „Ich konnte keine Wanderungen in den bayerischen Alpen mehr genießen, ohne ständig außer Atem zu sein. Meine Knie schmerzten vom zusätzlichen Gewicht. Ich versteckte mich hinter weiten Pullovern, selbst zu Hause. Mein Hausarzt sagte mir immer wieder, ich solle weniger essen und mehr Sport machen, aber es funktionierte einfach nicht."</p>
+                
+                <p>Während eines Wanderurlaubs in Bayern besuchten die Schwestern ein Benediktinerkloster. Was sie bemerkten, war bemerkenswert: Obwohl die Mönche ein relativ bewegungsarmes Leben führten, hielten sie – viele in ihren 70ern und 80ern – ein gesundes Gewicht und zeigten unglaubliche Vitalität.</p>
+                <p>„Diese Mönche gingen nicht ins Fitnessstudio und folgten keiner Modediät", erklärt Laura. „Dennoch hatten sie mehr Energie als Menschen, die halb so alt waren. Wir mussten ihr Geheimnis erfahren."</p>
+                <p>Das Geheimnis? Eine spezielle Kräuterteemischung, die die Mönche seit Jahrhunderten täglich trinken – eine sorgfältig zusammengestellte Kombination aus 13 kraftvollen natürlichen Zutaten.</p>
+                
+                <div class="quote-simple" style="background: #f9f9f9; padding: 15px;">
+                    <p>„Seit über 800 Jahren verwenden wir diese Kräuter, um unsere Gesundheit und Vitalität zu erhalten. Der Körper hat eine unglaubliche Fähigkeit, sich selbst zu heilen und zu regulieren, wenn er die richtigen natürlichen Stoffe erhält."</p>
+                    <cite>– Bruder Thomas, 82-jähriger Benediktinermönch</cite>
+                </div>
+
+                <h3>Warum deutsche Diäten immer wieder scheitern</h3>
+                <img src="./images/b53.jpg" alt="Tee-Zutaten" style="margin-bottom: 1em; width: 100%; border-radius: 5px;">
+                <p>Bevor wir verstehen, wie dieser Klostertee wirkt, ist es entscheidend zu verstehen, warum traditionelle Diätansätze scheitern, besonders für Deutsche.</p>
+                <p>Laut Forschungen deutscher Universitäten stört unsere moderne Ernährung – reich an verarbeiteten Lebensmitteln, Fertiggerichten und dem gelegentlichen Bier oder Wein – das Darmmikrobiom und schafft Bedingungen für Gewichtszunahme:</p>
+                
+                <ul class="benefits-list">
+                    <li><strong>Darmdysbiose</strong> (Mikrobiom-Ungleichgewicht) löst Entzündungen aus und verlangsamt den Stoffwechsel</li>
+                    <li><strong>Chronische niedriggradige Entzündungen</strong> durch verarbeitete Lebensmittel fördern die Fettspeicherung</li>
+                    <li><strong>Gestörte Darmbakterien</strong> beeinflussen Hungerhormone wie Leptin und Ghrelin</li>
+                    <li><strong>Beeinträchtigte Leberfunktion</strong> durch Alkohol und fettiges Essen reduziert die Fettverbrennung</li>
+                </ul>
+
+                <p>„Wenn Ihr Darmmikrobiom aus dem Gleichgewicht ist, löst es systemische Entzündungen aus", erklären Ärzte mit langjähriger Erfahrung in der Verdauungsgesundheit. „Diese Entzündung beeinflusst den Stoffwechsel, die Insulinempfindlichkeit und die Fettspeicherung. Bis Sie das Darmgleichgewicht wiederherstellen, wird Abnehmen immer ein verlorener Kampf sein."</p>
+                <p>Das erklärt, warum so viele Deutsche unter folgenden Problemen leiden:</p>
+                <ul class="benefits-list">
+                    <li>Ständiges Aufgeblähtsein und Verdauungsprobleme nach dem Essen</li>
+                    <li>Das gefürchtete Nachmittagstief bei der Arbeit</li>
+                    <li>Unkontrollierbare Gelüste nach Schokolade, Chips und Kuchen</li>
+                    <li>Gewicht, das sich trotz gesunder Ernährung nicht bewegt</li>
+                    <li>Gehirnnebel und Konzentrationsschwäche</li>
+                    <li>Gelenkschmerzen, die Bewegung unangenehm machen</li>
+                    <li>Gestörter Schlaf und erschöpftes Aufwachen</li>
+                </ul>
+            </div>
+            <h3>Die Lösung: Die Formel für maximale Fettverbrennung</h3> <img src=" https://dailylifeinsider.com/wp-content/uploads/2025/05/49082398243809203498.webp" alt="Tee-Zutaten" style="margin-bottom: 1em; width: 100%; border-radius: 5px;">
+           
+            <p>Um diese Spirale zu durchbrechen, entwickelten Lena und Laura <strong><a href="https://trk.cmclk.com/cf/click/1" class="red-text" style="text-decoration: underline;">Lulutox</a></strong>. Sie enthält exakt die Zutaten, die sie erforscht haben, optimiert für den modernen Stoffwechsel:</p>
+            <div class="ingredients-grid">
+                <div class="ingredient-card"><strong>Matcha Grüntee</strong></div>
+                <div class="ingredient-card"><strong>Mariendistel</strong></div>
+                <div class="ingredient-card"><strong>Oolong-Tee</strong></div>
+                <div class="ingredient-card"><strong>Yerba Mate</strong></div>
+                <div class="ingredient-card"><strong>Löwenzahnblatt</strong></div>
+                <div class="ingredient-card"><strong>Sencha Grüntee</strong></div>
+                <div class="ingredient-card"><strong>Goji-Beeren</strong></div>
+                <div class="ingredient-card"><strong>Ginseng</strong></div>
+                <div class="ingredient-card"><strong>Zitronengras</strong></div>
+                <div class="ingredient-card"><strong>Brennnesselblatt</strong></div>
+                <div class="ingredient-card"><strong>Guarana</strong></div>
+                <div class="ingredient-card"><strong>Steviablatt</strong></div>
+            </div>
+
+            <h2>Echte deutsche Erfolgsgeschichten</h2>
+            <p>Seit der Einführung haben die Schwestern Tausende von Erfolgsgeschichten von Deutschen erhalten, die das Abnehmen fast aufgegeben hatten.</p>
+
+            <div class="testimonial-wrapper">
+                <div class="ba-placeholder">
+                    <img src="./images/ba11.jpg"  style="width: 100%;">
+                </div>
+                <div class="testimonial-box">
+                    <div class="testimonial-header">
+                        <img src="https://dailylifeinsider.com/wp-content/uploads/2025/03/430988940389043809-1024x860.jpg" alt="Sabine Ergebnisse">
+                        <div>
+                            <div class="bold">Sabine R., 52, München</div>
+                            <div class="verified-badge">✅ Verifizierter Kauf</div>
+                        </div>
+                    </div>
+                    <p>„Ich habe jede Diät ausprobiert – Keto, 5:2, Shakes, was auch immer. Nichts hat langfristig funktioniert. Aber nach nur zwei Wochen Lulutox-Tee am Morgen bemerkte ich, dass meine Kleidung lockerer saß. Nach 10 Wochen hatte ich 18 kg abgenommen und fühlte mich besser als seit Jahren. Meine Knie schmerzen nicht mehr, ich schlafe die ganze Nacht durch, und ich habe endlich wieder Energie für Spaziergänge im Englischen Garten!"</p>
+                </div>
+            </div>
+
+            <div class="testimonial-wrapper">
+              
+                <blockquote class="quote-simple">
+                    <p>„Bei meinem Schichtdienst im Krankenhaus war eine gesunde Ernährung fast unmöglich. Lulutox passt perfekt in meinen Alltag – ich brühe einfach jeden Morgen eine Tasse auf. Ich habe 20 kg in 8 Wochen abgenommen und meine Energie ist durch die Decke gegangen. Meine Kollegen fragen ständig, was ich anders mache! Das Beste ist, mein Blutdruck ist gesunken und mein Hausarzt ist begeistert."</p>
+                    <cite>– Thomas M., 45, Hamburg</cite>
+                </blockquote>
+            </div>
+
+            <div class="testimonial-wrapper">
+                <div class="ba-placeholder">
+                   <img src="./images/365735673.jpg"  style="width: 100%;">
+                </div>
+                <div class="testimonial-box">
+                    <div class="testimonial-header">
+                        <img src="https://dailylifeinsider.com/wp-content/uploads/2025/05/453209834809098324.webp" alt="Anna Ergebnisse">
+                        <div>
+                            <div class="bold">Anna S., 38, Köln</div>
+                            <div class="verified-badge">✅ Verifizierter Kauf</div>
+                        </div>
+                    </div>
+                    <p>„Nach drei Kindern dachte ich, ich würde meinen Körper nie zurückbekommen. Zwischen Schulfahrten und Teilzeitarbeit hatte ich keine Zeit für mich. Lulutox hat mir das Gegenteil bewiesen. 15 kg weniger in 7 Wochen, und ich habe tatsächlich Energie, mit den Kindern im Park mitzuhalten. Meine Rückenschmerzen sind fast verschwunden, und ich habe keine Angst mehr, in den Spiegel zu schauen. Beste Investition, die ich je gemacht habe!"</p>
+                </div>
+            </div>
+
+            <h2>Warum das funktioniert, wenn alles andere versagt</h2>
+            <p>Traditionelle Diäten konzentrieren sich auf Einschränkung – Kalorien reduzieren, Lebensmittelgruppen eliminieren oder komplizierten Ernährungsplänen folgen. Aber dieser Ansatz ignoriert das eigentliche Problem: ein unausgeglichenes Darmmikrobiom, das darauf programmiert ist, Fett zu speichern.</p>
+            <p>Lulutox funktioniert anders. Anstatt gegen Ihren Körper zu kämpfen, arbeitet es mit ihm zusammen durch:</p>
+            <ol class="how-it-works">
+                <li><strong>Wiederherstellung des Darmgleichgewichts</strong> – Unterstützung des Wachstums nützlicher Bakterien</li>
+                <li><strong>Reduzierung von Entzündungen</strong> – Beruhigung systemischer Entzündungen, die Gewichtszunahme verursachen</li>
+                <li><strong>Optimierung des Stoffwechsels</strong> – Hilft Ihrem Körper, auf natürliche Weise Fett zu verbrennen</li>
+                <li><strong>Ausgleich der Hormone</strong> – Regulierung von Hungerhormonen wie Leptin und Ghrelin</li>
+                <li><strong>Verbesserung der Verdauung</strong> – Verbesserung der Nährstoffaufnahme und Reduzierung von Blähungen</li>
+            </ol>
+            <p>Das Ergebnis? Ihr Körper beginnt auf natürliche Weise, gespeichertes Fett freizusetzen, während Sie sich energiegeladener fühlen als je zuvor. Kein Hunger, keine Erschöpfung, keine komplizierten Regeln.</p>
+
+            <h2>So verwenden Sie Lulutox für maximale Ergebnisse</h2>
+            <img src="https://dailylifeinsider.com/wp-content/uploads/2025/03/430988904390843.gif" alt="Zubereitung" style="border-radius: 8px; margin-bottom: 20px;">
+            <p>Die Anwendung von Lulutox könnte nicht einfacher sein – perfekt für den geschäftigen deutschen Alltag. Lassen Sie einfach einen Teebeutel 4-6 Minuten in heißem Wasser ziehen. Er hat einen sanften Pfirsichgeschmack, der absolut köstlich ist! Genießen Sie ihn heiß an einem kalten, grauen Wintertag oder gekühlt, wann immer Sie möchten. Trinken Sie ihn ein- bis zweimal täglich – idealerweise morgens oder am frühen Nachmittag.</p>
+
+            <div class="results-timeline">
+                <div class="timeline-item">
+                    <h3>In der ersten Woche bemerken die meisten Menschen:</h3>
+                    <ul>
+                        <li>Weniger Blähungen und bessere Verdauung</li>
+                        <li>Mehr Energie über den ganzen Tag</li>
+                        <li>Reduzierte Gelüste nach süßen Snacks</li>
+                        <li>Bessere Schlafqualität</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>In Woche 4 beginnt die echte Transformation:</h3>
+                    <ul>
+                        <li>Sichtbarer Gewichtsverlust (durchschnittlich 5-8 kg)</li>
+                        <li>Kleidung sitzt merklich lockerer</li>
+                        <li>Klarere Haut und strahlenderer Teint</li>
+                        <li>Verbesserte Stimmung und geistige Klarheit</li>
+                        <li>Reduzierte Gelenkschmerzen und verbesserte Mobilität</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="offer-box">
+                <h2 style="color: #cc0000;">Sonderangebot für deutsche Einwohner - 70% RABATT!</h2>
+                <p>Die Schwestern T. planten ursprünglich, Lulutox für 79,90 € pro Packung zu verkaufen – immer noch ein Bruchteil dessen, was Menschen für Fitnessstudio-Mitgliedschaften oder Diätprogramme ausgeben, die nicht funktionieren. Aber sie hatten eine andere Vision.</p>
+                <p class="bold">„Wir haben Lulutox nicht geschaffen, um reich zu werden", erklärt Sarah. „Wir haben es geschaffen, weil wir wissen, wie frustrierend und hoffnungslos sich Abnehmen anfühlen kann. Wir möchten, dass jeder Deutsche Zugang zu dieser Lösung hat, besonders jetzt im Winter, wenn Bewegung draußen so schwierig ist."</p>
+                <p>Deshalb haben sie beschlossen, eine zeitlich begrenzte Sonderaktion für neue deutsche Kunden anzubieten...</p>
+                
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border: 1px solid #2196f3; margin: 20px 0;">
+                    <p style="margin:0; font-weight: bold; font-size: 20px; color: #0d47a1;">Für eine begrenzte Zeit können neue Kunden Lulutox für weniger als 24,99 € bekommen – das sind massive 70% RABATT auf den regulären Preis von 79,90 €!</p>
+                </div>
+                <p>Das ist weniger als ein Euro pro Tag – günstiger als Ihr täglicher Kaffee beim Bäcker!</p>
+            </div>
+
+            <h2 class="center" style="margin-top: 40px;">Lulutox exklusiv für jedes Alter! Wählen Sie Ihre Altersgruppe und finden Sie die beste Lösung für Sie!</h2>
+            <div class="age-buttons">
+                <div class="age-card">
+                    <h3>Für Alter 60+</h3>
+                    <a href="https://trk.cmclk.com/cf/click/1" class="age-cta">Hier klicken für 70% Rabatt!</a>
+                </div>
+                <div class="age-card">
+                    <h3>Für Alter 40-60</h3>
+                    <a href="https://trk.cmclk.com/cf/click/1" class="age-cta">Hier klicken für 70% Rabatt!</a>
+                </div>
+                <div class="age-card">
+                    <h3>Für Alter 20-40</h3>
+                    <a href="https://trk.cmclk.com/cf/click/1" class="age-cta">Hier klicken für 70% Rabatt!</a>
+                </div>
+            </div>
+            
+            <div style="background: #fff3e0; border: 1px solid #ffb74d; padding: 15px; margin: 20px 0;">
+                <strong>Wichtige Bestandsinfo:</strong> Aufgrund der überwältigenden Nachfrage nach Berichten in deutschen Morgensendungen und großen Gesundheitsmagazinen war Lulutox im letzten Monat dreimal ausverkauft. Der aktuelle Bestand ist begrenzt und wird voraussichtlich bald vergriffen sein.
+            </div>
+
+            <h2>Kein Risiko mit 30-Tage-Garantie</h2>
+            <div class="guarantee-box">
+                <p class="bold" style="font-size: 20px;">Ihr Erfolg ist garantiert</p>
+                <p>Probieren Sie Lulutox 30 Tage lang. Wenn Sie keine signifikanten Ergebnisse sehen – wenn Sie nicht abnehmen, sich nicht energiegeladener fühlen und nicht lieben, wie Sie sich fühlen – senden Sie einfach den unbenutzten Teil zurück für eine vollständige Rückerstattung. Keine Fragen gestellt.</p>
+                <p class="bold">Sie haben nichts zu verlieren außer dem Gewicht!</p>
+            </div>
+
+            <h2>Der Winter ist da – Die Entscheidung liegt bei Ihnen</h2>
+            <p>Sie können weiterhin mit Diäten kämpfen, die nicht funktionieren, sich hinter weiten Pullovern verstecken, frustriert und erschöpft sein…</p>
+            <p>Oder Sie können etwas anderes versuchen. Etwas, das bereits für Tausende von Deutschen wie Sie funktioniert hat. Etwas, das durch jahrhundertealte Weisheit und moderne Wissenschaft gestützt wird.</p>
+            <p>Denken Sie daran: Mit der 30-Tage-Garantie riskieren Sie nichts. Aber wenn Sie Lulutox nicht ausprobieren, riskieren Sie einen weiteren Winter, in dem Sie sich in Ihrer eigenen Haut unwohl fühlen, ein weiteres Jahr gescheiterter Diäten, vielleicht ein weiteres Jahrzehnt, in dem Sie Gewicht mit sich tragen, das Sie davon abhält, Ihr bestes Leben zu leben – und Ihre Gesundheit aufs Spiel setzt.</p>
+
+            <div class="testimonial-wrapper">
+                <div class="ba-placeholder">
+               <img src="./images/35.jpg"  style="width: 100%;">
+                </div>
+                <blockquote class="quote-simple">
+                    <p>„Ich wünschte, ich hätte Lulutox vor Jahren gefunden. Ich habe Tausende für Personal Trainer, Ernährungspläne und Abnehmkliniken ausgegeben. Dieser einfache Tee hat mir bessere Ergebnisse gebracht als alle zusammen. Ich bin 47 und habe endlich das Selbstvertrauen, wieder einen Badeanzug im Freibad zu tragen. Mein Mann sagt, ich sehe aus wie die Frau, die er vor 20 Jahren geheiratet hat. Mein einziges Bedauern ist, dass ich das nicht früher gefunden habe!"</p>
+                    <cite>– Karin W., 47, Düsseldorf</cite>
+                </blockquote>
+            </div>
+
+            <a href="https://trk.cmclk.com/cf/click/1" class="cta-button">Jetzt Ihren Sonderpreis sichern →</a>
+
+            <p class="final-warning">Letzte Warnung: Nur noch wenige Einheiten verfügbar zu diesem Sonderpreis von 70% RABATT für 24,99 €. Sobald sie weg sind, kehrt der Preis auf 79,90 € zurück. Basierend auf der aktuellen Nachfrage erwarten wir, innerhalb von 72 Stunden ausverkauft zu sein. Verpassen Sie nicht Ihre Chance, Ihren Körper zu transformieren und Ihre Gesundheit zurückzugewinnen!</p>
+            
+            <img src="./images/34098098340984308934.jpg" alt="Collage zufriedener Kunden" style="width: 100%; border-radius: 8px; margin-top: 20px;">
+
+            <div class="comments-section">
+                <div class="comments-header">128 Kommentare</div>
+                <div class="comment-input-sim">Schreibe einen Kommentar...</div>
+                
+                <div style="border-bottom: 1px solid #e0e0e0; margin-bottom: 20px; font-size: 14px; color: #65676b; display: flex; justify-content: space-between;">
+                    <span>Relevanteste</span>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                    </div>
+                    <div class="comment-body-wrapper">
+                        <div class="comment-bubble">
+                            <a href="#" class="comment-name">Monika Weber</a>
+                            <span class="comment-text">Endlich wieder lieferbar!! 🎉 Ich habe 3 Wochen gewartet, weil es überall ausverkauft war. Habe jetzt direkt 5 Packungen für mich und meine Schwester bestellt, bevor der Preis wieder hochgeht. Dieser Tee ist das Einzige, was meinen Blähbauch wirklich wegkriegt.</span>
+                        </div>
+                        <div class="comment-actions">
+                            <span>Gefällt mir</span> <span>Antworten</span> 1 Std.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    </div>
+                    <div class="comment-body-wrapper">
+                        <div class="comment-bubble">
+                            <a href="#" class="comment-name">Michael Bauer</a>
+                            <span class="comment-text">Ganz ehrlich? Ich dachte, das ist wieder so ein Internet-Betrug. Aber meine Frau hat mich gezwungen, es zu probieren. Bin jetzt in Woche 3 und mein Gürtel muss 2 Löcher enger. Ich nehme alles zurück, das Zeug funktioniert. 🍻</span>
+                        </div>
+                        <div class="comment-image">
+                            <img src="https://dailylifeinsider.com/wp-content/uploads/2025/03/439089084390843-1024x242.jpg" alt="Beweis">
+                        </div>
+                        <div class="comment-actions">
+                            <span>Gefällt mir</span> <span>Antworten</span> 3 Std.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="User">
+                    </div>
+                    <div class="comment-body-wrapper">
+                        <div class="comment-bubble">
+                            <a href="#" class="comment-name">Gisela H.</a>
+                            <span class="comment-text">Ich bin 64 und dachte, mein Stoffwechsel ist tot. Nichts hat geholfen, nicht mal Kohlsuppe. Mit Lulutox habe ich in 2 Monaten 9 Kilo verloren, ohne Sport. Meine Enkel sagen, ich sehe 10 Jahre jünger aus. Danke an die Schwestern! ❤️</span>
+                        </div>
+                        <div class="comment-actions">
+                            <span>Gefällt mir</span> <span>Antworten</span> 5 Std.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User">
+                    </div>
+                    <div class="comment-body-wrapper">
+                        <div class="comment-bubble">
+                            <a href="#" class="comment-name">Sabine Klein</a>
+                            <span class="comment-text">Kommt das wirklich an? Ich habe Angst, online zu bestellen.</span>
+                        </div>
+                        <div class="comment-actions">
+                            <span>Gefällt mir</span> <span>Antworten</span> 6 Std.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment comment-reply">
+                    <div class="comment-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User">
+                    </div>
+                    <div class="comment-body-wrapper">
+                        <div class="comment-bubble">
+                            <a href="#" class="comment-name">Karin Schulz</a>
+                            <span class="comment-text">Ja Sabine! Ich hatte auch Sorge, aber es kam nach 2 Tagen mit DHL. Und du kannst per PayPal zahlen, da bist du abgesichert. Mach es, solange der Rabatt noch da ist!</span>
+                        </div>
+                        <div class="comment-actions">
+                            <span>Gefällt mir</span> <span>Antworten</span> 5 Std.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="User">
+                    </div>
+                    <div class="comment-body-wrapper">
+                        <div class="comment-bubble">
+                            <a href="#" class="comment-name">Petra Fischer</a>
+                            <span class="comment-text">Leute, greift zu! Ich habe letzte Woche noch den vollen Preis bezahlt (79€) und jetzt kostet es nur 24€?? Ärgerlich für mich, aber ich habe mir gleich noch einen Vorrat für den Winter bestellt. Bei dem Preis kann man nichts falsch machen.</span>
+                        </div>
+                        <div class="comment-actions">
+                            <span>Gefällt mir</span> <span>Antworten</span> 8 Std.
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="https://trk.cmclk.com/cf/click/1" style="display: inline-block; background: #f0f2f5; padding: 10px 20px; border-radius: 4px; color: #333; font-weight: 600; width: 100%;">100 weitere Kommentare laden...</a>
+                </div>
+            </div>
+
+        </article>
+
+        <aside class="sidebar">
+            <div style="background: #f9f9f9; padding: 20px; border: 1px solid #eee; position: sticky; top: 80px;">
+                <h3 style="margin-top: 0; font-size: 18px; border-bottom: 2px solid #cc0000; padding-bottom: 10px; margin-bottom: 20px;">Meistgelesen</h3>
+                <div style="margin-bottom: 20px;">
+                    <a href="https://trk.cmclk.com/cf/click/1">
+                        <img src="https://dailylifeinsider.com/wp-content/uploads/2025/04/548380954308.png" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px;">
+                        <strong style="font-size: 16px; line-height: 1.3;">Schwestern lehnen erstes Millionen-Angebot ab? Die Wahrheit über den Deal.</strong>
+                    </a>
+                </div>
+                <div style="margin-top: 30px; text-align: center; background: #fff; padding: 15px; border: 1px solid #eee;">
+                    <p style="font-size: 12px; color: #999; text-transform: uppercase;">Anzeige</p>
+                    <a href="https://trk.cmclk.com/cf/click/1">
+                        <img src="https://dailylifeinsider.com/wp-content/uploads/2025/03/3408904830894308943.jpg" style="border: 1px solid #ccc; margin-bottom: 10px;">
+                        <span class="cta-button" style="font-size: 16px; padding: 12px; margin-top: 5px; width: auto;">Angebot prüfen &raquo;</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer style="background: #222; color: #999; padding: 40px 0; margin-top: 40px; font-size: 12px; border-top: 5px solid #cc0000;">
+    <div class="container" style="background: transparent; box-shadow: none; color: #bbb;">
+        <p><strong>HAFTUNGSAUSSCHLUSS:</strong> Die auf dieser Website dargestellten Informationen dienen ausschließlich Informationszwecken und ersetzen keine ärztliche Beratung. Die Ergebnisse können variieren. Lulutox ist ein Nahrungsergänzungsmittel und kein Medikament.</p>
+        <p class="center" style="margin-top: 20px; color: #666;">&copy; 2025 Deutsche Gesundheit Nachrichten. Alle Rechte vorbehalten.</p>
+    </div>
+</footer>
+
+<script>
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const today = new Date();
+    document.getElementById('currentDate').textContent = today.toLocaleDateString('de-DE', dateOptions);
+    document.getElementById('updateDate').textContent = today.toLocaleDateString('de-DE');
+    
+    setTimeout(function() {
+        document.getElementById('scarcityBar').style.display = 'block';
+    }, 1000);
+</script>
+
+<script>!function(){"use strict";var n="lp_ref",t="cpid",e="lpurl",c="https://trk.cmclk.com",r="(?<domain>http(?:s?)://[^/]*)".concat("/cf/click"),a="(?:(?:/(?<cta>[1-9][0-9]*)/?)|(?:/))?",i="^".concat(r).concat(a).concat("(?:$|(\\?.*))"),o='javascript:window.clickflare.l="(?<original_link>'.concat(r).concat(a,'("|(\\?[^"]*"))).*'),s=function(){return new RegExp(i,"")},u=function(){return new RegExp(o,"")};function l(n){var t=function(n){return n.replace(s(),(function(n){for(var t=[],e=1;e<arguments.length;e++)t[e-1]=arguments[e];var r=t[t.length-1].domain;return n.replace(r,c)}))}(n);return'javascript:window.clickflare.l="'.concat(t,'"; void 0;')}function d(n,t){if(t&&n&&t.apply(document,[n]),/loaded|interactive|complete/.test(document.readyState))for(var e=0,c=document.links.length;e<c;e++)if(s().test(document.links[e].href)){var r=document.links[e];window.clickflare.links_replaced.has(r)||(r.href=l(r.href),window.clickflare.links_replaced.add(r))}}var f,h,m,p;!function(r,a){var i=document.onreadystatechange;window.clickflare||(window.clickflare={listeners:{},customParams:{},links_replaced:new Set,addEventListener:function(n,t){var e=this.listeners[n]||[];e.includes(t)||e.push(t),this.listeners[n]=e},dispatchEvent:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))},push:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))}},document.onreadystatechange=function(n){return d(n,i)},d(null,i),setTimeout((function(){!function(r,a){var i,o=function(r,a){var i=new URL("".concat(c).concat(r)),o="{",s=o+o;a.startsWith(s)||i.searchParams.set(t,a);return i.searchParams.append(n,document.referrer),i.searchParams.append(e,location.href),i.searchParams.append("lpt",document.title),i.searchParams.append("t",(new Date).getTime().toString()),i.toString()}(r,a),s=document.createElement("script"),l=document.scripts[0];s.async=1,s.src=o,s.onerror=function(){!function(){for(var n=function(n,t){var e=document.links[n];u().test(decodeURI(e.href))&&setTimeout((function(){e&&e.setAttribute("href",function(n){var t=n.match(u());if(t){var e=(t.groups||{}).original_link;return e?e.slice(0,-1):n}return n}(decodeURI(e.href)))}))},t=0,e=document.links.length;t<e;t++)n(t)}()},null===(i=l.parentNode)||void 0===i||i.insertBefore(s,l)}(r,a)})))}("".concat("/cf/tags","/").concat(new URL(window.location.href).searchParams.get("cftmid")||"{{__CONTAINER_ID__}}"),(m=new URL(window.location.href).searchParams.get(t),f=new RegExp("(^| )".concat("cf_cpid","=([^;]+)")),p=(h=document.cookie.match(f))&&h.pop()||null,m||p||"{{__CAMPAIGN_ID__}}"))}();</script>
+
+</body>
+</html>
