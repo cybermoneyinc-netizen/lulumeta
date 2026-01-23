@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Die Diätwissenschaftliche Tageszeitung</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* CSS Reset & Defaults */
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; color: #111; line-height: 1.6; background-color: #fff; }
+        img { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px; }
+        a { color: #03cc54; text-decoration: none; transition: 0.3s; }
+        a:hover { text-decoration: underline; }
+        
+        /* Typography */
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: #000; margin-top: 1.5em; margin-bottom: 0.5em; line-height: 1.2; }
+        h1 { font-size: 32px; font-weight: 800; margin-top: 0; text-align: left; }
+        h2 { font-size: 26px; font-weight: 700; text-align: left; }
+        p { margin-bottom: 20px; font-size: 18px; text-align: left; }
+        strong { font-weight: 700; }
+        
+        /* Layout Grid */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 15px; }
+        .wrapper { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 30px; }
+        .main-content { flex: 0 0 66%; max-width: 66%; }
+        .sidebar { flex: 0 0 30%; max-width: 30%; }
+
+        /* Header Elements */
+        .top-banner { background-color: #03cc54; color: white; text-align: center; padding: 10px; font-weight: bold; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
+        .navbar { background: #fff; border-bottom: 1px solid #eee; padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 800; color: #333; text-transform: uppercase; }
+        .logo span { color: #03cc54; }
+        
+        /* Buttons */
+        .cta-button {
+            display: block;
+            background: linear-gradient(180deg,#4ba614,#008c00);
+            color: #fff !important;
+            font-size: 22px;
+            font-weight: 700;
+            text-align: center;
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #34740e;
+            margin: 30px auto;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-decoration: none !important;
+            width: 100%;
+            max-width: 400px;
+        }
+        .cta-button:hover { filter: brightness(1.1); transform: translateY(-2px); }
+
+        /* Ingredient Boxes */
+        .ingredient-block { background: #fff; border: 1px solid #e3e3e3; margin-bottom: 25px; border-radius: 0px; overflow: hidden; }
+        .ingredient-text { padding: 20px; background: #fff; }
+        .ingredient-text strong { color: #000; font-weight: 800; }
+
+        /* Testimonials (Fixed) */
+        .testimonial { background: #F4F4F4; padding: 20px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: start; gap: 15px; }
+        /* Specific style for the avatar image only */
+        .testimonial > img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin: 0; flex-shrink: 0; }
+        /* Style for images inside the testimonial content (the before/after photos) */
+        .testimonial-content img { width: 100%; height: auto; border-radius: 4px; margin-top: 15px; object-fit: contain; }
+        .testimonial-content p { margin: 0; font-size: 16px; line-height: 1.4; }
+        .stars { color: #FFD700; font-size: 14px; }
+
+        /* Sidebar */
+        .sidebar-box { border: 1px solid #eee; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center; background: #fff; position: sticky; top: 100px; }
+        
+        /* Footer */
+        .site-footer { margin-top: 50px; border-top: 1px solid #eee; padding: 40px 0; text-align: center; font-size: 12px; color: #777; background: #f9f9f9; }
+        .disclaimer { margin-top: 20px; line-height: 1.4; }
+
+        /* Mobile Sticky Button */
+        .mobile-sticky-btn { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; padding: 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 999; }
+        .mobile-sticky-btn a { display: block; background: #03cc54; color: white !important; padding: 12px; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .wrapper { flex-direction: column; }
+            .main-content, .sidebar { flex: 0 0 100%; max-width: 100%; }
+            .sidebar { order: 2; }
+            h1 { font-size: 26px; }
+            .mobile-sticky-btn { display: block; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-banner">
+        DIE DIÄTWISSENSCHAFTLICHE TAGESZEITUNG
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="https://trk.cmclk.com/cf/click/1" class="logo">Purisaki</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="wrapper">
+            
+            <article class="main-content">
+                
+                <h1>Sie verlor 24 Kilo mithilfe eines uralten Pflanzengeheimnisses, das die moderne Medizin zu VERBERGEN versuchte. Jetzt ist die Pharmaindustrie wütend, dass es zum Mainstream wird.</h1>
+                
+                <p><strong>Dieses 2000 Jahre alte pflanzliche Heilmittel wäre beinahe für immer verloren gegangen. Bis eine verzweifelte Frau entdeckte, dass es der Schlüssel zu mühelosem Abnehmen war.</strong></p>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w49-tilen-wl-husband-story-asset-01-de.png" alt="Transformation Story" style="margin-bottom: 25px;">
+                </a>
+
+                <p>Okay, ich muss Ihnen etwas sagen, was Sie vielleicht wütend machen wird.</p>
+                <p>Seit JAHREN gibt es eine natürliche Lösung zur Gewichtsabnahme, die tatsächlich funktioniert.</p>
+                <p><strong>Kein Hungern. Keine anstrengenden Trainingseinheiten. Keine gefährlichen Chemikalien.</strong></p>
+                <p>Einfach nur Pflanzen. Bestimmte Pflanzen, die indigene Kulturen seit Jahrhunderten verwenden.</p>
+                <p>Und die Mainstream-Abnehmindustrie?</p>
+                <p>Sie wollen nicht, dass Sie davon erfahren.</p>
+                <p>Weil man eine Pflanze nicht patentieren kann. Man kann nicht 1500 € im Monat für etwas verlangen, das in der Erde wächst. Man kann kein Milliarden-Euro-Imperium auf uralter Weisheit aufbauen, die allen gehört.</p>
+                <p>Also haben sie es verborgen.</p>
+                <p>Bisher.</p>
+
+                <h2>Mein Name ist Gloria. Ich bin 59. Und ich wäre beinahe gestorben, weil ich „moderne“ Abnehmtipps befolgt habe.</h2>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w49-tilen-wl-mexico-story-asset-02.png" alt="Gloria Krankenhaus" style="margin-bottom: 25px;">
+                </a>
+
+                <p>Ich übertreibe nicht.</p>
+                <p>Vor zwei Jahren habe ich eines dieser trendigen Nahrungsergänzungsmittel zur Gewichtsreduktion ausprobiert, über die alle sprachen. Die Promi-Versionen. Ich habe mir einen Arzt in einem Online-Lehrvideo dazu angesehen.</p>
+                <p><strong>Innerhalb von drei Wochen war ich in der Notaufnahme.</strong></p>
+                <p>Starke Übelkeit. Konnte keine Nahrung bei mir behalten. Herzrasen, das mich glauben ließ, ich würde sterben.</p>
+                <p>Der Notarzt warf einen Blick auf meine Akte und seufzte.</p>
+                <p>„Sie sind die Vierte in dieser Woche“, sagte er. „Diese Nahrungsergänzungsmittel sind für manche Menschen zu stark. Ihr Körper stößt sie ab.“</p>
+                <p>Ich bin 12 Kilo leichter nach Hause gekommen – aber das lag am Erbrechen, nicht am Fettabbau. Ich war schwächer als je zuvor. Verängstigt. Und immer noch übergewichtig.</p>
+                <p>Da überraschte mich meine Tante Rosa.</p>
+
+                <h2>Tía Rosas Geheimnis aus ihrer „alten Heimat“</h2>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w49-tilen-wl-mexico-story-asset-03.png" alt="Tante Rosa" style="margin-bottom: 25px;">
+                </a>
+
+                <p>Meine Tante Rosa ist 74 Jahre alt.</p>
+                <p>Sie wuchs in einem kleinen Dorf in Mexiko auf, von wo aus die nächste Apotheke drei Busstunden entfernt war. Wenn Menschen krank wurden, verwendeten sie Pflanzen. Wenn sie abnehmen mussten, griffen sie auf Pflanzen zurück. Wenn etwas nicht stimmte, war die Antwort immer dieselbe:</p>
+                <p><strong>Die Natur hat etwas dafür.</strong></p>
+                <p>Rosa hatte zwanzig Jahre lang mitangesehen, wie ich mit meinem Gewicht kämpfte. Sie sahen mir dabei zu, wie ich jede Diät, jede Pille, jedes Programm ausprobierte. Sah, wie ich wegen dieser Nahrungsergänzungsmittel im Krankenhaus landete.</p>
+                <p>Schließlich nahm sie mich bei der Quinceañera meiner Cousine beiseite.</p>
+                <p>„Mija“, sagte sie. „Warum vergiftest du dich immer wieder mit Chemikalien, wenn Gott uns doch schon alles gegeben hat, was wir brauchen?“</p>
+                <p>Sie drückte mir ein kleines Päckchen in die Hand.</p>
+                <p>„Das ist es, was die Frauen in unserem Dorf seit Generationen benutzen.“</p>
+                <p><strong>Im Inneren befanden sich kleine, durchsichtige Pflaster.</strong></p>
+                <p>Purisaki Berberin-Pflaster.</p>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w49-tilen-wl-mexico-story-asset-04-a.png" alt="Die Pflaster" style="margin-bottom: 25px;">
+                </a>
+
+                <p>„Pflaster?“ Ich war verwirrt. „Tante, ich habe schon jedes Nahrungsergänzungsmittel ausprobiert –“</p>
+                <p>Sie hob ihre Hand.</p>
+                <p>„Das sind nicht diese Pillen, die einem den Magen zerstören. Diese gehen über die HAUT. So, wie Medizin verabreicht werden sollte. So, wie es unsere Vorfahren kannten. Dies ist jedoch eine modernisierte Version – <strong>die Wissenschaftler haben das, was unsere Großmütter wussten, aufgegriffen und noch wirkungsvoller gemacht.</strong> Dieselbe uralte Pflanzenart, aber auf eine Weise verabreicht, die tatsächlich mit dem Körper zusammenwirkt.“</p>
+                <p>Sie begann, die Zutaten aufzuzählen. Pflanzen, von denen ich noch nie gehört hatte. Antike Heilmittel. Pflanzliche Verbindungen, die seit Jahrtausenden verwendet wurden.</p>
+                <p>„Probiere es einen Monat lang aus“, sagte sie. „Was hat die moderne Medizin für dich getan, außer dich kränker zu machen?“</p>
+                <p>Sie hatte Recht.</p>
+
+                <h2>Die uralten Pflanzen, die die Pharmaindustrie Ihnen verschweigt</h2>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w49-tilen-wl-mexico-story-asset-05-de.png" alt="Pflanzen" style="margin-bottom: 25px;">
+                </a>
+
+                <p>Ich ging nach Hause und recherchierte jeden einzelnen Inhaltsstoff dieser Pflaster.</p>
+                <p>Was ich dann vorfand, machte mich wütend.</p>
+                <p>Diesen Pflanzen standen BERGE wissenschaftlicher Forschung zugrunde. Echte Studien. Echte Ergebnisse. Aufgedeckt von echten Wissenschaftlern.</p>
+                <p>Und dennoch sprach niemand über sie.</p>
+                <p>Folgendes ist tatsächlich in diesen Pflastern enthalten:</p>
+
+                <div class="ingredient-block">
+                    <img src="./images/berberine.jpg" alt="Berberin">
+                    <div class="ingredient-text">
+                        <strong>Berberin</strong> — Das ist der Star. Eine 2020 durchgeführte Überprüfung von 12 klinischen Studien ergab, dass Personen, die Berberin einnahmen, deutlich mehr Gewicht verloren als die Placebo-Gruppen. Es zeigten sich auch Verbesserungen beim Taillenumfang und bei Entzündungsmarkern. Jim bezeichnete es als „eine der vielversprechendsten natürlichen Verbindungen zur Unterstützung des Stoffwechsels“.
+                    </div>
+                </div>
+
+                <div class="ingredient-block">
+                    <img src="./images/copy-of-6.jpg" alt="Fucoxanthin">
+                    <div class="ingredient-text">
+                        <strong>Fucoxanthin</strong> – Eine Verbindung aus Algen, die japanische Forscher eingehend untersucht haben. In einer Studie an Frauen konnte gezeigt werden, dass es innerhalb weniger Wochen dazu beitrug, Körperfett zu reduzieren und den Ruheumsatz anzukurbeln. Lindas Arzt erwähnte diese Studie ausdrücklich als „faszinierende Forschung“.
+                    </div>
+                </div>
+
+                <div class="ingredient-block">
+                    <img src="./images/copy-of-7.jpg" alt="Grüntee">
+                    <div class="ingredient-text">
+                        <strong>Grüntee-Extrakt</strong> – Aber nicht aus den Gründen, die Sie vielleicht vermuten würden. Ja, er unterstützt den Stoffwechsel. Studien zeigen jedoch, dass er auch dazu beiträgt, Hungerhormone zu senken und gleichzeitig Adiponektin – das Fettverbrennungshormon des Körpers – zu steigern. Eine Doppelblindstudie mit 102 Frauen zeigte messbare Ergebnisse.
+                    </div>
+                </div>
+
+                <div class="ingredient-block">
+                    <img src="./images/copy-of-8.jpg" alt="African Mango">
+                    <div class="ingredient-text">
+                        <strong>Afrikanischer Mangoextrakt</strong> — Das hat mich überrascht. Untersuchungen ergaben, dass die Anwender deutlich mehr Gewicht verloren als die Placebo-Gruppe. Wissenschaftler glauben, dass es dazu beiträgt, die Leptinempfindlichkeit wiederherzustellen – das ist das Hormon, das dem Gehirn signalisiert: „Wir haben genug Fettreserven, hör auf zu essen.“
+                    </div>
+                </div>
+
+                <div class="ingredient-block">
+                    <img src="./images/copy-of-9.jpg" alt="Granatapfel">
+                    <div class="ingredient-text">
+                        <strong>Granatapfelöl</strong> — Wirkt synergistisch mit Fucoxanthin. Als Forscher diese beiden Faktoren in Studien mit übergewichtigen Frauen kombinierten, beobachteten sie Verbesserungen bei der Leberverfettung und der Insulinempfindlichkeit.
+                    </div>
+                </div>
+
+                <div class="ingredient-block">
+                    <img src="./images/copy-of-10.jpg" alt="Vitamin B">
+                    <div class="ingredient-text">
+                        <strong>B-Vitamin-Komplex</strong> – Klingt einfach, aber Jim erklärte, dass B-Vitamin-Mängel unaufhörliche Zuckergelüste und Gewichtszunahme verursachen können, egal was Sie essen. Diese helfen, dieses Gleichgewicht wiederherzustellen.
+                    </div>
+                </div>
+
+                <h2>Warum Purisaki Berberin-Pflaster? Warum schluckt man diese Kräuter nicht einfach?</h2>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w49-tilen-wl-mexico-story-asset-06.png" alt="Wirkungsweise" style="margin-bottom: 25px;">
+                </a>
+
+                <p>Das ist wichtig.</p>
+                <p>Man könnte alle diese Zutaten als Pillen kaufen. Das versuchen die Leute schon seit Jahren.</p>
+                <p>Das Problem? Das Verdauungssystem.</p>
+                <p>Bis die meisten oralen Nahrungsergänzungsmittel die Magensäure und den Darmtrakt passiert haben, wird ein großer Teil der Wirkstoffe zerstört. Einige Studien legen nahe, dass bis zu 85 % der Nahrungsergänzungsmittel in Tablettenform nie in den Blutkreislauf gelangen.</p>
+                <p>Sie bezahlen im Grunde dafür, teuren Urin herzustellen.</p>
+                <p>Pflaster lösen dieses Problem vollständig.</p>
+                <p>Die Inhaltsstoffe werden direkt über die Haut in den Blutkreislauf aufgenommen. Keine Zerstörung im Verdauungstrakt. Keine Magenbeschwerden. Kein Wirkungsverlust.</p>
+                <p>Studien zeigen, dass die transdermale Verabreichung die Bioverfügbarkeit im Vergleich zu oralen Nahrungsergänzungsmitteln um bis zu 1.500 % erhöhen kann.</p>
+                <p>Fünfzehn mal MEHR von den guten Inhaltsstoffen erreichen tatsächlich Ihre Zellen.</p>
+                <p>So sollte Pflanzenmedizin ursprünglich angewendet werden. Nicht in Pillen gestopft, die Ihr Darm zerstört.</p>
+
+                <a href="https://trk.cmclk.com/cf/click/1" class="cta-button">VERFÜGBARKEIT PRÜFEN</a>
+
+                <h2>Meine Ergebnisse: 24 Kilo in 5 Monaten. Natürlich.</h2>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w49-tilen-wl-mexico-story-asset-07-de.png" alt="Ergebnis" style="margin-bottom: 25px;">
+                </a>
+
+                <p>Ich habe die Purisaki Pflaster am Tag nach der Übergabe durch Tante Rosa angefangen zu benutzen.</p>
+                <p>Ganz ehrlich – nach dem Albtraum mit der Injektion hatte ich Angst, irgendetwas auszuprobieren. Aber das waren Pflanzen. Natürliche Verbindungen. Nichts Synthetisches.</p>
+                <p>Wie schlimm sollte es schon sein können?</p>
+                <p><strong>Woche 1:</strong> Das Erste, was mir auffiel, war nicht der Gewichtsverlust. Es war die Stille. Dieses ständige Gedankenkreisen ums Essen – was soll ich essen, wann kann ich essen, was ist im Kühlschrank – hat einfach nachgelassen. Als hätte jemand ein Radio leiser gedreht, das jahrelang in voller Lautstärke lief. Ich habe 2 Kilo abgenommen. Aber ehrlich gesagt war der innere Frieden mehr wert.</p>
+                <p><strong>Woche 2:</strong> Ich war auf einer Geburtstagsfeier und habe EIN Stück Kuchen gegessen. Eins. Dann hörte ich auf. Nicht etwa, weil ich „brav“ war. Weil ich wirklich zufrieden war. Das ist mir noch nie gelungen. Noch nie. Insgesamt 4 Kilo abgenommen.</p>
+                <p><strong>Monat 1:</strong> 8 Kilo weniger. Ich hatte meine Ernährung nicht grundlegend verändert. Hatte nicht mit dem Sport angefangen. Ich habe einfach … von Natur aus weniger gegessen. Ich habe aufgehört zu naschen. Ich war mit den normalen Portionsgrößen zufrieden. Meine Schwester fragte, was ich mache. Ich war noch nicht bereit, es zu teilen.</p>
+                <p><strong>Monat 2:</strong> 13 kg insgesamt. Ich musste mir neue Jeans kaufen. Zum ersten Mal seit Jahren brauchte ich KLEINERE Größen statt größerer. Ich war voller Energie. Keine Einbrüche am Nachmittag. Kein Koffein erforderlich.</p>
+                <p><strong>Monat 3:</strong> Die Waage zeigte 18 Kilo Gewichtsverlust an. Mein Arzt konnte meine Untersuchungsergebnisse kaum fassen. Blutdruck gesunken. Der Blutzuckerspiegel verbesserte sich. Alles entwickelt sich in die richtige Richtung. „Was auch immer Sie tun“, sagte sie, „machen Sie weiter so.“ Ich habe ihr von den Pflastern erzählt. Von den Pflanzen. Sie war zunächst skeptisch – wie die meisten westlichen Ärzte. Aber sie konnte meine Ergebnisse nicht anfechten.</p>
+                <p><strong>Monat 5:</strong> 24 Kilo abgenommen.</p>
+                <p><strong>VIERUNDZWANZIG KILO.</strong></p>
+                <p>Mit Pflanzen. Uralte Pflanzen, die die Menschen seit Jahrtausenden nutzen.</p>
+                <p><em>No injections. No prescriptions. No emergency room visits.</em></p>
+                <p>Einfach Natur. Auf dem richtigen Weg verabreicht.</p>
+
+                <h2>Die Abnehmindustrie will nicht, dass Sie wissen, dass dies funktioniert</h2>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w49-tilen-wl-mexico-story-asset-08-a-eur.png" alt="Industrie" style="margin-bottom: 25px;">
+                </a>
+
+                <p>Ich will ganz ehrlich mit Ihnen sein.</p>
+                <p>Hinter diesen Aufnähern steckt kein riesiges Werbebudget. Keine Werbung mit Prominenten. Kein Milliardenkonzern drängt sie auf.</p>
+                <p><strong>Warum? Weil bei pflanzenbasierten Lösungen keine GROSSEN Gewinnspannen zu erzielen sind.</strong></p>
+                <p>Man kann nicht 1500 € im Monat für Berberin verlangen. Mit Algenextrakt lässt sich keine lebenslange Abhängigkeit von Medikamenten erzeugen. Mit Granatapfelöl kann man kein Unternehmen aufbauen, das an der Börse zum Liebling der Kunden wird.</p>
+                <p>Die etablierte Industrie ignoriert es also. Vergräbt es. Hofft, dass Sie weiterhin ihre teuren synthetischen Lösungen kaufen, die Sie krank machen.</p>
+                <p><strong>Aber die Forschung existiert. Das traditionelle Wissen ist vorhanden. Die ERGEBNISSE liegen vor.</strong></p>
+                <p>Man muss einfach bereit sein, über das hinauszuschauen, was einem verkauft wird.</p>
+
+                <h2>Eine Warnung vor Nachahmungen</h2>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w49-tilen-wl-mexico-story-asset-09.png" alt="Warnung" style="margin-bottom: 25px;">
+                </a>
+
+                <p>Eine Warnung muss ich aussprechen.</p>
+                <p>Nachdem Lindas Geschichte in unserer Gemeinde die Runde machte, erreichten uns beunruhigende Berichte. Leute, die „ähnliche“ Pflaster von irgendwelchen Webseiten gekauft hatten. Null Ergebnisse. Manche bekamen sogar Hautreaktionen von billigen Plagiaten.</p>
+                <p>Wenn etwas so gut funktioniert, reagieren Betrüger blitzschnell.</p>
+                <p>Die authentischen Purisaki Berberin-Pflaster sind nur erhältlich über <a href="https://trk.cmclk.com/cf/click/1">die offizielle Website mit Verifizierung.</a> Bitte verschwenden Sie nicht Ihr Geld – und riskieren Sie nicht Ihre Gesundheit – für Fälschungen.</p>
+
+                <a href="https://trk.cmclk.com/cf/click/1" class="cta-button">JETZT VERFÜGBARKEIT PRÜFEN</a>
+
+                <h2>Bereit, das auszuprobieren, was wirklich funktioniert?</h2>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/25w44-top-holistic-expert-cravings-asset-03.jpg" alt="Bereit" style="margin-bottom: 25px;">
+                </a>
+
+                <p>Ich kann nicht versprechen, dass diese Pflaster bei jedem genau gleich funktionieren.</p>
+                <p>Körper sind unterschiedlich. Die Stoffwechselprozesse sind unterschiedlich. Die Ausgangspunkte sind unterschiedlich.</p>
+                <p>Aber ich kann Ihnen Folgendes versprechen:</p>
+                <p>Das sind echte Pflanzen. Seit Jahrhunderten erforscht. Gestützt auf moderne wissenschaftliche Erkenntnisse. Die Wirkstoffe werden so verabreicht, dass sie tatsächlich in Ihren Blutkreislauf gelangen.</p>
+                <p>Keine synthetischen Chemikalien. Keine beängstigenden Nebenwirkungen. Keine Besuche in der Notaufnahme.</p>
+                <p>Hier trifft uralte Weisheit auf moderne Übertragungstechnologie.</p>
+                <p>Wenn Sie schon alles andere versucht haben …</p>
+                <p>Wenn Sie es satt haben, Ihrem Körper Chemikalien zuzuführen …</p>
+                <p>Wenn Sie bereit sind, MIT der Natur statt gegen sie zu arbeiten …</p>
+                <p>Vielleicht ist es dann an der Zeit, das auszuprobieren, was sich seit Jahrtausenden bewährt hat.</p>
+
+                <a href="https://trk.cmclk.com/cf/click/1" class="cta-button">ENTDECKEN SIE DIE NATÜRLICHE LÖSUNG</a>
+
+                <p><em>Begrenzte Verfügbarkeit. Diese Produkte werden nicht in einer pharmazeutischen Fabrik massenhaft hergestellt, sondern sind sorgfältig zusammengestellte Pflaster auf pflanzlicher Basis. Wenn sie ausverkauft sind, muss auf die nächste Charge gewartet werden.</em></p>
+
+                <h2>Was echte Frauen erleben</h2>
+
+                <div class="testimonial">
+                    <img src="./images/anonymous.jpg" alt="Emilia">
+                    <div class="testimonial-content">
+                        <strong>Emilia, 62, Berlin</strong> <span class="stars">★★★★★</span>
+                        <p>Ich habe innerhalb von zehn Jahren 14.000 € für Behandlungen zur Gewichtsreduktion ausgegeben. Mit diesen Pflanzenbeeten habe ich in vier Monaten 21 Kilo abgenommen. Ich könnte weinen, wenn ich an das verschwendete Geld denke.</p>
+                        <img src="./images/5.png" alt="Emilia Vorher Nachher">
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <img src="./images/anonymous.jpg" alt="Emma">
+                    <div class="testimonial-content">
+                        <strong>Emma, 55, Hanover</strong> <span class="stars">★★★★★</span>
+                        <p>Ich hatte panische Angst vor Spritzen und ihren Nebenwirkungen. Diese Pflaster fühlten sich sicher an, weil sie nur Pflanzen enthielten. 17 Kilo abgenommen und keinerlei Nebenwirkungen.</p>
+                        <img src="./images/4.png" alt="Emma Vorher Nachher">
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <img src="./images/anonymous.jpg" alt="Mia">
+                    <div class="testimonial-content">
+                        <strong>Mia, 49, Hamburg</strong> <span class="stars">★★★★★</span>
+                        <p>Meine Großmutter erzählte immer von traditionellen pflanzlichen Heilmitteln. Diese Pflaster fühlen sich an wie eine Hommage an diese Weisheit. Ich habe 18,5 Kilo abgenommen und meine Großmutter wäre stolz.</p>
+                        <img src="./images/25-03-04-weightloss08b.jpg" alt="Mia Vorher Nachher">
+                    </div>
+                </div>
+
+                <a href="https://trk.cmclk.com/cf/click/1" class="cta-button">JETZT BESTELLEN</a>
+
+            </article>
+
+            <aside class="sidebar">
+                <div class="sidebar-box">
+                    <h2 style="font-size: 20px; text-align: center; margin-top: 0;">BIS ZU 70% RABATT</h2>
+                    <p style="text-align: center; font-size: 14px; margin-bottom: 10px;">NUR FÜR KURZE ZEIT!</p>
+                    <a href="https://trk.cmclk.com/cf/click/1">
+                        <img src="./images/25w49-tilen-wl-husband-story-asset-00-de.png" alt="Produkt Angebot">
+                    </a>
+                    <p style="font-weight: 700; margin-top: 15px;">Testen Sie es noch heute mit einer 60-Tage-Geld-zurück-Garantie!</p>
+                    <a href="https://trk.cmclk.com/cf/click/1" class="cta-button" style="font-size: 16px; margin-top: 10px;">JETZT BESTELLEN ></a>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Haftungsausschluss: Diese Aussagen wurden nicht von der Food and Drug Administration geprüft. Dieses Produkt ist nicht zur Diagnose, Behandlung, Heilung oder Vorbeugung von Krankheiten bestimmt. Die Ergebnisse können individuell variieren. Konsultieren Sie Ihren Arzt, bevor Sie mit der Einnahme eines neuen Nahrungsergänzungsmittels beginnen. Erfahrungsberichte spiegeln individuelle Erfahrungen wider und stellen möglicherweise keine typischen Ergebnisse dar. Dies ist eine Werbeanzeige.</p>
+            <div style="margin-top: 20px;">
+                <a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-sticky-btn">
+        <a href="https://trk.cmclk.com/cf/click/1">VERFÜGBARKEIT PRÜFEN >></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 500) {
+                $(".mobile-sticky-btn").fadeIn();
+            } else {
+                $(".mobile-sticky-btn").fadeOut();
+            }
+        });
+    </script>
+    <script>!function(){"use strict";var n="lp_ref",t="cpid",e="lpurl",c="https://trk.cmclk.com",r="(?<domain>http(?:s?)://[^/]*)".concat("/cf/click"),a="(?:(?:/(?<cta>[1-9][0-9]*)/?)|(?:/))?",i="^".concat(r).concat(a).concat("(?:$|(\\?.*))"),o='javascript:window.clickflare.l="(?<original_link>'.concat(r).concat(a,'("|(\\?[^"]*"))).*'),s=function(){return new RegExp(i,"")},u=function(){return new RegExp(o,"")};function l(n){var t=function(n){return n.replace(s(),(function(n){for(var t=[],e=1;e<arguments.length;e++)t[e-1]=arguments[e];var r=t[t.length-1].domain;return n.replace(r,c)}))}(n);return'javascript:window.clickflare.l="'.concat(t,'"; void 0;')}function d(n,t){if(t&&n&&t.apply(document,[n]),/loaded|interactive|complete/.test(document.readyState))for(var e=0,c=document.links.length;e<c;e++)if(s().test(document.links[e].href)){var r=document.links[e];window.clickflare.links_replaced.has(r)||(r.href=l(r.href),window.clickflare.links_replaced.add(r))}}var f,h,m,p;!function(r,a){var i=document.onreadystatechange;window.clickflare||(window.clickflare={listeners:{},customParams:{},links_replaced:new Set,addEventListener:function(n,t){var e=this.listeners[n]||[];e.includes(t)||e.push(t),this.listeners[n]=e},dispatchEvent:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))},push:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))}},document.onreadystatechange=function(n){return d(n,i)},d(null,i),setTimeout((function(){!function(r,a){var i,o=function(r,a){var i=new URL("".concat(c).concat(r)),o="{",s=o+o;a.startsWith(s)||i.searchParams.set(t,a);return i.searchParams.append(n,document.referrer),i.searchParams.append(e,location.href),i.searchParams.append("lpt",document.title),i.searchParams.append("t",(new Date).getTime().toString()),i.toString()}(r,a),s=document.createElement("script"),l=document.scripts[0];s.async=1,s.src=o,s.onerror=function(){!function(){for(var n=function(n,t){var e=document.links[n];u().test(decodeURI(e.href))&&setTimeout((function(){e&&e.setAttribute("href",function(n){var t=n.match(u());if(t){var e=(t.groups||{}).original_link;return e?e.slice(0,-1):n}return n}(decodeURI(e.href)))}))},t=0,e=document.links.length;t<e;t++)n(t)}()},null===(i=l.parentNode)||void 0===i||i.insertBefore(s,l)}(r,a)})))}("".concat("/cf/tags","/").concat(new URL(window.location.href).searchParams.get("cftmid")||"{{__CONTAINER_ID__}}"),(m=new URL(window.location.href).searchParams.get(t),f=new RegExp("(^| )".concat("cf_cpid","=([^;]+)")),p=(h=document.cookie.match(f))&&h.pop()||null,m||p||"{{__CAMPAIGN_ID__}}"))}();</script>
+
+</body>
+</html>
