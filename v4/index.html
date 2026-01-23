@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abnehm-Pflaster sorgen für Staunen bei Diät-Experten (DE)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800&family=Fira+Code:wght@300;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* CSS RESET */
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; font-family: 'Manrope', sans-serif; color: #111; line-height: 1.5; background-color: #fff; font-weight: 300; }
+        img { max-width: 100%; height: auto; border-radius: 4px; display: block; margin: 0 auto; }
+        a { color: #000; text-decoration: underline; transition: 0.3s; }
+        a:hover { text-decoration: none; }
+        
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; color: #000; margin-top: 1.5em; margin-bottom: 0.5em; line-height: 1.2; font-weight: 700; }
+        h1 { font-size: 30px; margin-top: 0; }
+        h2 { font-size: 24px; }
+        p { margin-bottom: 20px; font-size: 18px; }
+        b, strong { font-weight: 700; }
+        i { font-style: italic; }
+
+        /* LAYOUT */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .wrapper { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 30px; }
+        .main-content { flex: 0 0 65%; max-width: 65%; }
+        .sidebar { flex: 0 0 30%; max-width: 30%; }
+
+        /* NAVBAR */
+        .navbar { background: #fff; border-bottom: 1px solid #ddd; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: center; align-items: center; }
+        .logo { font-size: 22px; font-weight: 800; color: #000; text-transform: uppercase; text-decoration: none; letter-spacing: 2px; }
+
+        /* ELEMENTS */
+        .meta-info { font-size: 14px; color: #666; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        
+        .cta-button {
+            display: block;
+            background-color: #000;
+            color: #fff !important;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 30px 0;
+            text-transform: uppercase;
+            text-decoration: none !important;
+        }
+        .cta-button:hover { background-color: #333; }
+
+        /* LISTS */
+        .check-list { list-style: none; padding: 0; }
+        .check-list li { margin-bottom: 15px; position: relative; padding-left: 0; }
+        .check-list li b { display: block; margin-bottom: 5px; }
+        
+        /* ICON LIST */
+        .icon-list-item { display: flex; gap: 10px; margin-bottom: 15px; align-items: flex-start; }
+        .icon-list-icon svg { width: 20px; height: 20px; fill: #000; }
+
+        /* CAROUSEL (Slideshow) */
+        .carousel-container { position: relative; width: 100%; margin: 20px 0; overflow: hidden; }
+        .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+        .carousel-slide { min-width: 50%; padding: 5px; box-sizing: border-box; } /* 2 slides per view on desktop */
+        .carousel-slide img { width: 100%; height: auto; border-radius: 4px; display: block; }
+        
+        .carousel-dots { text-align: center; margin-top: 15px; }
+        .carousel-dot { display: inline-block; width: 10px; height: 10px; background: #ccc; border-radius: 50%; margin: 0 5px; cursor: pointer; }
+        .carousel-dot.active { background: #000; }
+        
+        .carousel-nav button { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px; cursor: pointer; border-radius: 50%; }
+        .carousel-nav .prev { left: 10px; }
+        .carousel-nav .next { right: 10px; }
+
+        /* SIDEBAR */
+        .sidebar-box { border: 1px solid #eee; padding: 20px; border-radius: 4px; margin-bottom: 30px; text-align: center; background: #f9f9f9; }
+        .sidebar-sticky { position: sticky; top: 80px; }
+
+        /* FOOTER */
+        .site-footer { background: #111; color: #fff; padding: 40px 0; margin-top: 50px; font-size: 14px; text-align: center; }
+        .footer-links a { color: #fff; margin: 0 10px; text-decoration: none; }
+        .study-links { text-align: center; margin-bottom: 20px; }
+        .study-links a { color: #fff; margin: 0 5px; font-size: 12px; }
+
+        /* MOBILE STICKY */
+        .mobile-sticky-btn { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; padding: 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 999; }
+        .mobile-sticky-btn a { display: block; background: #000; color: white !important; padding: 12px; border-radius: 4px; font-weight: bold; text-align: center; text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .wrapper { flex-direction: column; }
+            .main-content, .sidebar { flex: 0 0 100%; max-width: 100%; }
+            .sidebar { order: 2; }
+            .mobile-sticky-btn { display: block; }
+            .carousel-slide { min-width: 100%; } /* 1 slide per view on mobile */
+        }
+        
+        .desktop-only { display: block; }
+        .mobile-only { display: none; }
+        @media (max-width: 768px) {
+            .desktop-only { display: none; }
+            .mobile-only { display: block; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="https://trk.cmclk.com/cf/click/1" class="logo">INSPIRATION STATION</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="wrapper">
+            
+            <article class="main-content">
+                
+               
+
+                <div class="meta-info">
+                    Autor: Dr. Klara Neumann – Wohlbefinden & Gesundheit | Vor 2 Tagen | Advertorial
+                </div>
+
+                <h1>Kann abnehmen SO einfach sein? Anti-Hunger Pflaster soll Heißhunger über die Haut zügeln. Eine echte Alternative zu Crashdiäten und verschreibungspflichtigen Mitteln?</h1>
+                
+                <p>Die neue “Transdermale” Abnehm-Methode sorgt für sorgenfreies Abnehmen durch Hunger-Zügelung über die Haut. Wie die Erfinder es geschafft haben, diesen Effekt zu erzielen, hat diese Ärztin aus Berlin erforscht. Nutzer berichten von unglaublichen Ergebnissen nach wenigen Tagen.</p>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/Bildschirmfoto-2025-10-30-um-15.44.22-rdz1vnikrhvsaiysvhiiq7licvd6gicu6i4ntajqcs.png"  style="margin-bottom: 20px;">
+                    <img src="./images/Header_Mobil.png" class="mobile-only" style="margin-bottom: 20px;">
+                    <img src="./images/Header_Mobil_2-neu.png" class="mobile-only" style="margin-bottom: 20px; display:none;">
+                </a>
+
+                <p><i>Übergewicht zählt zu den häufigsten Volkskrankheiten mit gravierenden Folgen. In Deutschland sind rund 30 % der Bevölkerung von Adipositas betroffen (BMI über 30) – <b>Häufige Ursachen: ein natürlicher Rückgang der Abnehm-Hormone und des Fettstoffwechsels.</b></i></p>
+
+                <p><b>Lästiges Bauchfett, Heißhunger-Attacken und nichts scheint zu helfen. Doch dann die Erfindung des Jahres: Die Abnehm-Spritze. Der Wirkmechanismus dieser ist mittlerweile vielen Leuten bekannt:</b> Das Anti-Hunger-Hormon GLP-1 wird verstärkt produziert. Das sorgt bei Anwenderinnen und Anwendern schnell zu massivem Gewichtsverlust durch Appetitverlust. <b>Doch die Nebenwirkungen sind unerforscht und häufen sich.</b> Aktuell gibt es die größte Sammelklage der Geschichte, aufgrund der vielen Nebenwirkungen dieser Spritze.</p>
+
+                <p>Viele Verbraucher suchen nach Alternativen um den Hunger zu zügeln, den Stoffwechsel zu beschleunigen und schnell abzunehmen.</p>
+
+                <p>Ich bin <b>Dr. Klara Neumann</b>, Ernährungswissenschaftlerin. Seit 15 Jahren erforsche ich Abnehmmethoden. Bei dieser Methode, habe ich mich selbst dem Test gestellt.</p>
+
+                <p>Als in meinem Umfeld <b>die Abnehm-Spritzen Thema wurden</b>, bekam ich Angst: <b>Nadelangst,</b> zwei Freundinnen mit starken <b>Nebenwirkungen</b>, dazu die weltweit größte <b>Sammelklagen</b> gegen die Hersteller. Mir war klar: Ich werde mich von synthetischen Mitteln, Pillen und Abnehmspritzen weiterhin fern halten. Ich war schon immer ein Verfechter von natürlichen Mitteln.</p>
+
+                <p>Der Wendepunkt: ein <b>10-Sekunden-Ritual – Hunger reduzierendes Pflaster, morgens aufkleben</b>, fertig. Abnehmen <b>ohne Pillen, Diäten oder gar Spritzen.</b> Die Idee: <b>transdermale Wirkstoffe wie Berberin</b>, das dafür bekannt ist, den Körper durch Hungerzügelung beim Abnehmen zu<b> </b>unterstützen.<b> Der Stoffwechsel wird angeregt und die Fettverbrennung läuft auf Hochtouren. </b></p>
+
+                <p>Aus meiner Erfahrung weiß ich: Es geht nicht nur um Kalorien. Stress, verarbeitetes Essen und ein überlasteter Stoffwechsel bremsen die Fettverbrennung – der Körper schaltet in den Sparmodus. Ein <b>sanfter Hormon-Anschub</b> kann helfen.</p>
+
+                <p>„Wie ich in 2 Monaten 15 kg verlor – mit nur 10 Sekunden am Tag!“</p>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/Ingredients.png" class="desktop-only" alt="Ingredients" style="margin-bottom:20px;">
+                    <img src="./images/Bildschirmfoto-2025-10-29-um-14.09.20.png" class="mobile-only" alt="Ingredients" style="margin-bottom:10px;">
+                    <img src="./images/Bildschirmfoto-2025-10-29-um-14.09.32.png" class="mobile-only" alt="Ingredients" style="margin-bottom:20px;">
+                </a>
+
+                <p><b>Im August begann ich das tägliche 10 Sekunden Ritual</b>: Schutzfolie abziehen, Abnehm-Pflaster aufkleben, Hunger zügeln – fertig. Die transdermale Unterstützung entfaltet ihre Wirkung nach 10 Sekunden und hält ca. 8–12 Stunden an, ganz ohne Pillen oder Spritze.</p>
+
+                <p>Die Pflaster kombinieren Berberin, Garcinia Cambogia und Grüntee-Extrakt. Die präzise Mischung unterstützt den natürlichen Hormon Haushalt, der meist für das lästige Bauchfett zuständig ist. Es fördert Sättigung, dämpft Heißhunger und aktiviert die Fettverbrennung – inspiriert von traditioneller Heilkunde, untermauert durch moderne Forschung.</p>
+
+                <p>Der selbe Wirkmechanismus wie bei der bekannten Abnehm-Spritze.</p>
+
+                <p>So wird Abnehmen alltagstauglich: aufkleben, loslegen, der Rest läuft im Hintergrund. Ergebnisse variieren, konsequente Anwendung ist entscheidend.</p>
+
+                <p>Einige Vorher-Nachher Resultate der Probanden:</p>
+
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide">
+                            <img src="./images/Bildschirmfoto-2025-10-30-um-10.20.15-768x768.png" alt="Result 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/Bildschirmfoto-2025-10-30-um-10.20.39-768x768.png" alt="Result 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/Bildschirmfoto-2025-10-30-um-10.18.51-768x770.png" alt="Result 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/Bildschirmfoto-2025-10-30-um-10.19.24-768x764.png" alt="Result 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/Bildschirmfoto-2025-10-30-um-10.20.01-768x767.png" alt="Result 5">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before-and-after_transformation_photo_of_a_woma_45b74239-9211-46e5-b7ee-48227021c44c_0-1-768x768.png" alt="Result 6">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/alt12_1080_square_crop-768x768.jpg" alt="Result 7">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before-and-after_transformation_photo_of_a_woma_0bf60624-cff4-4ef3-a239-04628f4dd6df_1-1-768x768.png" alt="Result 8">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/alt_1080_square_crop-768x768.jpg" alt="Result 9">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before-and-after_transformation_photo_of_a_woma_6e09f0cd-30ec-4701-93b6-1c2da414c7b9_2-1-768x768.png" alt="Result 10">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before-and-after_transformation_photo_of_a_attr_a272f6db-89e1-40de-827b-4cfaa4c9b1fc_0-768x768.png" alt="Result 11">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/alt2_1080_square_crop-768x768.jpg" alt="Result 12">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before-and-after_transformation_photo_of_a_attr_1156a44a-2faa-4f5e-afaf-ab24fec53000_1-768x768.png" alt="Result 13">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before-and-after_transformation_photo_of_a_attr_ad400fac-7d29-47e1-812b-2197e347738f_0-768x768.png" alt="Result 14">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/alt11_1080_square_crop-768x768.jpg" alt="Result 15">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/alt7_1080_square_crop-768x768.jpg" alt="Result 16">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before-and-after_transformation_photo_of_a_woma_452de1c8-b926-45e3-9416-afca70f19732_2-1-768x768.png" alt="Result 17">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/alt6_1080_square_crop-768x768.jpg" alt="Result 18">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/alt4_1080_square_crop-1-768x768.jpg" alt="Result 19">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before-and-after_transformation_photo_of_a_finn_c4268ed9-f393-4fc8-9375-f90d0b1e2776_0-768x768.png" alt="Result 20">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/asset-5.webp" alt="Result 21">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/asset-6.webp" alt="Result 22">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/asset-7.webp" alt="Result 23">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/asset-8.webp" alt="Result 24">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before_and_after_photo_of_a_40_year_old_man._He_b0d171b5-623b-4d61-9a73-6fe7ef9c67c0_1-768x768-1.webp" alt="Result 25">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before_and_after_photo_of_a_40_year_old_man._He_ab634374-430b-4fcd-9606-075bd4cbfe8c_0-768x768-1.webp" alt="Result 26">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before_and_after_photo_of_a_normal_woman_in_her_bb70fa6a-8d27-40a9-ae33-d679359adbaa_2-768x768-1.webp" alt="Result 27">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before_and_after_photo_of_a_woman_in_her_thirti_734ea1ff-82af-4d90-9eca-fcc301ae096c_2-768x768-1.webp" alt="Result 28">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before_and_after_photo_of_a_normal_woman_in_her_198173c8-6f36-44a0-bc3a-06db34e33ef5_2-768x768-1.webp" alt="Result 29">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before_and_after_photo_of_a_woman_in_her_thirti_d052f696-f8e7-47b4-b1ff-15289730daef_3-768x768-1.webp" alt="Result 30">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before_and_after_photo_of_a_man_in_his_thirties_48a9704f-074f-4efe-8848-6fb3c550e9f0_2-768x768-1.webp" alt="Result 31">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/u6996937928_A_before_and_after_photo_of_a_man_in_his_thirties_48a9704f-074f-4efe-8848-6fb3c550e9f0_1-768x768-1.webp" alt="Result 32">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/asset-3.webp" alt="Result 33">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./images/asset-4.webp" alt="Result 34">
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-nav">
+                        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                    </div>
+                    
+                    <div class="carousel-dots" id="carouselDots">
+                        </div>
+                </div>
+
+                <a href="https://trk.cmclk.com/cf/click/1" class="cta-button">Kostenlosen Stoffwechsel-Test machen</a>
+
+                <p><em>Purisaki Abnehm-Pflaster setzen gezielt Prozesse in Gang, die Ihren Körper beim effektiven Abnehmen unterstützen. Der Stoffwechsel wird kontinuierlich gefördert, die Fettverbrennung verstärkt und das Verlangen nach zusätzlichen Kalorien deutlich abgeschwächt. Mit dieser wirksamen Kombination helfen die Pflaster Ihrem Körper, überschüssige Pfunde natürlich abzubauen und Ihr Wunschgewicht langfristig zu erreichen.</em></p>
+
+                <p>Nachdem ich tiefer in die Materie eingestiegen bin stieß ich auf mehrere wissenschaftliche Untersuchungen, die die Wirkung der Patches zusätzlich bestätigen: Anwender konnten ihr Körpergewicht signifikant reduzieren – und das ohne den gefürchteten Jo-Jo-Effekt.</p>
+
+                <p>Eine kürzlich veröffentlichte Benutzerbefragung mit über 1.967 Teilnehmern zeigte zudem, dass regelmäßige Berberin-Anwender durchschnittlich 84% mehr Gewichtsverlust erlebten als vor der Anwendung – und das ganz ohne strenge Diätvorgaben oder Verzicht auf die Weihnachtsleckereien.</p>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/Neu_3-re9anqt91nthnhslhwnl14sey82v0sg496o786xomc.png" class="desktop-only" style="margin-bottom:20px;">
+                    <img src="./images/Vorher_Nachher_Mobil-rei5h54b7xwkvprwxi9f45n7kjy3al14dit84nqeow.png" class="mobile-only" style="margin-bottom:20px;">
+                    <img src="./images/Bildschirmfoto-2025-11-11-um-13.39.32-rejsgrx5nodhbialmbgn6s1aeszppnwah8iv5p1was.png" class="mobile-only" style="margin-bottom:20px;">
+                    <img src="./images/Bildschirmfoto-2025-11-11-um-13.39.54-rejsgqzbf36sku51mnotdyaw7pli2vv1rl1cu24hz4.png" class="mobile-only" style="margin-bottom:20px;">
+                    <img src="./images/Bildschirmfoto-2025-11-11-um-13.42.24-rejsk720h7ww5gri7mc930cxzv4lnx7qkz63h334c8.png" class="mobile-only" style="margin-bottom:20px;">
+                </a>
+
+                <p>Was macht die Abnehmpflaster so besonders? 4 entscheidende Wirkmechanismen sorgen für ihre außergewöhnliche Wirkung:</p>
+
+                <div class="check-list">
+                    <p><strong>1. Natürliche Gewichtsregulation:</strong><br />Die speziell ausgewählten Pflanzenstoffe in den Pflastern fördern gezielt den natürliche Anti-Hunger Mechanismus im Körper. Sie arbeiten harmonisch zusammen, um die Fettverbrennung zu verstärken und den Stoffwechsel auf natürliche Weise zu aktivieren.</p>
+                    <p><strong>2. Einzigartige Pflanzenextrakt-Formel:</strong><br />Die raffinierte Kombination aus wissenschaftlich belegten Extrakten wie Berberin und Garcinia Cambogia verstärkt die Gewichtsabnahme spürbar. Diese Inhaltsstoffe unterstützen den Fettstoffwechsel und reduzieren die Einlagerung neuer Fettzellen, wodurch das Abnehmen mühelos wird.</p>
+                    <p><strong>3. Kontinuierliche transdermale Fettverbrennung:</strong><br />Die innovative Pflaster-Technologie sorgt für eine gleichmäßige 8-12 Stunden Freisetzung der gewichtsreduzierenden Wirkstoffe über die Haut. Dadurch werden die Inhaltsstoffe kontinuierlich an den Körper abgegeben – ohne Verdauung und ohne die Höhen und Tiefen von Diätpillen.</p>
+                    <p><strong>4. Unterstützung bei Stoffwechsel und Energie:</strong><br />Die Pflaster tragen aktiv zu einem beschleunigten Stoffwechsel bei und unterstützen konstante Energie für mehr Bewegung im Alltag. Diese Balance schafft optimale Voraussetzungen für natürliche Gewichtsabnahme und ein schlankeres Körpergefühl den ganzen Tag über.</p>
+                </div>
+
+                <a href="https://trk.cmclk.com/cf/click/1" class="cta-button">Kostenlosen Stoffwechsel-Test Machen</a>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/product-1-rdx6k2f2lc19hj9izo4pe92havej7mxmfzehyrgotc.png" alt="Product" style="margin-bottom:20px;">
+                </a>
+
+                <p>Die Kraft von 4 wissenschaftlich belegten Pflanzenextrakten in einer einzigartigen Transdermalen Formel – das sind die Top-Inhaltsstoffe:</p>
+
+                <div class="icon-list-item">
+                    <div class="icon-list-icon">
+                        <svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></svg>
+                    </div>
+                    <span><b>Berberin-Extrakt:</b> Unterstützt den natürlichen Fettstoffwechsel und hilft dabei, die Gewichtsabnahme zu beschleunigen – für sichtbar weniger Pfunde auf der Waage.</span>
+                </div>
+                <div class="icon-list-item">
+                    <div class="icon-list-icon"><svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></svg></div>
+                    <span><b>Garcinia Cambogia-Extrakt:</b> Die tropische Powerfrucht ist reich an HCA und kann die Fetteinlagerung wirksam verhindern, während sie die natürliche Gewichtsreduktion fördert.</span>
+                </div>
+                <div class="icon-list-item">
+                    <div class="icon-list-icon"><svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></svg></div>
+                    <span><b>Grüntee-Extrakt (EGCG):</b> Stärkt mit Antioxidantien die Fettverbrennung und unterstützt die Gewichtsabnahme – das zentrale System für effektive Körperfettreduktion.</span>
+                </div>
+                <div class="icon-list-item">
+                    <div class="icon-list-icon"><svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></svg></div>
+                    <span><b>Zimtextrakt:</b> Fördert einen gesunden Stoffwechsel und trägt zur Beschleunigung der Gewichtsabnahme bei, wodurch hartnäckige Pfunde endlich schmelzen.</span>
+                </div>
+                <div class="icon-list-item">
+                    <div class="icon-list-icon"><svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></svg></div>
+                    <span><b>Weniger emotionales Essen:</b> Die Stimulation bestimmter Punkte kann die Ausschüttung von Glückshormonen fördern – Stress-Essen wird reduziert und das Essverhalten normalisiert sich.</span>
+                </div>
+
+                <p>Ist die Anwendung der Abnehmpflaster sicher?</p>
+                <p>Die Pflaster gelten als sehr gut verträglich. Nebenwirkungen sind nicht bekannt – im Gegenteil: Die natürliche Pflanzenextrakt-Mischung unterstützt die Gewichtsregulation, fördert die Fettverbrennung und kann so das allgemeine Wohlbefinden deutlich verbessern. Viele Anwender berichten zusätzlich von mehr Energie und einem schlankeren Körpergefühl – zusätzlich zur Gewichtsabnahme.</p>
+
+                <p>1 Pflaster pro Tag ist ausreichend!</p>
+                <p>Für optimale Ergebnisse sollten Sie täglich ein Pflaster auf saubere, trockene Haut aufkleben und 8-12 Stunden tragen.</p>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/Women.png" class="mobile-only" alt="Women">
+                </a>
+
+                <p>Nur im offiziellen Online-Shop erhältlich:</p>
+                <p>Um sicherzugehen, dass Sie das Originalprodukt erhalten, sollten die Pflaster ausschließlich über den offiziellen Online-Shop des Herstellers bestellt werden.</p>
+                <p><em>“Die Herstellung der Pflaster ist sehr aufwendig, und aktuell übersteigt die Nachfrage unsere Produktionskapazitäten. Für uns steht jedoch die Qualität an erster Stelle – Kompromisse bei der transdermalen Technologie kommen nicht infrage”, erklärt das Entwicklungsteam von Purisaki Patches.</em></p>
+
+                <a href="https://trk.cmclk.com/cf/click/1" class="cta-button">Hier Verfügbarkeit Prüfen</a>
+
+                <p><em><strong>Gut zu wissen: </strong></em></p>
+                <p>Die Abnehm-Pflaster waren seit der Einführung im Jahr 2025 bereits 3 Mal ausverkauft.</p>
+
+                <a href="https://trk.cmclk.com/cf/click/1">
+                    <img src="./images/Frau-final-rdx8h2qmexncoicn6twuraqvpdceuqhkk0o6bnum1s.png" alt="Frau Final">
+                </a>
+
+            </article>
+
+            <aside class="sidebar">
+                <div class="sidebar-sticky">
+                    <div class="sidebar-box">
+                        <img src="./images/product-1-rdx6k2f2lc19hj9izo4pe92havej7mxmfzehyrgotc.png" alt="Product">
+                        <h3>Purisaki Patches</h3>
+                        <p>Nur im offiziellen Online-Shop erhältlich.</p>
+                        <a href="https://trk.cmclk.com/cf/click/1" class="cta-button" style="width:100%; margin:10px 0;">JETZT BESTELLEN</a>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="study-links">
+                <a href="#">Studie 1</a> | 
+                <a href="#">Studie 2</a> | 
+                <a href="#">Studie 3</a> | 
+                <a href="#">Studie 4</a> | 
+                <a href="#">Studie 5</a> | 
+                <a href="#">Studie 6</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Impressum</a> | 
+                <a href="#">Datenschutz</a>
+            </div>
+            <p style="margin-top:20px; line-height:1.4;">
+                Dieses Pflaster ist kein Arzneimittel und kein zugelassenes Medizinprodukt; es dient nicht der Diagnose, Behandlung, Heilung oder Verhütung von Krankheiten. Es werden keine Ergebnisse garantiert – individuelle Resultate können variieren. Das Pflaster ersetzt weder eine ausgewogene Ernährung noch ausreichende Bewegung und ist lediglich eine ergänzende Maßnahme im Rahmen eines gesunden Lebensstils. Verwenden Sie das Produkt nicht während Schwangerschaft oder Stillzeit, nicht bei Kindern und Jugendlichen sowie nicht bei bekannter Unverträglichkeit gegenüber Inhaltsstoffen. Personen mit Vorerkrankungen – insbesondere Stoffwechsel-, Haut-, Leber- oder Nierenerkrankungen – oder unter laufender Medikation (z. B. blutzuckersenkende Mittel) sollten vor der Anwendung ärztlichen Rat einholen. Das Pflaster ist ausschließlich zur äußeren Anwendung bestimmt und darf nicht auf verletzte, gereizte oder entzündete Haut geklebt werden; bei Rötung, Juckreiz, Brennen oder anderen Reizungen Anwendung beenden und ärztlich abklären lassen. Bitte außerhalb der Reichweite von Kindern, kühl und trocken sowie vor direkter Sonneneinstrahlung geschützt aufbewahren. Gesundheits- und Gewichtsangaben dürfen nur im Rahmen der geltenden EU-Vorschriften verwendet werden; diese Hinweise ersetzen keine Rechtsberatung.
+            </p>
+        </div>
+    </footer>
+
+    <div class="mobile-sticky-btn">
+        <a href="https://trk.cmclk.com/cf/click/1">KOSTENLOSEN TEST MACHEN >></a>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carouselDots');
+        
+        let slidesPerView = window.innerWidth <= 900 ? 1 : 2;
+        let maxIndex = Math.ceil(slides.length / slidesPerView) - 1;
+
+        // Create Dots
+        for (let i = 0; i <= maxIndex; i++) {
+            let dot = document.createElement('div');
+            dot.className = 'carousel-dot';
+            if (i === 0) dot.classList.add('active');
+            dot.onclick = () => { currentIndex = i; updateCarousel(); };
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function moveSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = maxIndex;
+            if (currentIndex > maxIndex) currentIndex = 0;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            let percentage = -(currentIndex * 100);
+            track.style.transform = `translateX(${percentage}%)`;
+            
+            dots.forEach(dot => dot.classList.remove('active'));
+            if(dots[currentIndex]) dots[currentIndex].classList.add('active');
+        }
+
+        // Auto-play
+        setInterval(() => {
+            moveSlide(1);
+        }, 3000);
+
+        // Responsive Update
+        window.addEventListener('resize', () => {
+            slidesPerView = window.innerWidth <= 900 ? 1 : 2;
+            maxIndex = Math.ceil(slides.length / slidesPerView) - 1;
+            // Re-render dots logic could go here if complete responsiveness needed, 
+            // but CSS flexbox handles the heavy lifting.
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 500) {
+                $(".mobile-sticky-btn").fadeIn();
+            } else {
+                $(".mobile-sticky-btn").fadeOut();
+            }
+        });
+    </script>
+    
+        <script>!function(){"use strict";var n="lp_ref",t="cpid",e="lpurl",c="https://trk.cmclk.com",r="(?<domain>http(?:s?)://[^/]*)".concat("/cf/click"),a="(?:(?:/(?<cta>[1-9][0-9]*)/?)|(?:/))?",i="^".concat(r).concat(a).concat("(?:$|(\\?.*))"),o='javascript:window.clickflare.l="(?<original_link>'.concat(r).concat(a,'("|(\\?[^"]*"))).*'),s=function(){return new RegExp(i,"")},u=function(){return new RegExp(o,"")};function l(n){var t=function(n){return n.replace(s(),(function(n){for(var t=[],e=1;e<arguments.length;e++)t[e-1]=arguments[e];var r=t[t.length-1].domain;return n.replace(r,c)}))}(n);return'javascript:window.clickflare.l="'.concat(t,'"; void 0;')}function d(n,t){if(t&&n&&t.apply(document,[n]),/loaded|interactive|complete/.test(document.readyState))for(var e=0,c=document.links.length;e<c;e++)if(s().test(document.links[e].href)){var r=document.links[e];window.clickflare.links_replaced.has(r)||(r.href=l(r.href),window.clickflare.links_replaced.add(r))}}var f,h,m,p;!function(r,a){var i=document.onreadystatechange;window.clickflare||(window.clickflare={listeners:{},customParams:{},links_replaced:new Set,addEventListener:function(n,t){var e=this.listeners[n]||[];e.includes(t)||e.push(t),this.listeners[n]=e},dispatchEvent:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))},push:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))}},document.onreadystatechange=function(n){return d(n,i)},d(null,i),setTimeout((function(){!function(r,a){var i,o=function(r,a){var i=new URL("".concat(c).concat(r)),o="{",s=o+o;a.startsWith(s)||i.searchParams.set(t,a);return i.searchParams.append(n,document.referrer),i.searchParams.append(e,location.href),i.searchParams.append("lpt",document.title),i.searchParams.append("t",(new Date).getTime().toString()),i.toString()}(r,a),s=document.createElement("script"),l=document.scripts[0];s.async=1,s.src=o,s.onerror=function(){!function(){for(var n=function(n,t){var e=document.links[n];u().test(decodeURI(e.href))&&setTimeout((function(){e&&e.setAttribute("href",function(n){var t=n.match(u());if(t){var e=(t.groups||{}).original_link;return e?e.slice(0,-1):n}return n}(decodeURI(e.href)))}))},t=0,e=document.links.length;t<e;t++)n(t)}()},null===(i=l.parentNode)||void 0===i||i.insertBefore(s,l)}(r,a)})))}("".concat("/cf/tags","/").concat(new URL(window.location.href).searchParams.get("cftmid")||"{{__CONTAINER_ID__}}"),(m=new URL(window.location.href).searchParams.get(t),f=new RegExp("(^| )".concat("cf_cpid","=([^;]+)")),p=(h=document.cookie.match(f))&&h.pop()||null,m||p||"{{__CAMPAIGN_ID__}}"))}();</script>
+
+
+</body>
+</html>
